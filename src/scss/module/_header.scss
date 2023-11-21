@@ -1,0 +1,100 @@
+@use '../global' as g;
+
+/*********************************
+    ヘッダー
+*********************************/
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: g.$header_height;
+    z-index: g.$z-index_header;
+    background-color: rgba(g.$color_white,0.95);
+    border-bottom: 1px solid g.$color_grey_light;
+    box-shadow: 0 2px 8px 0 rgba(g.$color_pure-black,0.1);
+}
+
+.header__inner{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: g.$content_width;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+.header__title{
+}
+
+.header__title-link{
+    font-size: g.$font-size_lg;
+    font-weight: bold;
+
+    &:hover,&:focus {
+        opacity: 0.8;
+    }
+}
+
+.header__hamburger{
+
+    @include g.media(pc){
+        display: none;
+    }
+}
+
+.header__hamburger-button{
+    position: relative;
+    display: block;
+    width: calc(g.$header_height * 0.8);
+    height: calc(g.$header_height * 0.8);
+    cursor: pointer;
+
+    &--active{
+
+        .header__hamburger-line{
+
+            &:nth-of-type(1) {
+                top: 50%;
+                left: 50%;
+                transform:  translateY(-50%) translateX(-50%) rotate(-45deg);
+            }
+              
+            &:nth-of-type(2) {
+                opacity: 0
+            }
+              
+            &:nth-of-type(3) {
+                top: 50%;
+                left: 50%;
+                transform:  translateY(-50%) translateX(-50%) rotate(45deg);
+            }
+        }
+    }
+}
+
+.header__hamburger-line{
+    position: absolute;
+    display: inline-block;
+    width: 60%;
+    height: 2px;
+    left: calc((100% - 60%) / 2);
+    background: g.$color_black_light;
+    border-radius: 100px;
+    transition: 0.5s;
+
+    &:nth-of-type(1) {
+        top: 30%;
+    }
+      
+    &:nth-of-type(2) {
+        top: calc(50% - (2px / 2));
+    }
+      
+    &:nth-of-type(3) {
+        top: calc(70% - (2px));
+    }
+}

@@ -1,0 +1,27 @@
+@use '../global' as g;
+
+/*********************************
+    ページビジュアル
+*********************************/
+
+.page-visual{
+    background: linear-gradient(#ffffff,#eeeeee);;
+}
+
+.page-visual__inner{
+    max-width: g.$content_width;
+    margin: 0 auto;
+    padding: 40px 0;
+}
+
+.page-visual__heading{
+    padding: 40px 20px;
+    text-align: center;
+
+    &--left{
+        
+        @include g.media(pc){
+            margin-right:  calc(60px + g.$sidebar_width);
+        }
+    }
+}

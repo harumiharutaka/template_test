@@ -1,0 +1,59 @@
+@use '../global' as g;
+
+/*********************************
+    サイドバー
+*********************************/
+
+.sidebar{
+    display: none;
+    //position: absolute;
+    position: fixed; //スクロールスナップ用スタイル
+    top: calc(g.$header_height + 40px);
+    right: max(20px, ( (100% - g.$content_width) / 2) + 20px);
+    width: g.$sidebar_width;
+    max-height: calc(100vh - (g.$header_height + 40px + 80px));
+    background-color: g.$color_white;
+    border: 1px solid g.$color_grey_light;
+    border-radius: 4px;
+    box-shadow: 0 2px 8px 0 rgba(g.$color_pure-black,0.1);
+    overflow: auto;
+
+    @include g.media(pc){
+        display: block;
+    }
+}
+
+.sidebar__inner{
+    padding: 20px;
+
+    >*:first-child{
+        margin-top: 0;
+    }
+}
+
+.sidebar__link-wrapper{
+    
+    &--heading{
+        margin: 15px 0 5px;
+    
+        .sidebar__link{
+            display: inline-block;
+            font-weight: bold;
+    
+            &::after{
+                content: "";
+                display: block;
+                height: 1px;
+                width: 6rem;
+                background-color: g.$color_black_light;
+            }
+        }
+    }
+}
+
+.sidebar__link{
+
+    &:hover,&:focus {
+        opacity: 0.8;
+    }
+}

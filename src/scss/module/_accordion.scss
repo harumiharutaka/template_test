@@ -1,0 +1,80 @@
+@use '../global' as g;
+
+/*********************************
+    アコーディオン
+*********************************/
+
+.accordion{
+}
+
+.accordion__title{
+
+    .accordion__body + &{
+        margin-top: 15px;
+    }
+}
+
+.accordion__button{
+    position: relative;
+    display: block;
+    width: 100%;
+    padding: 5px 40px 5px 10px;
+    background-color: g.$color_grey_light;
+    border-radius: 4px 4px 0 0;
+    border: 1px solid transparent;
+    transition: 0.5s;
+
+    &::before{
+        font-family: 'Font Awesome 6 Free';
+        font-weight: 900;
+        content: "\f107";  
+        position: absolute;
+        top: 50%;
+        right: 15px;
+        transform: translateY(-45%); 
+    }
+
+    &:hover,&:focus{ 
+        background-color: g.$color_grey;
+        color: g.$color_white;
+    }
+
+    &--active{
+        border-radius: 4px 4px 0 0;
+        
+        &::before{
+            transform: translateY(-55%) rotate(180deg);
+        }
+    }
+}
+
+.accordion__body{
+    display: none;
+    height: 0;
+    border-left: 1px solid g.$color_grey_light;
+    border-right: 1px solid g.$color_grey_light;
+    border-bottom: 1px solid g.$color_grey_light;
+    border-radius: 0 0 4px 4px;
+    padding: 10px;
+
+    >*:last-child{
+        margin-bottom: 0;
+    }
+
+    &--active{
+        display: block;
+        height: auto;
+    }
+}
+
+.accordion__text{
+    line-height: g.$line-height_low;
+    margin-bottom: 10px;
+}
+
+.accordion__cards{
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+}

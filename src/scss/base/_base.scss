@@ -1,0 +1,34 @@
+@use '../global' as g;
+
+/*********************************
+    基本設定
+*********************************/
+
+/* html */
+html{
+    font-size: 100%;
+    height: 100%;
+}
+
+body{
+    @include g.text-style(body_m);
+    color: $s-color_text_body;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+img{
+    max-width: 100%;
+}
+
+/* wrapper */
+.wrapper{
+    flex: 1;
+    padding-top: g.$header-height_pc;
+    position: relative;
+
+    @include g.media(header-sp){
+        padding-top: g.$header-height_sp;
+    }
+}

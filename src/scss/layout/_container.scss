@@ -1,0 +1,26 @@
+@use '../global' as g;
+
+/*********************************
+    コンテナ
+*********************************/
+
+.container{
+    
+    &--bg-gray{
+        background-color: g.$color_light;
+    }
+}
+
+.container__inner{
+    max-width: g.$content_width;
+    margin: 0 auto;
+    padding: 40px 0;
+
+    >*:last-child{
+        margin-bottom: 0;
+    }
+}
+
+.container__content{
+    margin-bottom: 40px;
+}
