@@ -19,20 +19,19 @@
 　┃　　┃　　┃　　┗━ _footer.scss //フッター
 　┃　　┃　　┃　　　　　：
 　┃　　┃　　┣━ page //ページ毎に使うCSSを格納
-　┃　　┃　　┃　　┣━ _index.scss
 　┃　　┃　　┃　　┗━ _top.scss //indexページ
 　┃　　┃　　┃　　　　　：
 　┃　　┃　　┗━ style.scss
 　┃　　┣━ js
 　┃　　┃　　┣━ module //モジュールに分けたjsを格納
 　┃　　┃　　┗━ script.js
-　┃　　┣━ html
-　┃　　┃　　┣━ parts //テンプレートに分けたhtmlを格納（WordPress化したら削除）
-　┃　　┃　　┗━ index.html //ビルド前のhtmlを格納（WordPress化したら削除）
+　┃　　┣━ html //（WordPress化したら削除）
+　┃　　┃　　┣━ parts //テンプレートに分けたhtmlを格納
+　┃　　┃　　┗━ index.html //ビルド前のhtmlを格納
 　┃　　┃　　 　　：
-　┃　　┣━ php
-　┃　　┃　　┣━ parts //テンプレートに分けたphpを格納（WordPress時に使用）
-　┃　　┃　　┗━ index.php //phpを格納（WordPress時に使用）
+　┃　　┣━ (php) //（WordPress時に使用）
+　┃　　┃　　┣━ parts //テンプレートに分けたphpを格納
+　┃　　┃　　┗━ front-page.php //phpを格納
 　┃　　┃　　 　　：
 　┃　　┗━ publicl //Viteの変換対象外のディレクトリ、中身がそのままコピーされる
 　┃　　 　　┗━ assets
@@ -45,7 +44,7 @@
 　 　　┃　　┣━ js
 　 　　┃　　┣━ img
 　 　　┃　　┗━ favicon
-　 　　┣━ (parts) //WordPress時のみ
+　 　　┣━ (parts) //（WordPress時に使用）
 　 　　┗━ index.html(php)
 　 　　 　　：
 
@@ -58,6 +57,7 @@
 /* 共通ルール */
 
 1.PCファーストでコーディングする
+2.複数単語は「ハイフンケース（multi-word）」で記載する
 
 /* HTMLルール */
 
@@ -68,8 +68,7 @@
 1.CSS設計は「BEM」を採用
 2.命名規則は「MindBEMding（.Block__Element--Modifier）」を採用
 3.modifierのキーと値はハイフンで繋ぐ（key-val）
-4.複数単語は「ハイフンケース（multi-word）」で記載する
-5.基本的に子孫セレクタは使用しない
+4.基本的に子孫セレクタは使用しない
 
 /* JSルール */
 
@@ -82,7 +81,7 @@
 *********************************/
 
 1.「__Element」を「&」でネストしない
-2.「__Modifier」は「&」でネストする
+2.「--Modifier」は「&」でネストする
 3.疑似クラス,疑似要素は「&」でネストする
 
 .Block {
