@@ -1,5 +1,6 @@
 module.exports = {
   plugins: {
+    'postcss-normalize-charset': {},
     autoprefixer: {},
     'postcss-sort-media-queries': {},
     'css-declaration-sorter':{order:'smacss'},
@@ -8,5 +9,5 @@ module.exports = {
       //除外設定　https://purgecss.com/safelisting.html
       safelist: ['hoge']
     },
-  }
+  },
 }

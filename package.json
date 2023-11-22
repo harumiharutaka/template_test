@@ -2,10 +2,10 @@
   "name": "template_test",
   "version": "1.0.0",
   "description": "template_test",
-  "main": "index.js",
+  "main": "vite.config.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "vite",
+    "dev": "vite --host",
     "build": "vite build && html-beautify dist/**/*.html",
     "preview": "vite preview"
   },
