@@ -55,16 +55,16 @@ for (let i = 0; i < files.length; i++) {
 }
 
 //HTML上で出し分けたい各ページごとの情報
-const pageData = {
-  '/index.html': {
-    isHome: true,
-    title: 'Main Page',
-  },
-  '/list.html': {
-    isHome: false,
-    title: 'List Page',
-  },
-};
+//const pageData = {
+//  '/index.html': {
+//    isHome: true,
+//    title: 'Main Page',
+//  },
+//  '/list.html': {
+//    isHome: false,
+//    title: 'List Page',
+//  },
+//};
 
 export default defineConfig({
   root: './src', //開発ディレクトリ設定
@@ -75,12 +75,12 @@ export default defineConfig({
         assetFileNames: (assetInfo) => {
           let extType = assetInfo.name.split('.')[1];
           //Webフォントファイルの振り分け
-          if (/ttf|otf|eot|woff|woff2/i.test(extType)) {
-            extType = 'fonts';
-          }
-          if (/png|jpe?g|svg|gif|tiff|bmp|ico/i.test(extType)) {
-            extType = 'images';
-          }
+          //if (/ttf|otf|eot|woff|woff2/i.test(extType)) {
+          //  extType = 'fonts';
+          //}
+          //if (/png|jpe?g|svg|gif|tiff|bmp|ico/i.test(extType)) {
+          //  extType = 'images';
+          //}
           //ビルド時のCSS名を明記してコントロールする
           if(extType === 'css') {
             return `assets/css/style.css`;
@@ -102,9 +102,9 @@ export default defineConfig({
       //コンポーネントの格納ディレクトリを指定
       partialDirectory: resolve(__dirname, './src/parts'),
       //各ページ情報の読み込み
-      context(pagePath) {
-        return pageData[pagePath];
-      },
+      //context(pagePath) {
+      //  return pageData[pagePath];
+      //},
     }),
   ],
 });

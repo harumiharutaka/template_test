@@ -20,9 +20,8 @@
 「npm install -D @fullhuman/postcss-purgecss」
 「npm install -D postcss-normalize-charset」
 「npm install -D vite-plugin-handlebars」
-
-
-
+「npm install -D js-beautify」
+「.jsbeautifyrc」をコピー
 
 
 
