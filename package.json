@@ -1,0 +1,26 @@
+{
+  "name": "template_test",
+  "version": "1.0.0",
+  "description": "template_test",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@fullhuman/postcss-purgecss": "^5.0.0",
+    "autoprefixer": "^10.4.16",
+    "css-declaration-sorter": "^7.1.1",
+    "postcss": "^8.4.31",
+    "postcss-normalize-charset": "^6.0.0",
+    "postcss-sort-media-queries": "^5.2.0",
+    "sass": "^1.69.5",
+    "vite": "^5.0.2",
+    "vite-plugin-handlebars": "^1.6.0"
+  }
+}

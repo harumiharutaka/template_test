@@ -2,106 +2,6 @@
     変数
 *********************************/
 
-/* primitive-color_project */
-$p-color_opacity_white_0-95: #FFFFFFF2;
-$p-color_opacity_black_0-05: #0000000D;
-$p-color_opacity_black_0-3: #0000004D;
-$p-color_opacity_black_0-6: #00000099;
-$p-color_opacity_grey_900_0-6: #1A1A1A99;
-$p-color_brand-main_primary: #47E5FF;
-$p-color_brand-main_secondary: #CDF8FF;
-$p-color_brand-main_tertiary: #45A7B7;
-$p-color_brand-sub_primary: #FF5BA0;
-$p-color_brand-sub_secondary: #FFD9E9;
-$p-color_brand-sub_tertiary: #D00C5F;
-
-/* semantic-color */ 
-$s-color_text_body: $p-color_grey_900;
-$s-color_text_description: $p-color_grey_700;
-$s-color_text_place-holder: $p-color_grey_600;
-$s-color_text_on-fill: $p-color_white;
-$s-color_text_disabled: $p-color_grey_500;
-$s-color_link_normal: $p-color_blue_900;
-$s-color_link_hover: $p-color_blue_1000;
-$s-color_link_active: $p-color_blue_1000;
-$s-color_link_visited: $p-color_magenta_1000;
-$s-color_menu-link_normal: $p-color_grey_900;
-$s-color_menu-link_hover: $p-color_opacity_grey_900_0-6;
-$s-color_menu-link_active: $p-color_opacity_grey_900_0-6;
-$s-color_background_primary: $p-color_white;
-$s-color_background_secondary: $p-color_grey_100;
-$s-color_background_tertiary: $p-color_grey_50;
-$s-color_border_field: $p-color_grey_600;
-$s-color_border_focused: $p-color_grey_900;
-$s-color_border_selected: $p-color_light-blue_700;
-$s-color_border_disabled: $p-color_grey_300;
-$s-color_border_divider: $p-color_grey_300;
-$s-color_button_normal: $p-color_grey_600;
-$s-color_button_hover: $p-color_grey_800;
-$s-color_button_active: $p-color_grey_800;
-$s-color_button_disabled: $p-color_grey_300;
-$s-color_status_success: $p-color_green_600;
-$s-color_status_alert: $p-color_red_800;
-$s-color_status_warning: $p-color_yellow_700;
-
-/* font-family */
-$font-family_primary: 'Noto Sans JP','YuGothic','Yu Gothic','Hiragino Kaku Gothic ProN','ヒラギノ角ゴ ProN W3',sans-serif;
-
-/* font-size */ 
-$font-size_xxxxxl: 2.25rem; //36px
-$font-size_xxxxl: 2rem; //32px
-$font-size_xxxl: 1.75rem; //28px
-$font-size_xxl: 1.5rem; //24px
-$font-size_xl: 1.25rem; //20px
-$font-size_l: 1.125rem; //18px
-$font-size_m: 1rem; //16px
-$font-size_s: 0.875rem; //14px
-$font-size_xs: 0.75rem; //12px
-$font-size_xxs: 0.625rem; //10px
-
-/* line-height */
-$line-height_m: 1.8;
-$line-height_s: 1.4;
-$line-height_same: 1.0;
-
-/* letter-spacing */
-$letter-spacing_m: 0.04em;
-$letter-spacing_s: 0.02em;
-
-/* font-weight */
-$font-weight_r: normal;
-$font-weight_m: 500;
-$font-weight_b: bold;
-
-/* content-width */
-$content-width: 1200px;
-
-/* sidebar-width */
-$sidebar-width_2column: 200px;
-$sidebar-width_3column-left: 180px;
-$sidebar-width_3column-right: 160px;
-
-/* header-height */
-$header-height_pc: 4rem;
-$header-height_sp: 3rem;
-
-/* z-index */
-$z-index_pagetop: 10;
-$z-index_drawer-overlay: 20;
-$z-index_header: 30;
-$z-index_modal: 40;
-$z-index_loading: 50;
-
-/* elevation */
-$elevation_style1: 0px 2px 8px 1px rgba(0, 0, 0, 0.10), 0px 1px 5px 0px rgba(0, 0, 0, 0.30);
-$elevation_style2: 0px 2px 12px 2px rgba(0, 0, 0, 0.10), 0px 1px 6px 0px rgba(0, 0, 0, 0.30);
-$elevation_style3: 0px 4px 16px 3px rgba(0, 0, 0, 0.10), 0px 1px 6px 0px rgba(0, 0, 0, 0.30);
-$elevation_style4: 0px 6px 20px 4px rgba(0, 0, 0, 0.10), 0px 2px 6px 0px rgba(0, 0, 0, 0.30);
-$elevation_style5: 0px 8px 24px 5px rgba(0, 0, 0, 0.10), 0px 2px 10px 0px rgba(0, 0, 0, 0.30);
-$elevation_style6: 0px 10px 30px 6px rgba(0, 0, 0, 0.10), 0px 3px 12px 0px rgba(0, 0, 0, 0.30);
-$elevation_style7: 0px 12px 36px 7px rgba(0, 0, 0, 0.10), 0px 3px 14px 0px rgba(0, 0, 0, 0.30);
-$elevation_style8: 0px 14px 40px 7px rgba(0, 0, 0, 0.10), 0px 3px 16px 0px rgba(0, 0, 0, 0.30);
-
 /* primitive-color_digital-agency */ 
 $p-color_white: #FFFFFF;
 $p-color_black: #000000;
@@ -247,3 +147,103 @@ $p-color_purple_900: #5109AD;
 $p-color_purple_1000: #41048E;
 $p-color_purple_1100: #30016C;
 $p-color_purple_1200: #21004B;
+
+/* primitive-color_project */
+$p-color_opacity_white_0-95: #FFFFFFF2;
+$p-color_opacity_black_0-05: #0000000D;
+$p-color_opacity_black_0-3: #0000004D;
+$p-color_opacity_black_0-6: #00000099;
+$p-color_opacity_grey_900_0-6: #1A1A1A99;
+$p-color_brand-main_primary: #47E5FF;
+$p-color_brand-main_secondary: #CDF8FF;
+$p-color_brand-main_tertiary: #45A7B7;
+$p-color_brand-sub_primary: #FF5BA0;
+$p-color_brand-sub_secondary: #FFD9E9;
+$p-color_brand-sub_tertiary: #D00C5F;
+
+/* semantic-color */ 
+$s-color_text_body: $p-color_grey_900;
+$s-color_text_description: $p-color_grey_700;
+$s-color_text_place-holder: $p-color_grey_600;
+$s-color_text_on-fill: $p-color_white;
+$s-color_text_disabled: $p-color_grey_500;
+$s-color_link_normal: $p-color_blue_900;
+$s-color_link_hover: $p-color_blue_1000;
+$s-color_link_active: $p-color_blue_1000;
+$s-color_link_visited: $p-color_magenta_1000;
+$s-color_menu-link_normal: $p-color_grey_900;
+$s-color_menu-link_hover: $p-color_opacity_grey_900_0-6;
+$s-color_menu-link_active: $p-color_opacity_grey_900_0-6;
+$s-color_background_primary: $p-color_white;
+$s-color_background_secondary: $p-color_grey_100;
+$s-color_background_tertiary: $p-color_grey_50;
+$s-color_border_field: $p-color_grey_600;
+$s-color_border_focused: $p-color_grey_900;
+$s-color_border_selected: $p-color_light-blue_700;
+$s-color_border_disabled: $p-color_grey_300;
+$s-color_border_divider: $p-color_grey_300;
+$s-color_button_normal: $p-color_grey_600;
+$s-color_button_hover: $p-color_grey_800;
+$s-color_button_active: $p-color_grey_800;
+$s-color_button_disabled: $p-color_grey_300;
+$s-color_status_success: $p-color_green_600;
+$s-color_status_alert: $p-color_red_800;
+$s-color_status_warning: $p-color_yellow_700;
+
+/* font-family */
+$font-family_primary: 'Noto Sans JP','YuGothic','Yu Gothic','Hiragino Kaku Gothic ProN','ヒラギノ角ゴ ProN W3',sans-serif;
+
+/* font-size */ 
+$font-size_xxxxxl: 2.25rem; //36px
+$font-size_xxxxl: 2rem; //32px
+$font-size_xxxl: 1.75rem; //28px
+$font-size_xxl: 1.5rem; //24px
+$font-size_xl: 1.25rem; //20px
+$font-size_l: 1.125rem; //18px
+$font-size_m: 1rem; //16px
+$font-size_s: 0.875rem; //14px
+$font-size_xs: 0.75rem; //12px
+$font-size_xxs: 0.625rem; //10px
+
+/* line-height */
+$line-height_m: 1.8;
+$line-height_s: 1.4;
+$line-height_same: 1.0;
+
+/* letter-spacing */
+$letter-spacing_m: 0.04em;
+$letter-spacing_s: 0.02em;
+
+/* font-weight */
+$font-weight_r: normal;
+$font-weight_m: 500;
+$font-weight_b: bold;
+
+/* content-width */
+$content-width: 1200px;
+
+/* sidebar-width */
+$sidebar-width_2column: 200px;
+$sidebar-width_3column-left: 180px;
+$sidebar-width_3column-right: 160px;
+
+/* header-height */
+$header-height_pc: 4rem;
+$header-height_sp: 3rem;
+
+/* z-index */
+$z-index_pagetop: 10;
+$z-index_drawer-overlay: 20;
+$z-index_header: 30;
+$z-index_modal: 40;
+$z-index_loading: 50;
+
+/* elevation */
+$elevation_style1: 0px 2px 8px 1px rgba(0, 0, 0, 0.10), 0px 1px 5px 0px rgba(0, 0, 0, 0.30);
+$elevation_style2: 0px 2px 12px 2px rgba(0, 0, 0, 0.10), 0px 1px 6px 0px rgba(0, 0, 0, 0.30);
+$elevation_style3: 0px 4px 16px 3px rgba(0, 0, 0, 0.10), 0px 1px 6px 0px rgba(0, 0, 0, 0.30);
+$elevation_style4: 0px 6px 20px 4px rgba(0, 0, 0, 0.10), 0px 2px 6px 0px rgba(0, 0, 0, 0.30);
+$elevation_style5: 0px 8px 24px 5px rgba(0, 0, 0, 0.10), 0px 2px 10px 0px rgba(0, 0, 0, 0.30);
+$elevation_style6: 0px 10px 30px 6px rgba(0, 0, 0, 0.10), 0px 3px 12px 0px rgba(0, 0, 0, 0.30);
+$elevation_style7: 0px 12px 36px 7px rgba(0, 0, 0, 0.10), 0px 3px 14px 0px rgba(0, 0, 0, 0.30);
+$elevation_style8: 0px 14px 40px 7px rgba(0, 0, 0, 0.10), 0px 3px 16px 0px rgba(0, 0, 0, 0.30);

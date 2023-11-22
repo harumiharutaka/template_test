@@ -1,4 +1,32 @@
 /*********************************
+    メモ（構築者用）
+*********************************/
+
+※既存のプロジェクトにviteを入れる
+「npm init -y」
+「npm install -D vite」
+「vite.config.js」をコピー
+「package.json」の「"scripts"」に下記記述を追加
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+「npm install -D sass」
+「npm install -D postcss」
+「postcss.config.cjs」をコピー
+「npm install -D autoprefixer」
+「.browserslistrc」をコピー
+「npm install -D postcss-sort-media-queries」
+「npm install -D css-declaration-sorter」
+「npm install -D @fullhuman/postcss-purgecss」
+「npm install -D postcss-normalize-charset」
+「npm install -D vite-plugin-handlebars」
+
+
+
+
+
+
+/*********************************
     ディレクトリ構成
 *********************************/
 
@@ -57,7 +85,8 @@
 /* 共通ルール */
 
 1.PCファーストでコーディングする
-2.複数単語は「ハイフンケース（multi-word）」で記載する
+2.Figmaのオートレイアウト対応ヵ所は、余白は極力paddingとgapで記述する
+3.複数単語は「ハイフンケース（multi-word）」で記載する
 
 /* HTMLルール */
 
