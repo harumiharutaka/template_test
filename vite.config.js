@@ -68,6 +68,14 @@ const pageData = {
     isHome: true,
     title: 'top page',
   },
+  '/copy1.html': {
+    isHome: false,
+    title: 'copy1 page',
+  },
+  '/copy2/index.html': {
+    isHome: false,
+    title: 'copy2 page',
+  },
 };
 
 //CSSとJSファイルに更新パラメータを追加
@@ -102,9 +110,10 @@ export default defineConfig({
     host: true //IPアドレスを有効化
   },
   base: './', //相対パスでビルドする
-  root: './src', //開発ディレクトリ設定
+  root: './src/html', //開発ディレクトリ設定
+  publicDir: "../public", //publicディレクトリ設定
   build: {
-    outDir: '../dist', //出力場所の指定
+    outDir: '../../dist', //出力場所の指定
     rollupOptions: { //ファイル出力設定
       output: {
         assetFileNames: (assetInfo) => {
@@ -135,7 +144,7 @@ export default defineConfig({
   plugins: [
     handlebars({
       //テンプレートの格納ディレクトリを指定
-      partialDirectory: resolve(__dirname, './src/parts'),
+      partialDirectory: resolve(__dirname, './src/html/parts'),
       //各ページ情報の読み込み
       context(pagePath) {
         return pageData[pagePath];

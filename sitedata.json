@@ -1,0 +1,33 @@
+{
+  "siteName": "テンプレートテスト",
+  "siteUrl": "https://comic-school.jp/template_test/",
+  "pageMeta": {
+    "/index.html": {
+      "id": 1,
+      "name": "top",
+      "title": "top",
+      "description": "top",
+      "ogpImage": "/public/images/image_16-9.png",
+      "type": "website",
+      "path": "/"
+    },
+    "/copy1.html": {
+      "id": 2,
+      "name": "copy1",
+      "title": "copy1",
+      "description": "copy1",
+      "ogpImage": "/public/images/image_16-9.png",
+      "type": "article",
+      "path": "/copy1.html"
+    },
+    "/copy2/index.html": {
+      "id": 3,
+      "name": "copy2",
+      "title": "copy2",
+      "description": "copy2",
+      "ogpImage": "/public/images/image_16-9.png",
+      "type": "article",
+      "path": "/copy2/index.html"
+    }
+  }
+}

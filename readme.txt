@@ -23,7 +23,11 @@
 「npm install -D js-beautify」
 「.jsbeautifyrc」をコピー
 
-npm install -D vite sass postcss autoprefixer postcss-sort-media-queries css-declaration-sorter @fullhuman/postcss-purgecss postcss-normalize-charset vite-plugin-handlebars js-beautify
+「npm install -D vite sass postcss autoprefixer postcss-sort-media-queries css-declaration-sorter @fullhuman/postcss-purgecss postcss-normalize-charset vite-plugin-handlebars js-beautify」
+
+「npm run dev」
+
+「npm run build」
 
 /*********************************
     ディレクトリ構成
