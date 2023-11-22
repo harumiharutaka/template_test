@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "vite --host",
-    "build": "vite build && html-beautify dist/**/*.html",
+    "build": "vite build && html-beautify dist/**/*.html && esbuild src/public/assets/js/*.js --bundle --minify --outdir=dist/assets/js/",
     "preview": "vite preview"
   },
   "keywords": [],

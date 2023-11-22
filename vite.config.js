@@ -1,9 +1,8 @@
 import { defineConfig } from 'vite';
 
-//import設定を追記
 import { resolve } from 'path';
 
-//import設定を追記
+//handlebarsプラグインimport
 import handlebars from 'vite-plugin-handlebars';
 
 // HTMLの複数出力を自動化する
