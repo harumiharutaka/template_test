@@ -63,20 +63,20 @@ for (let i = 0; i < files.length; i++) {
 */
 
 //HTML上で出し分けたい各ページごとの情報
-const pageData = {
-  '/index.html': {
-    isHome: true,
-    title: 'top page',
-  },
-  '/copy1.html': {
-    isHome: false,
-    title: 'copy1 page',
-  },
-  '/copy2/index.html': {
-    isHome: false,
-    title: 'copy2 page',
-  },
-};
+//const pageData = {
+//  '/index.html': {
+//    isHome: true,
+//    title: 'top page',
+//  },
+//  '/copy1.html': {
+//    isHome: false,
+//    title: 'copy1 page',
+//  },
+//  '/copy2/index.html': {
+//    isHome: false,
+//    title: 'copy2 page',
+//  },
+//};
 
 //CSSとJSファイルに更新パラメータを追加
 const htmlPlugin = () => {
@@ -105,7 +105,10 @@ const htmlPlugin = () => {
   }
 }
 
-export default defineConfig({
+//sitedata.jsonの読み込み
+const siteData = require('./sitedata.json');
+
+export default defineConfig(({ command }) => ({
   server: {
     host: true //IPアドレスを有効化
   },
@@ -145,11 +148,16 @@ export default defineConfig({
     handlebars({
       //テンプレートの格納ディレクトリを指定
       partialDirectory: resolve(__dirname, './src/html/parts'),
-      //各ページ情報の読み込み
-      context(pagePath) {
-        return pageData[pagePath];
-      },
+      //各ページ情報の読み込み（json読み込み）
+      context: (pagePath) => {
+        return {
+          envUrl: command === 'dev' ? 'http:localhost' : 'https://comic-school.jp/template_test',
+          siteName: siteData.siteName,
+          siteUrl: siteData.siteUrl,
+          pageMeta: siteData.pageMeta[pagePath]
+        }
+      }
     }),
     htmlPlugin()
   ],
-});
+}));

@@ -4,16 +4,16 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>{{title}}</title>
+  <title>{{pageMeta.title}}</title>
   <meta name="description" content="">
 
   <!-- OGP -->
-  <meta property="og:url" content="https://comic-school.jp/test/git_test/index.html">
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="git_test">
-  <meta property="og:description" content="harumiharutakaのtestページ">
-  <meta property="og:site_name" content="comic-school">
-  <meta property="og:image" content="https://comic-school.jp/test/git_test/img/no-image.jpg">
+  <meta property="og:url" content="{{envUrl}}{{pageMeta.path}}">
+  <meta property="og:type" content="{{pageMeta.type}}">
+  <meta property="og:title" content="{{pageMeta.title}}">
+  <meta property="og:description" content="{{pageMeta.description}}">
+  <meta property="og:site_name" content="{{siteName}}">
+  <meta property="og:image" content="{{envUrl}}{{pageMeta.ogpImage}}">
   
   <!-- ファビコン -->
   <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
