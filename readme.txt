@@ -1,33 +1,18 @@
 /*********************************
-    メモ（構築者用）
+    環境構築方法（作業者用）
 *********************************/
 
-※既存のプロジェクトにviteを入れる
-「npm init -y」
-「npm install -D vite」
-「vite.config.js」をコピー
-「package.json」の「"scripts"」に下記記述を追加
+1.Gitからプロジェクトをクローンする
+2.「npm init -y」と入力し「package.json」を作成
+3.「npm install -D vite sass postcss autoprefixer postcss-sort-media-queries css-declaration-sorter @fullhuman/postcss-purgecss postcss-normalize-charset vite-plugin-handlebars js-beautify」と入力しプラグインを一括インストール
+4.「package.json」の「"scripts"」に下記記述を追加
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build && html-beautify dist/**/*.html",
     "preview": "vite preview"
-「npm install -D sass」
-「npm install -D postcss」
-「postcss.config.cjs」をコピー
-「npm install -D autoprefixer」
-「.browserslistrc」をコピー
-「npm install -D postcss-sort-media-queries」
-「npm install -D css-declaration-sorter」
-「npm install -D @fullhuman/postcss-purgecss」
-「npm install -D postcss-normalize-charset」
-「npm install -D vite-plugin-handlebars」
-「npm install -D js-beautify」
-「.jsbeautifyrc」をコピー
+5.「npm run dev」と入力するとプレビューサーバのパスが生成される
+6.「npm run build」と入力すると「dist」ディレクトリにビルドされる
 
-「npm install -D vite sass postcss autoprefixer postcss-sort-media-queries css-declaration-sorter @fullhuman/postcss-purgecss postcss-normalize-charset vite-plugin-handlebars js-beautify」
 
-「npm run dev」
-
-「npm run build」
 
 /*********************************
     ディレクトリ構成
@@ -55,28 +40,27 @@
 　┃　　┃　　┗━ style.scss
 　┃　　┣━ js
 　┃　　┃　　┣━ module //モジュールに分けたjsを格納
-　┃　　┃　　┗━ script.js
-　┃　　┣━ html //（WordPress化したら削除）
-　┃　　┃　　┣━ parts //テンプレートに分けたhtmlを格納
-　┃　　┃　　┗━ index.html //ビルド前のhtmlを格納
+　┃　　┃　　┃　　┗━ xxx.js
+　┃　　┃　　┃　　　　　：
+　┃　　┃　　┗━ main.js
+　┃　　┣━ publicl //Viteの変換対象外のディレクトリ、中身がそのままコピーされる
+　┃　　┃　　┗━ assets
+　┃　　┃　　 　　┣━ js //プラグインを入れる際はこちらに格納
+　┃　　┃　　 　　┣━ img //画像を格納
+　┃　　┃　　 　　┗━ favicon //ファビコンを格納
+　┃　　┣━ parts //テンプレートに分けたhtmlを格納
+　┃　　┃　　┣━ header.html //ヘッダー
+　┃　　┃　　┗━ footer.html //フッター
 　┃　　┃　　 　　：
-　┃　　┣━ (php) //（WordPress時に使用）
-　┃　　┃　　┣━ parts //テンプレートに分けたphpを格納
-　┃　　┃　　┗━ front-page.php //phpを格納
-　┃　　┃　　 　　：
-　┃　　┗━ publicl //Viteの変換対象外のディレクトリ、中身がそのままコピーされる
-　┃　　 　　┗━ assets
-　┃　　 　　 　　┣━ js //プラグインを入れる際はこちらに格納
-　┃　　 　　 　　┣━ img //画像を格納
-　┃　　 　　 　　┗━ favicon //ファビコンを格納
+　┃　　┗━ index.html //ビルド前のhtmlを格納
+　┃　　 　　：
 　┗━ dist //ビルド後のファイル（編集不可）
-　 　　┣━ assets //
+　 　　┣━ assets
 　 　　┃　　┣━ css
 　 　　┃　　┣━ js
 　 　　┃　　┣━ img
 　 　　┃　　┗━ favicon
-　 　　┣━ (parts) //（WordPress時に使用）
-　 　　┗━ index.html(php)
+　 　　┗━ index.html
 　 　　 　　：
 
 
@@ -88,7 +72,7 @@
 /* 共通ルール */
 
 1.PCファーストでコーディングする
-2.Figmaのオートレイアウト対応ヵ所は、余白は極力paddingとgapで記述する
+2.Figmaのオートレイアウト対応ヵ所は、余白はなるべくpaddingとgapで記述する
 3.複数単語は「ハイフンケース（multi-word）」で記載する
 
 /* HTMLルール */
@@ -137,3 +121,37 @@
     &::before {
     }
 }
+
+
+
+/*********************************
+    環境構築方法（構築者用）
+*********************************/
+
+/* Gitからクローンしたプロジェクトにviteを入れる方法 */
+
+参考：https://coding-memo.work/development/1274/
+　　：https://designsupply-web.com/media/programming/7598/
+
+1.「npm init -y」と入力し「package.json」を作成
+2.「npm install -D vite」と入力しviteプラグインをインストール
+3.「vite.config.js」を他のプロジェクトからコピーする
+4.「npm install -D sass」と入力しSassプラグインをインストール
+5.「npm install -D postcss」と入力しPostCSSプラグインをインストール
+6.「postcss.config.cjs」を他のプロジェクトからコピーする
+7.「npm install -D autoprefixer」と入力しベンダープレフィックスを自動付与するプラグインをインストール
+8.「.browserslistrc」を他のプロジェクトからコピーする
+9.「npm install -D postcss-sort-media-queries」と入力しメディアクエリを整理するプラグインをインストール
+10.「npm install -D css-declaration-sorter」と入力しCSSプロパティをソートするプラグインをインストール
+11.「npm install -D @fullhuman/postcss-purgecss」と入力し未使用のスタイルを削除するプラグインをインストール
+12.「npm install -D postcss-normalize-charset」と入力し先頭にcharset追加するプラグインをインストール
+13.「npm install -D vite-plugin-handlebars」と入力しHTMLをハンドルバー化するプラグインをインストール
+14.「npm install -D js-beautify」と入力しビルドしたHTMLを整形するプラグインをインストール
+15.「.jsbeautifyrc」を他のプロジェクトからコピーする
+17.「sitedata.json」を他のプロジェクトからコピーし内容を編集する
+18.「package.json」の「"scripts"」に下記記述を追加
+    "dev": "vite",
+    "build": "vite build && html-beautify dist/**/*.html",
+    "preview": "vite preview"
+19.「npm run dev」と入力するとプレビューサーバのパスが生成される
+20.「npm run build」と入力すると「dist」ディレクトリにビルドされる
