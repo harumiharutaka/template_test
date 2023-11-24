@@ -9,7 +9,7 @@
     "dev": "vite",
     "build": "vite build && html-beautify dist/**/*.html",
     "preview": "vite preview"
-5.「npm run dev」と入力するとプレビューサーバのパスが生成される
+5.「npm run dev」と入力するとプレビューサーバのパスが表示される
 6.「npm run build」と入力すると「dist」ディレクトリにビルドされる
 
 
@@ -153,5 +153,5 @@
     "dev": "vite",
     "build": "vite build && html-beautify dist/**/*.html",
     "preview": "vite preview"
-19.「npm run dev」と入力するとプレビューサーバのパスが生成される
+19.「npm run dev」と入力するとプレビューサーバのパスが表示される
 20.「npm run build」と入力すると「dist」ディレクトリにビルドされる

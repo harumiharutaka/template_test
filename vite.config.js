@@ -62,22 +62,6 @@ for (let i = 0; i < files.length; i++) {
   }
 */
 
-//HTML上で出し分けたい各ページごとの情報
-//const pageData = {
-//  '/index.html': {
-//    isHome: true,
-//    title: 'top page',
-//  },
-//  '/copy1.html': {
-//    isHome: false,
-//    title: 'copy1 page',
-//  },
-//  '/copy2/index.html': {
-//    isHome: false,
-//    title: 'copy2 page',
-//  },
-//};
-
 //CSSとJSファイルに更新パラメータを追加
 const htmlPlugin = () => {
   return {
@@ -151,7 +135,7 @@ export default defineConfig(({ command }) => ({
       //各ページ情報の読み込み（json読み込み）
       context: (pagePath) => {
         return {
-          envUrl: command === 'dev' ? 'http:localhost' : 'https://comic-school.jp/template_test',
+          envUrl: command === 'dev' ? 'http:localhost' : 'https://template_test.com',
           siteName: siteData.siteName,
           siteUrl: siteData.siteUrl,
           pageMeta: siteData.pageMeta[pagePath]
