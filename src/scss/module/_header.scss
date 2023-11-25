@@ -24,16 +24,15 @@
 .header__inner{
     display: flex;
     justify-content: space-between;
+    align-items: center;
     position: relative;
     width: 100%;
     max-width: g.$content_width;
+    padding: 0 10px;
 }
 
 .header__title{
-    line-height: 1;
-}
-
-.header__title-link{
+    line-height: g.$line-height_same;
 }
 
 .header__title-img{
@@ -42,12 +41,17 @@
 
     &:hover,&:active,&:focus {
         opacity: 0.6;
+        transition: 0.1s;
+    }
+
+    @include g.media(header-sp){
+        height: 20px;
     }
 }
 
 .header__hamburger{
 
-    @include g.media(pc){
+    @include g.media(header-pc){
         display: none;
     }
 }
