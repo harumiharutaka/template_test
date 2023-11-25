@@ -7,7 +7,7 @@
       "name": "top",
       "title": "top",
       "description": "top",
-      "ogpImage": "/public/images/image_16-9.png",
+      "ogpImage": "/assets/img/image_16-9.png",
       "type": "website",
       "path": "/"
     },
@@ -16,7 +16,7 @@
       "name": "copy1",
       "title": "copy1",
       "description": "copy1",
-      "ogpImage": "/public/images/image_16-9.png",
+      "ogpImage": "/assets/img/image_16-9.png",
       "type": "article",
       "path": "/copy1.html"
     },
@@ -25,7 +25,7 @@
       "name": "copy2",
       "title": "copy2",
       "description": "copy2",
-      "ogpImage": "/public/images/image_16-9.png",
+      "ogpImage": "/assets/img/image_16-9.png",
       "type": "article",
       "path": "/copy2/index.html"
     }

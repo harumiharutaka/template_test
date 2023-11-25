@@ -6,16 +6,16 @@
 
 /* html */
 html{
-    font-size: 100%;
     height: 100%;
+    font-size: 100%;
 }
 
 body{
-    @include g.text-style(body_m);
-    color: g.$s-color_text_body;
-    height: 100%;
     display: flex;
     flex-direction: column;
+    height: 100%;
+    color: g.$s-color_text_body;
+    @include g.text-style(body_m);
 }
 
 img{
@@ -24,9 +24,9 @@ img{
 
 /* wrapper */
 .wrapper{
+    position: relative;
     flex: 1;
     padding-top: g.$header-height_pc;
-    position: relative;
 
     @include g.media(header-sp){
         padding-top: g.$header-height_sp;
