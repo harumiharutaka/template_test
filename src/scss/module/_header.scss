@@ -5,37 +5,43 @@
 *********************************/
 
 .header{
+    display: flex;
+    justify-content: center;   
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    height: g.$header_height;
+    height: g.$header-height_pc;
     z-index: g.$z-index_header;
-    background-color: rgba(g.$color_white,0.95);
-    border-bottom: 1px solid g.$color_grey_light;
-    box-shadow: 0 2px 8px 0 rgba(g.$color_pure-black,0.1);
+    background-color: g.$p-color_opacity_white_095;
+    box-shadow: g.$elevation_style1;
+
+    @include g.media(header-sp){
+        height: g.$header-height_sp;
+    }
 }
 
 .header__inner{
-    position: relative;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    position: relative;
+    width: 100%;
     max-width: g.$content_width;
-    height: 100%;
-    margin: 0 auto;
-    padding: 0 10px;
 }
 
 .header__title{
+    line-height: 1;
 }
 
 .header__title-link{
-    font-size: g.$font-size_lg;
-    font-weight: bold;
+}
 
-    &:hover,&:focus {
-        opacity: 0.8;
+.header__title-img{
+    height: 24px;
+    width: auto;
+
+    &:hover,&:active,&:focus {
+        opacity: 0.6;
     }
 }
 
@@ -49,8 +55,8 @@
 .header__hamburger-button{
     position: relative;
     display: block;
-    width: calc(g.$header_height * 0.8);
-    height: calc(g.$header_height * 0.8);
+    width: calc(g.$header-height_sp * 0.8);
+    height: calc(g.$header-height_sp * 0.8);
     cursor: pointer;
 
     &--active{
@@ -82,7 +88,7 @@
     width: 60%;
     height: 2px;
     left: calc((100% - 60%) / 2);
-    background: g.$color_black_light;
+    background: g.$p-color_grey_900;
     border-radius: 100px;
     transition: 0.5s;
 

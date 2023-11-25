@@ -82,7 +82,7 @@
     white-space: nowrap;
     cursor: pointer;
 
-    &:hover,&:focus{
+    &:hover,&:active,&:focus{
         border-bottom-color: g.$color_grey_dark;
     }
 

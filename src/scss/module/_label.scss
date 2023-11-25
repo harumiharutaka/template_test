@@ -23,7 +23,7 @@
         transition: 0.5s;
         cursor: pointer;
 
-        &:hover,&:focus{ 
+        &:hover,&:active,&:focus{ 
             background-color: g.$color_white;
             border-color: currentColor;
             color: g.$color_grey_dark;

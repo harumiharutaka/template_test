@@ -32,7 +32,7 @@
 .cta-area__link{
     color: g.$color_link-blue;
 
-    &:hover,&:focus {
+    &:hover,&:active,&:focus {
         opacity: 0.8;
     }
 

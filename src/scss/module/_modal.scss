@@ -61,7 +61,7 @@
         transform: translateY(-50%) translateX(-50%); 
     }
 
-    &:hover,&:focus{ 
+    &:hover,&:active,&:focus{ 
         background-color: g.$color_grey_light;
         border-color: currentColor;
         color: g.$color_black_light;

@@ -15,7 +15,7 @@
         display: block;
         transition: 0.5s;
 
-        &:hover,&:focus{ 
+        &:hover,&:active,&:focus{ 
             opacity: 0.8;
 
             .card__title,.card__text{

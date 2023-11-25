@@ -34,7 +34,7 @@
         transform: translateY(-45%); 
     }
 
-    &:hover,&:focus{ 
+    &:hover,&:active,&:focus{ 
         background-color: g.$color_grey;
         color: g.$color_white;
     }

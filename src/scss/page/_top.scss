@@ -35,7 +35,7 @@
         font-weight: bold;
         transition: 0.5s;
 
-        &:hover,&:focus{ 
+        &:hover,&:active,&:focus{ 
             background-color: g.$color_grey;
             color: g.$color_white;
         }

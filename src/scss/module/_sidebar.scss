@@ -53,7 +53,7 @@
 
 .sidebar__link{
 
-    &:hover,&:focus {
+    &:hover,&:active,&:focus {
         opacity: 0.8;
     }
 }

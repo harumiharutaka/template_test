@@ -41,7 +41,7 @@
     border: 1px solid transparent;
     color: g.$color_white;
 
-    &:hover,&:focus{
+    &:hover,&:active,&:focus{
         background-color: #dddddd;
         border-color: g.$color_grey;
         color: g.$color_grey;

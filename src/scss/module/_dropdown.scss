@@ -37,7 +37,7 @@
     transition: 0.5s;
     cursor: pointer;
 
-    &:hover,&:focus{ 
+    &:hover,&:active,&:focus{ 
         opacity: 0.8;
     }
 
@@ -94,7 +94,7 @@
     transition: 0.5s;
     cursor: pointer;
 
-    &:hover,&:focus{
+    &:hover,&:active,&:focus{
         background-color: g.$color_grey;
         color: g.$color_white;
     }
@@ -154,7 +154,7 @@
     transition: 0.5s;
     cursor: pointer;
 
-    &:hover,&:focus{
+    &:hover,&:active,&:focus{
         background-color: g.$color_grey;
         color: g.$color_white;
     }

@@ -42,7 +42,7 @@
 
 .posts__title{
 
-    &:hover,&:focus{ 
+    &:hover,&:active,&:focus{ 
         opacity: 0.8;
         text-decoration: underline;
     }
