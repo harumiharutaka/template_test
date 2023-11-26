@@ -33,10 +33,12 @@
 
 .footer__left-column{
     display: flex;
+    align-items: flex-start;
     gap: 20px;
 
     @include g.media(sp){
         flex-direction: column;
+        align-items: stretch;
     }
 }
 

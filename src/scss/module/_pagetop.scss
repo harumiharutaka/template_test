@@ -13,18 +13,18 @@
     bottom: 20px;
     width: 40px;
     height: 40px;
-    background-color: g.$p-color_opacity_black_03;
+    background-color: g.$p-color_black;
     border-radius: 100px;
     z-index: g.$z-index_pagetop;
     opacity: 0;
     transition: opacity 0.1s , background-color 0.1s;
 
     &:hover,&:active,&:focus{
-        background-color: g.$p-color_opacity_black_06;
+        opacity: 0.6;
     }
 
     &--show{
-        opacity: 1;
+        opacity: 0.3;
     }
 }
 
