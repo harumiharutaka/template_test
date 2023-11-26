@@ -5,23 +5,23 @@
 *********************************/
 
 .page-visual{
-    background: linear-gradient(#ffffff,#eeeeee);;
+    display: flex;
+    justify-content: center;   
+    width: 100%; 
+    height: 200px;
+    background-color: g.$p-color_grey_50;
 }
 
 .page-visual__inner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
     max-width: g.$content_width;
-    margin: 0 auto;
-    padding: 40px 0;
 }
 
 .page-visual__heading{
-    padding: 40px 20px;
-    text-align: center;
-
-    &--left{
-        
-        @include g.media(pc){
-            margin-right:  calc(60px + g.$sidebar_width);
-        }
-    }
+    font-size: g.$font-size_xxxxxl;
+    line-height: g.$line-height_s;
+    font-weight: g.$font-weight_m;
 }

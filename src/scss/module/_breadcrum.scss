@@ -16,14 +16,11 @@
 .breadcrum{
     span a{
         color: g.$s-color_menu-link_normal;
+        text-decoration: none;
         transition: 0.1s;
     
-        &:hover,&:active,&:focus {
+        &:hover,&:active,&:focus{
             color: g.$s-color_menu-link_hover;
-        }
-
-        &:visited {
-            color: g.$s-color_menu-link_normal;
         }
     }
     
@@ -33,5 +30,5 @@
 }
 
 .breadcrum__partition{
-    font-size: g.$font-size_xxs;
+    font-size: g.$font-size_xs;
 }

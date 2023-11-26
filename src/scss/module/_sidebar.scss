@@ -5,55 +5,46 @@
 *********************************/
 
 .sidebar{
-    display: none;
-    //position: absolute;
-    position: fixed; //スクロールスナップ用スタイル
-    top: calc(g.$header_height + 40px);
-    right: max(20px, ( (100% - g.$content_width) / 2) + 20px);
-    width: g.$sidebar_width;
-    max-height: calc(100vh - (g.$header_height + 40px + 80px));
-    background-color: g.$color_white;
-    border: 1px solid g.$color_grey_light;
-    border-radius: 4px;
-    box-shadow: 0 2px 8px 0 rgba(g.$color_pure-black,0.1);
-    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
 
-    @include g.media(pc){
-        display: block;
+    &--2column{
+        width: 200px; 
     }
-}
 
-.sidebar__inner{
-    padding: 20px;
-
-    >*:first-child{
-        margin-top: 0;
+    &--3column-left{
+        width: 180px; 
     }
-}
 
-.sidebar__link-wrapper{
-    
-    &--heading{
-        margin: 15px 0 5px;
-    
-        .sidebar__link{
-            display: inline-block;
-            font-weight: bold;
-    
-            &::after{
-                content: "";
-                display: block;
-                height: 1px;
-                width: 6rem;
-                background-color: g.$color_black_light;
-            }
+    &--3column-right{
+        width: 160px; 
+    }
+
+    @include g.media(sp){
+        width: 100%;
+
+        &--2column{
+            order: 2;
         }
-    }
+    
+        &--3column-left{
+            order: 2;
+        }
+    
+        &--3column-right{
+            order: 3;
+        }
+    } 
 }
 
-.sidebar__link{
-
-    &:hover,&:active,&:focus {
-        opacity: 0.8;
-    }
+.sidebar-box{
+    display: flex;
+    flex-direction: column;   
+    width: 100%; 
+    background-color: g.$s-color_background_primary;
+    border: 1px solid g.$p-color_grey_200;
+    border-radius: 4px;
+    padding: 20px;
+    gap: 20px;
 }

@@ -5,31 +5,30 @@
 *********************************/
 
 .pagetop{
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: fixed;
-    right: max(40px, ( (100% - g.$content_width) / 2) + 40px);
+    right: max(40px, ( (100% - g.$content_width) / 2) - 40px);
     bottom: 20px;
     width: 40px;
     height: 40px;
-    background-color: g.$color_grey_dark;
+    background-color: g.$p-color_opacity_black_03;
     border-radius: 100px;
-    box-shadow: 0 1px 4px 0 rgba(g.$color_pure-black,0.1);
     z-index: g.$z-index_pagetop;
     opacity: 0;
-    transition: opacity 0.1s;
+    transition: opacity 0.1s , background-color 0.1s;
 
-    &::after{
-        font-family: 'Font Awesome 6 Free';
-        font-weight: 900;
-        content: "\f106";  
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translateY(-50%) translateX(-50%); 
-        color: g.$color_white;
+    &:hover,&:active,&:focus{
+        background-color: g.$p-color_opacity_black_06;
     }
 
     &--show{
-        opacity: 0.6;
+        opacity: 1;
     }
+}
+
+.pagetop__icon{
+    color: g.$p-color_white;
+    font-size: g.$font-size_xl;
 }

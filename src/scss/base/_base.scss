@@ -27,11 +27,11 @@ a{
     text-decoration: underline;
     transition: 0.1s;
 
-    &:where(:visited) {
+    &:where(:visited){
         color: g.$s-color_link_visited;
     }
 
-    &:where(:hover,:active,:focus) {
+    &:where(:hover,:active,:focus){
         color: g.$s-color_link_hover;
     }
 }

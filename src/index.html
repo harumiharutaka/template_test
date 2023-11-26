@@ -91,6 +91,14 @@
 
   <div class="wrapper">
 
+    <div class="page-visual">
+      <div class="page-visual__inner">
+        <div class="page-visual__heading page-visual__heading--left">
+          <h2 class="page-visual-heading">{{pageMeta.title}}</h2>
+        </div>
+      </div>
+    </div><!-- /.page-visual -->
+
     <div class="container">
       <div class="container__inner">
 
@@ -99,31 +107,69 @@
           <div class="breadcrum">
             <span><a href="">Top</a></span>
             <i class="breadcrum__partition fa-solid fa-angle-right"></i>
-            <span><a href="">Page</a></span>
-            <i class="breadcrum__partition fa-solid fa-angle-right"></i>
-            <span><span class="current-item">Page</span></span>
+            <span><span class="current-item">{{pageMeta.title}}</span></span>
           </div>
 
         </div>
 
         <div class="container__column">
 
-          <aside>
-            サイドバー
-          </aside>
+          <aside class="sidebar sidebar--2column">
+            
+            <div class="sidebar-box">
+              <p>サイドバー</p>
+              <p>サイドバー</p>
+            </div><!-- /.sidebar-box -->
+
+            <div class="sidebar-box">
+              <p>サイドバー</p>
+              <p>サイドバー</p>
+            </div><!-- /.sidebar-box -->
+
+          </aside><!-- /.sidebar -->
 
           <main class="content">
-            <div class="content__inner content__inner--column-left">
-              <artcile class="content__box">
-                コンテンツ<br>
-                <a href="">リンクテキスト</a>
-              </artcile>
-            </div>
+
+            <artcile class="content-box">
+              <div class="content-box__inner">
+                <div class="content-box__header">
+                  <p>コンテンツheader</p>
+                </div>
+                <div class="content-box__body">
+                  <p>コンテンツbody</p>
+                </div>
+                <div class="content-box__footer">
+                  <p>コンテンツfooter</p>
+                </div>
+              </div>
+            </artcile><!-- /.content-box -->
+
+            <artcile class="content-box">
+              <div class="content-box__inner">
+                <div class="content-box__header">
+                  <p>コンテンツheader</p>
+                </div>
+                <div class="content-box__body">
+                  <p>コンテンツbody</p>
+                </div>
+                <div class="content-box__footer">
+                  <p>コンテンツfooter</p>
+                </div>
+              </div>
+            </artcile><!-- /.content-box -->
+
           </main><!-- /.content -->
           
         </div> 
         
         <div class="container__cta-area">
+
+          <div class="cta-area">
+            <p class="cta-area__title">気軽にお問い合わせください</p>
+            <hr class="cta-area__divider">
+            <p class="cta-area__text">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+            <a class="cta-area__link" href="">問い合わせする</a>
+          </div><!-- /.cta-area -->
           
         </div> 
 
@@ -196,9 +242,6 @@
             <a href="">
               <img class="footer__banner-img" src="assets/img/image_banner.png" alt="バナー" width="234" height="60">
             </a>
-            <a href="">
-              <img class="footer__banner-img" src="assets/img/image_banner.png" alt="バナー" width="234" height="60">
-            </a>
           </div>
 
         </div>
@@ -212,7 +255,7 @@
     </div>
   </footer><!-- /.footer -->
 
-  <button class="pagetop js_pagetop"></button>
+  <button class="pagetop js_pagetop"><i class="pagetop__icon fa-solid fa-angle-up"></i></button>
 
   <div class="drawer-overlay js_drawer-overlay"></div>
 

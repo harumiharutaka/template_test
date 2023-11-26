@@ -1,29 +1,29 @@
 // ヘッダー
 @forward 'header';
 
-// フッター
-@forward 'footer';
-
-// パンくずリスト
-@forward 'breadcrum';
-
-// コンテンツ
-//@forward 'content';
+// ドロップダウン
+//@forward 'dropdown';
 
 // ドロワー
 //@forward 'drawer';
 
+// フッター
+@forward 'footer';
+
 // ページトップ
-//@forward 'pagetop';
+@forward 'pagetop';
 
-// サイドバー
-//@forward 'sidebar';
-
-// ローディング
-//@forward 'loading';
+// パンくずリスト
+@forward 'breadcrum';
 
 // ページビジュアル
-//@forward 'page-visual';
+@forward 'page-visual';
+
+// コンテンツ
+@forward 'content';
+
+// サイドバー
+@forward 'sidebar';
 
 // セクション
 //@forward 'section';
@@ -49,11 +49,8 @@
 // ページャー
 //@forward 'pager';
 
-// タブ
-//@forward 'tab';
-
 // CTAエリア
-//@forward 'cta-area';
+@forward 'cta-area';
 
 // 料金表
 //@forward 'price-box';
@@ -61,20 +58,23 @@
 // FAQ
 //@forward 'faq';
 
-// アコーディオン
-//@forward 'accordion';
-
 // ポストリスト
 //@forward 'posts';
 
 // リスト
 //@forward 'list';
 
+// タブ
+//@forward 'tab';
+
+// アコーディオン
+//@forward 'accordion';
+
 // モーダル
 //@forward 'modal';
 
-// ドロップダウン
-//@forward 'dropdown';
+// ローディング
+//@forward 'loading';
 
 // スライドショー
 //@forward 'slideshow';
