@@ -38,10 +38,10 @@
 .header__title-img{
     height: 24px;
     width: auto;
+    transition: 0.1s;
 
     &:hover,&:active,&:focus {
         opacity: 0.6;
-        transition: 0.1s;
     }
 
     @include g.media(header-sp){

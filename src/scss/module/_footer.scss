@@ -66,11 +66,12 @@
 
 .footer__sns-logo{
     width: 36px;
+    min-width: 36px;
     height: 36px;
+    transition: 0.1s;
     
     &:hover,&:active,&:focus {
         opacity: 0.6;
-        transition: 0.1s;
     }
 }
 
@@ -108,12 +109,13 @@
 }
 
 .footer__nav-link{
+    color: g.$s-color_menu-link_normal;
     font-size: g.$font-size_s;
     line-height: g.$line-height_s;
+    transition: 0.1s;
 
     &:hover,&:active,&:focus {
         color: g.$s-color_menu-link_hover;
-        transition: 0.1s;
     }
 }
 
@@ -129,10 +131,10 @@
 }
 
 .footer__banner-img{
+    transition: 0.1s;
 
     &:hover,&:active,&:focus {
         opacity: 0.6;
-        transition: 0.1s;
     }
 }
 

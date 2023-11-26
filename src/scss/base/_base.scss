@@ -22,6 +22,19 @@ img{
     max-width: 100%;
 }
 
+p{
+    color: g.$s-color_link_normal;
+    transition: 0.1s;
+
+    &:hover,&:active,&:focus {
+        color: g.$s-color_link_hover;
+    }
+
+    &:visited {
+        color: g.$s-color_link_visited;
+    }
+}
+
 /* wrapper */
 .wrapper{
     position: relative;

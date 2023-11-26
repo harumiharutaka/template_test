@@ -5,22 +5,33 @@
 *********************************/
 
 .container{
-    
-    &--bg-gray{
-        background-color: g.$color_light;
-    }
+    display: flex;
+    justify-content: center;   
+    width: 100%; 
+    background-color: g.$s-color_background_primary;
 }
 
 .container__inner{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
     max-width: g.$content_width;
-    margin: 0 auto;
-    padding: 40px 0;
+    padding: 20px 20px 40px 20px;
+}
 
-    >*:last-child{
-        margin-bottom: 0;
+.container__breadcrum{
+    padding-bottom: 20px;
+}
+
+.container__column{
+    display: flex;
+    gap: 40px;
+
+    @include g.media(sp){
+        flex-direction: column;
     }
 }
 
-.container__content{
-    margin-bottom: 40px;
+.container__cta-area{
+    padding-top: 40px;
 }

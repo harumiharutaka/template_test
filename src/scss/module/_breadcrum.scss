@@ -1,0 +1,32 @@
+@use '../global' as g;
+
+/*********************************
+    パンくずリスト
+*********************************/
+
+.breadcrum{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    font-size: g.$font-size_xs;
+    line-height: g.$line-height_s;
+}
+
+.breadcrum{
+    span a{
+        color: g.$s-color_menu-link_normal;
+        transition: 0.1s;
+    
+        &:hover,&:active,&:focus {
+            color: g.$s-color_menu-link_hover;
+        }
+    }
+    
+    span .current-item{
+        color: g.$p-color_grey_500;
+    }
+}
+
+.breadcrum__partition{
+    font-size: g.$font-size_xxs;
+}
