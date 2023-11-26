@@ -24,14 +24,15 @@ img{
 
 a{
     color: g.$s-color_link_normal;
+    text-decoration: underline;
     transition: 0.1s;
 
-    &:hover,&:active,&:focus {
-        color: g.$s-color_link_hover;
+    &:where(:visited) {
+        color: g.$s-color_link_visited;
     }
 
-    &:visited {
-        color: g.$s-color_link_visited;
+    &:where(:hover,:active,:focus) {
+        color: g.$s-color_link_hover;
     }
 }
 

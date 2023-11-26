@@ -73,9 +73,6 @@
     &:hover,&:active,&:focus {
         opacity: 0.6;
     }
-
-    &:visited {
-    }
 }
 
 .footer__right-column{
@@ -115,14 +112,11 @@
     color: g.$s-color_menu-link_normal;
     font-size: g.$font-size_s;
     line-height: g.$line-height_s;
+    text-decoration: none;
     transition: 0.1s;
 
     &:hover,&:active,&:focus {
         color: g.$s-color_menu-link_hover;
-    }
-    
-    &:visited {
-        color: g.$s-color_menu-link_normal;
     }
 }
 
@@ -142,9 +136,6 @@
 
     &:hover,&:active,&:focus {
         opacity: 0.6;
-    }
-    
-    &:visited {
     }
 }
 
