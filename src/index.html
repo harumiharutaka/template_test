@@ -49,11 +49,13 @@
 
   <header class="header">
     <div class="header__inner">
+      
       <div class="header__title">
-        <a href="index.html">
+        <a href="/">
           <img class="header__title-img" src="assets/img/brand-logo.png" alt="BLAND NAME" width="490" height="64">
         </a>
       </div>
+
       <div class="header__hamburger">
         <button class="header__hamburger-button js_header_hamburger-button">
           <span class="header__hamburger-line"></span>
@@ -61,6 +63,58 @@
           <span class="header__hamburger-line"></span>
         </button>
       </div>
+
+      <ul class="dropdown js_dropdown">
+        <li class="dropdown__item">
+          <a href="/" class="dropdown__link">トップ</a>
+        </li>
+        <li class="dropdown__item">
+          <a class="dropdown__link js_dropdown_child_parent">企業情報<i class="dropdown__link-icon fa-solid fa-angle-down"></i></a>
+          <ul class="dropdown__child-wrapper">
+            <li class="dropdown__child-item">
+              <a href="" class="dropdown__child-link">企業概要</a>
+            </li>
+            <li class="dropdown__child-item">
+              <a href="" class="dropdown__child-link">沿革</a>
+            </li>
+            <li class="dropdown__child-item">
+              <a href="" class="dropdown__child-link">アクセス</a>
+            </li>
+          </ul>
+        </li>
+        <li class="dropdown__item">
+          <a class="dropdown__link js_dropdown_child_parent">事業紹介<i class="dropdown__link-icon fa-solid fa-angle-down"></i></a>
+          <ul class="dropdown__child-wrapper">
+            <li class="dropdown__child-item">
+              <a href="" class="dropdown__child-link">事業内容</a>
+            </li>
+            <li class="dropdown__child-item">
+              <a class="dropdown__child-link js_dropdown_grandchild_parent">事業実績<i class="dropdown__child-icon fa-solid fa-angle-right"></i></a>
+              <ul class="dropdown__grandchild-wrapper">
+                <li class="dropdown__grandchild-item">
+                  <a href="" class="dropdown__grandchild-link">事業カテゴリ1</a>
+                </li>
+                <li class="dropdown__grandchild-item">
+                  <a href="" class="dropdown__grandchild-link">事業カテゴリ2</a>
+                </li>
+                <li class="dropdown__grandchild-item">
+                  <a href="" class="dropdown__grandchild-link">事業カテゴリ3</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li class="dropdown__item">
+          <a href="" class="dropdown__link">ニュース</a>
+        </li>
+        <li class="dropdown__item">
+          <a href="" class="dropdown__link">BLOG</a>
+        </li>
+        <li class="dropdown__item">
+          <a href="" class="dropdown__link">お問い合わせ</a>
+        </li>
+      </ul><!-- /.dropdown -->
+
       <!--nav class="drawer js_drawer">
         <ul class="drawer__inner">
           <li class="drawer__link-wrapper">
@@ -86,6 +140,7 @@
           </li>
         </ul>
       </nav--><!-- /.drawer -->
+      
     </div>
   </header><!-- /.header -->
 
@@ -105,7 +160,7 @@
         <div class="container__breadcrum">
           
           <div class="breadcrum">
-            <span><a href="">Top</a></span>
+            <span><a href="/">Top</a></span>
             <i class="breadcrum__partition fa-solid fa-angle-right"></i>
             <span><span class="current-item">{{pageMeta.title}}</span></span>
           </div>
@@ -168,7 +223,7 @@
             <p class="cta-area__title">気軽にお問い合わせください</p>
             <hr class="cta-area__divider">
             <p class="cta-area__text">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
-            <a class="cta-area__link" href="">問い合わせする</a>
+            <a href="" class="cta-area__link">問い合わせする</a>
           </div><!-- /.cta-area -->
           
         </div> 
@@ -213,22 +268,22 @@
 
           <div class="footer__nav">
             <div class="footer__nav-item">
-              <a class="footer__nav-link" href="">サイトポリシー</a>
+              <a href="" class="footer__nav-link">サイトポリシー</a>
             </div>
             <div class="footer__nav-item">
-              <a class="footer__nav-link" href="">プライバシーポリシー</a>
+              <a href="" class="footer__nav-link">プライバシーポリシー</a>
             </div>
             <div class="footer__nav-item">
-              <a class="footer__nav-link" href="">セキュリティポリシー</a>
+              <a href="" class="footer__nav-link">セキュリティポリシー</a>
             </div>
             <div class="footer__nav-item">
-              <a class="footer__nav-link" href="">サイトマップ</a>
+              <a href="" class="footer__nav-link">サイトマップ</a>
             </div>
             <div class="footer__nav-item">
-              <a class="footer__nav-link" href="">お問い合わせ</a>
+              <a href="" class="footer__nav-link">お問い合わせ</a>
             </div>
             <div class="footer__nav-item">
-              <a class="footer__nav-link" href="">コンポーネント一覧</a>
+              <a href="" class="footer__nav-link">コンポーネント一覧</a>
             </div>
           </div>
 

@@ -8,7 +8,7 @@ export function dropdown() {
     dropdowns.forEach(function(dropdown, index) {
     
         // 子メニューの開閉
-        const ParentBtns = dropdown.querySelectorAll('.dropdown__link--parent');
+        const ParentBtns = dropdown.querySelectorAll('.js_dropdown_child_parent');
         ParentBtns.forEach(function(ParentBtn, index) {
     
             ParentBtn.onclick = function(e) {
@@ -50,7 +50,7 @@ export function dropdown() {
             });
     
             // 孫メニューの開閉
-            const ChildParentBtns = dropdown.querySelectorAll('.dropdown__child-link--parent');
+            const ChildParentBtns = dropdown.querySelectorAll('.js_dropdown_grandchild_parent');
             ChildParentBtns.forEach(function(ChildParentBtn, index) {
     
                 ChildParentBtn.parentNode.addEventListener('mouseover', function (event) {
@@ -78,5 +78,19 @@ export function dropdown() {
     
         }
     })
+
+    //ウィンドウリサイズの処理
+    window.addEventListener('resize',function(){
+
+        if (window.matchMedia('(max-width:991.98px)').matches) {
+    
+            const childWrapperActives = document.querySelectorAll('.dropdown__child-wrapper--active');
+            childWrapperActives.forEach(function(childWrapperActive, index) {
+                childWrapperActive.classList.remove('dropdown__child-wrapper--active');
+            });
+    
+        }
+    
+    });
     
 }

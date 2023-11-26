@@ -61,7 +61,7 @@ export function hamburger() {
     //ウィンドウリサイズの処理
     window.addEventListener('resize',function(){
     
-        if (window.matchMedia('(min-width:901px)').matches) {
+        if (window.matchMedia('(min-width:992px)').matches) {
     
             const active = hamburger.classList.contains('header__hamburger-button--active');
     
