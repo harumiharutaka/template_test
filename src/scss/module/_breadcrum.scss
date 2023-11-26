@@ -6,6 +6,7 @@
 
 .breadcrum{
     display: flex;
+    flex-wrap: wrap;
     gap: 10px;
     align-items: center;
     font-size: g.$font-size_xs;
@@ -19,6 +20,10 @@
     
         &:hover,&:active,&:focus {
             color: g.$s-color_menu-link_hover;
+        }
+
+        &:visited {
+            color: g.$s-color_menu-link_normal;
         }
     }
     

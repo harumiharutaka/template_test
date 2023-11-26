@@ -73,6 +73,9 @@
     &:hover,&:active,&:focus {
         opacity: 0.6;
     }
+
+    &:visited {
+    }
 }
 
 .footer__right-column{
@@ -117,6 +120,10 @@
     &:hover,&:active,&:focus {
         color: g.$s-color_menu-link_hover;
     }
+    
+    &:visited {
+        color: g.$s-color_menu-link_normal;
+    }
 }
 
 .footer__banner{
@@ -135,6 +142,9 @@
 
     &:hover,&:active,&:focus {
         opacity: 0.6;
+    }
+    
+    &:visited {
     }
 }
 

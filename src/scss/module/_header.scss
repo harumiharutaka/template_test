@@ -43,6 +43,9 @@
     &:hover,&:active,&:focus {
         opacity: 0.6;
     }
+    
+    &:visited {
+    }
 
     @include g.media(header-sp){
         height: 20px;
