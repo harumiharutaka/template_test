@@ -12,7 +12,7 @@
 
     @include g.media(sp){
         order: 1;
-    }   
+    }
 }
 
 .content-box{
@@ -31,6 +31,10 @@
     max-width: 1000px;
     padding: 40px;
     gap: 40px;
+
+    @include g.media(sp){
+        padding: 40px 20px;
+    }
 }
 
 .content-box__header{
