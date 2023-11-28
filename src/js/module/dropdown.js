@@ -73,7 +73,9 @@ export function dropdown() {
 
                 if (e.key == "Enter") {
 
-                    if (document.activeElement.classList.contains('js_dropdown_link_parent')){
+                    const linkParentActive = focusBtn.classList.contains('js_dropdown_link_parent');
+                    const childParentActive = focusBtn  .classList.contains('js_dropdown_child_parent');
+                    if (linkParentActive){
 
                         const childWrapperActive = focusBtn.nextElementSibling.classList.contains('dropdown__child-wrapper--active');
                         if(!childWrapperActive){
@@ -91,7 +93,7 @@ export function dropdown() {
             
                         }
                     
-                    } else if (document.activeElement.classList.contains('js_dropdown_child_parent')) {
+                    } else if (childParentActive) {
     
                         const grandChildWrapperActive = focusBtn.nextElementSibling.classList.contains('dropdown__grandchild-wrapper--active');
                         if(!grandChildWrapperActive){
@@ -117,27 +119,51 @@ export function dropdown() {
 
             focusBtn.addEventListener('focus', function (e) {
 
-                const childActive = focusBtn.closest('.dropdown__child-wrapper--active');
-                const grandchildActive = focusBtn.closest('.dropdown__grandchild-wrapper--active');
-                const linkParent = this.classList.contains('js_dropdown_link_parent');
-                const childParent = this.classList.contains('js_dropdown_child_parent');
-                if  (!childActive && !linkParent) {
+                const linkParentActive = this.classList.contains('js_dropdown_link_parent');
+                const childParentActive = this.classList.contains('js_dropdown_child_parent');
+                const childActive = this.closest('.dropdown__child-wrapper--active');
+                const grandchildActive = this.closest('.dropdown__grandchild-wrapper--active');
+                if (linkParentActive) {
 
-                    const focusChildActives = dropdown.querySelectorAll('.dropdown__child-wrapper--active');
-                    focusChildActives.forEach(function(focusChildActive, index) {
-                        focusChildActive.classList.remove('dropdown__child-wrapper--active');
+                    const childWrapperActive = this.nextElementSibling.classList.contains('dropdown__child-wrapper--active');
+                    if (!childWrapperActive){
+        
+                        const childWrapperActives = dropdown.querySelectorAll('.dropdown__child-wrapper--active');
+                        childWrapperActives.forEach(function(childWrapperActive, index) {
+                            childWrapperActive.classList.remove('dropdown__child-wrapper--active');
+                        });
+    
+                    }
+
+                } else if  (childParentActive) {
+
+                    const grandchildWrapperActive = this.nextElementSibling.classList.contains('dropdown__grandchild-wrapper--active');
+                    if (!grandchildWrapperActive){
+        
+                        const grandchildWrapperActives = dropdown.querySelectorAll('.dropdown__grandchild-wrapper--active');
+                        grandchildWrapperActives.forEach(function(grandchildWrapperActive, index) {
+                            grandchildWrapperActive.classList.remove('dropdown__grandchild-wrapper--active');
+                        });
+    
+                    }
+
+                } else if  (!childActive) {
+
+                    const childWrapperActives = dropdown.querySelectorAll('.dropdown__child-wrapper--active');
+                    childWrapperActives.forEach(function(childWrapperActive, index) {
+                        childWrapperActive.classList.remove('dropdown__child-wrapper--active');
                     });
             
-                    const focusGrandchildActives = dropdown.querySelectorAll('.dropdown__grandchild-wrapper--active');
-                    focusGrandchildActives.forEach(function(focusGrandchildActive, index) {
-                        focusGrandchildActive.classList.remove('dropdown__grandchild-wrapper--active');
+                    const grandchildWrapperActives = dropdown.querySelectorAll('.dropdown__grandchild-wrapper--active');
+                    grandchildWrapperActives.forEach(function(grandchildWrapperActive, index) {
+                        grandchildWrapperActive.classList.remove('dropdown__grandchild-wrapper--active');
                     });
 
-                } else if (!grandchildActive && !childParent) {
+                } else if (!grandchildActive) {
 
-                    const focusGrandchildActives = dropdown.querySelectorAll('.dropdown__grandchild-wrapper--active');
-                    focusGrandchildActives.forEach(function(focusGrandchildActive, index) {
-                        focusGrandchildActive.classList.remove('dropdown__grandchild-wrapper--active');
+                    const grandchildWrapperActives = dropdown.querySelectorAll('.dropdown__grandchild-wrapper--active');
+                    grandchildWrapperActives.forEach(function(grandchildWrapperActive, index) {
+                        grandchildWrapperActive.classList.remove('dropdown__grandchild-wrapper--active');
                     });
 
                 }
@@ -147,8 +173,6 @@ export function dropdown() {
         });
     
     });
-
-
     
     // ドロップダウン範囲外をクリックで子メニューを閉じる
     document.addEventListener('click', (e) => {
