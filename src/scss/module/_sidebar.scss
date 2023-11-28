@@ -22,17 +22,19 @@
     }
 
     @include g.media(sp){
-        width: 100%;
 
         &--2column{
+            width: 100%;
             order: 2;
         }
     
         &--3column-left{
+            width: 100%;
             order: 2;
         }
     
         &--3column-right{
+            width: 100%;
             order: 3;
         }
     } 
