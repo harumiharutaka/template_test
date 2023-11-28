@@ -7,65 +7,6 @@ export function dropdown() {
     const dropdowns = document.querySelectorAll('.js_dropdown');
     dropdowns.forEach(function(dropdown, index) {
 
-        // フォーカスの処理
-        const FocusBtns = dropdown.querySelectorAll('a');
-        FocusBtns.forEach(function(FocusBtn, index) {
-
-            FocusBtn.addEventListener('focus', function (e) {
-                
-                if (document.activeElement.classList.contains('js_dropdown_link_parent')){
-
-                    const childWrapperActiv = this.nextElementSibling.classList.contains('dropdown__child-wrapper--active');
-                    if(!childWrapperActiv){
-        
-                        const childWrapperActivs = dropdown.querySelectorAll('.dropdown__child-wrapper--active');
-                        childWrapperActivs.forEach(function(childWrapperActiv, index) {
-                            childWrapperActiv.classList.remove('dropdown__child-wrapper--active');
-                        });
-        
-                        this.nextElementSibling.classList.add('dropdown__child-wrapper--active');
-        
-                    }
-                
-                } else if (document.activeElement.classList.contains('js_dropdown_child_parent')) {
-                    
-                    const GrandChildWrapperActiv = this.nextElementSibling.classList.contains('dropdown__grandchild-wrapper--active');
-                    if(!GrandChildWrapperActiv){
-        
-                        const GrandChildWrapperActivs = dropdown.querySelectorAll('.dropdown__grandchild-wrapper--active');
-                        GrandChildWrapperActivs.forEach(function(GrandChildWrapperActiv, index) {
-                            GrandChildWrapperActiv.classList.remove('dropdown__grandchild-wrapper--active');
-                        });
-        
-                        this.nextElementSibling.classList.add('dropdown__grandchild-wrapper--active');
-        
-                    }
-
-                } else if (!document.activeElement.closest('.dropdown__child-wrapper--active')) {
-
-                    const FocusChildActives = dropdown.querySelectorAll('.dropdown__child-wrapper--active');
-                    FocusChildActives.forEach(function(FocusChildActive, index) {
-                        FocusChildActive.classList.remove('dropdown__child-wrapper--active');
-                    });
-
-                    const FocusGrandchildActives = dropdown.querySelectorAll('.dropdown__grandchild-wrapper--active');
-                    FocusGrandchildActives.forEach(function(FocusGrandchildActive, index) {
-                        FocusGrandchildActive.classList.remove('dropdown__grandchild-wrapper--active');
-                    });
-
-                } else if (!document.activeElement.closest('.dropdown__grandchild-wrapper--active')) {
-
-                    const FocusGrandchildActives = dropdown.querySelectorAll('.dropdown__grandchild-wrapper--active');
-                    FocusGrandchildActives.forEach(function(FocusGrandchildActive, index) {
-                        FocusGrandchildActive.classList.remove('dropdown__grandchild-wrapper--active');
-                    });
-
-                }
-                
-            }); 
-
-        });
-    
         // 子メニューの開閉
         const ParentBtns = dropdown.querySelectorAll('.js_dropdown_link_parent');
         ParentBtns.forEach(function(ParentBtn, index) {
@@ -107,21 +48,84 @@ export function dropdown() {
                 }
 
             });
+    
+        });
+        
+        // 孫メニューの開閉
+        const ChildParentBtns = dropdown.querySelectorAll('.js_dropdown_child_parent');
+        ChildParentBtns.forEach(function(ChildParentBtn, index) {
 
-            // 孫メニューの開閉
-            const ChildParentBtns = dropdown.querySelectorAll('.js_dropdown_child_parent');
-            ChildParentBtns.forEach(function(ChildParentBtn, index) {
-    
-                ChildParentBtn.parentNode.addEventListener('mouseover', function (event) {
-                    ChildParentBtn.nextElementSibling.classList.add('dropdown__grandchild-wrapper--active');
-                }, false);
-    
-                ChildParentBtn.parentNode.addEventListener('mouseleave', function (event) {
-                    ChildParentBtn.nextElementSibling.classList.remove('dropdown__grandchild-wrapper--active');
-                }, false);
+            ChildParentBtn.parentNode.addEventListener('mouseover', function (event) {
+                ChildParentBtn.nextElementSibling.classList.add('dropdown__grandchild-wrapper--active');
+            }, false);
 
-            });
+            ChildParentBtn.parentNode.addEventListener('mouseleave', function (event) {
+                ChildParentBtn.nextElementSibling.classList.remove('dropdown__grandchild-wrapper--active');
+            }, false);
+
+        });
+
+        // フォーカスの処理
+        const FocusBtns = dropdown.querySelectorAll('a');
+        FocusBtns.forEach(function(FocusBtn, index) {
+
+            FocusBtn.addEventListener('focus', function (e) {
+
+                window.setTimeout(function(){
+
+                    if (document.activeElement.classList.contains('js_dropdown_link_parent')){
+
+                        const childWrapperActiv = FocusBtn.nextElementSibling.classList.contains('dropdown__child-wrapper--active');
+                        if(!childWrapperActiv){
+            
+                            const childWrapperActivs = dropdown.querySelectorAll('.dropdown__child-wrapper--active');
+                            childWrapperActivs.forEach(function(childWrapperActiv, index) {
+                                childWrapperActiv.classList.remove('dropdown__child-wrapper--active');
+                            });
+            
+                            FocusBtn.nextElementSibling.classList.add('dropdown__child-wrapper--active');
+            
+                        }
+                    
+                    } else if (document.activeElement.classList.contains('js_dropdown_child_parent')) {
+                        
+                        const GrandChildWrapperActiv = FocusBtn.nextElementSibling.classList.contains('dropdown__grandchild-wrapper--active');
+                        if(!GrandChildWrapperActiv){
+            
+                            const GrandChildWrapperActivs = dropdown.querySelectorAll('.dropdown__grandchild-wrapper--active');
+                            GrandChildWrapperActivs.forEach(function(GrandChildWrapperActiv, index) {
+                                GrandChildWrapperActiv.classList.remove('dropdown__grandchild-wrapper--active');
+                            });
+            
+                            FocusBtn.nextElementSibling.classList.add('dropdown__grandchild-wrapper--active');
+            
+                        }
     
+                    } else if (!document.activeElement.closest('.dropdown__child-wrapper--active')) {
+    
+                        const FocusChildActives = dropdown.querySelectorAll('.dropdown__child-wrapper--active');
+                        FocusChildActives.forEach(function(FocusChildActive, index) {
+                            FocusChildActive.classList.remove('dropdown__child-wrapper--active');
+                        });
+    
+                        const FocusGrandchildActives = dropdown.querySelectorAll('.dropdown__grandchild-wrapper--active');
+                        FocusGrandchildActives.forEach(function(FocusGrandchildActive, index) {
+                            FocusGrandchildActive.classList.remove('dropdown__grandchild-wrapper--active');
+                        });
+    
+                    } else if (!document.activeElement.closest('.dropdown__grandchild-wrapper--active')) {
+    
+                        const FocusGrandchildActives = dropdown.querySelectorAll('.dropdown__grandchild-wrapper--active');
+                        FocusGrandchildActives.forEach(function(FocusGrandchildActive, index) {
+                            FocusGrandchildActive.classList.remove('dropdown__grandchild-wrapper--active');
+                        });
+    
+                    }
+
+                }, 100);
+            
+            }); 
+
         });
     
     });
