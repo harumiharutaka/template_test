@@ -35,14 +35,17 @@
     line-height: g.$line-height_same;
 }
 
-.header__title-img{
-    height: 24px;
-    width: auto;
+.header__title-link{
     transition: 0.1s;
-
+    
     &:hover,&:active,&:focus{
         opacity: 0.6;
     }
+}
+
+.header__title-img{
+    height: 24px;
+    width: auto;
 
     @include g.media(header-sp){
         height: 20px;

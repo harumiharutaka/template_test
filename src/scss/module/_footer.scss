@@ -66,15 +66,18 @@
     }
 }
 
+.footer__sns-link{
+    transition: 0.1s;
+
+    &:hover,&:active,&:focus{
+        opacity: 0.6;
+    }
+}
+
 .footer__sns-logo{
     width: 36px;
     min-width: 36px;
     height: 36px;
-    transition: 0.1s;
-    
-    &:hover,&:active,&:focus{
-        opacity: 0.6;
-    }
 }
 
 .footer__right-column{
@@ -133,12 +136,15 @@
     }   
 }
 
-.footer__banner-img{
+.footer__banner-link{
     transition: 0.1s;
-
+    
     &:hover,&:active,&:focus{
         opacity: 0.6;
     }
+}
+
+.footer__banner-img{
 }
 
 .footer__copyright{

@@ -51,7 +51,7 @@
     <div class="header__inner">
       
       <div class="header__title">
-        <a href="/">
+        <a href="/" class="header__title-link">
           <img class="header__title-img" src="assets/img/brand-logo.png" alt="BLAND NAME" width="490" height="64">
         </a>
       </div>
@@ -69,7 +69,7 @@
           <a href="/" class="dropdown__link">トップ</a>
         </li>
         <li class="dropdown__item">
-          <a class="dropdown__link js_dropdown_child_parent">企業情報<i class="dropdown__link-icon fa-solid fa-angle-down"></i></a>
+          <a tabindex="0" class="dropdown__link js_dropdown_link_parent">企業情報<i class="dropdown__link-icon fa-solid fa-angle-down"></i></a>
           <ul class="dropdown__child-wrapper">
             <li class="dropdown__child-item">
               <a href="" class="dropdown__child-link">企業概要</a>
@@ -83,13 +83,27 @@
           </ul>
         </li>
         <li class="dropdown__item">
-          <a class="dropdown__link js_dropdown_child_parent">事業紹介<i class="dropdown__link-icon fa-solid fa-angle-down"></i></a>
+          <a tabindex="0" class="dropdown__link js_dropdown_link_parent">事業紹介<i class="dropdown__link-icon fa-solid fa-angle-down"></i></a>
           <ul class="dropdown__child-wrapper">
             <li class="dropdown__child-item">
               <a href="" class="dropdown__child-link">事業内容</a>
             </li>
             <li class="dropdown__child-item">
-              <a class="dropdown__child-link js_dropdown_grandchild_parent">事業実績<i class="dropdown__child-icon fa-solid fa-angle-right"></i></a>
+              <a tabindex="0" class="dropdown__child-link js_dropdown_child_parent">事業実績<i class="dropdown__child-icon fa-solid fa-angle-right"></i></a>
+              <ul class="dropdown__grandchild-wrapper">
+                <li class="dropdown__grandchild-item">
+                  <a href="" class="dropdown__grandchild-link">事業カテゴリ1</a>
+                </li>
+                <li class="dropdown__grandchild-item">
+                  <a href="" class="dropdown__grandchild-link">事業カテゴリ2</a>
+                </li>
+                <li class="dropdown__grandchild-item">
+                  <a href="" class="dropdown__grandchild-link">事業カテゴリ3</a>
+                </li>
+              </ul>
+            </li>
+            <li class="dropdown__child-item">
+              <a tabindex="0" class="dropdown__child-link js_dropdown_child_parent">事業実績<i class="dropdown__child-icon fa-solid fa-angle-right"></i></a>
               <ul class="dropdown__grandchild-wrapper">
                 <li class="dropdown__grandchild-item">
                   <a href="" class="dropdown__grandchild-link">事業カテゴリ1</a>
@@ -245,19 +259,19 @@
           </div>
 
           <div class="footer__sns-body">
-            <a href="">
+            <a href="" class="footer__sns-link">
               <img class="footer__sns-logo" src="assets/img/sns_logo_x.svg" alt="Xロゴ" width="36" height="36">
             </a>
-            <a href="">
+            <a href="" class="footer__sns-link">
               <img class="footer__sns-logo" src="assets/img/sns_logo_instagram.svg" alt="Instagramロゴ" width="36" height="36">
             </a>
-            <a href="">
+            <a href="" class="footer__sns-link">
               <img class="footer__sns-logo" src="assets/img/sns_logo_facebook.svg" alt="Facebookロゴ" width="36" height="36">
             </a>
-            <a href="">
+            <a href="" class="footer__sns-link">
               <img class="footer__sns-logo" src="assets/img/sns_logo_youtube.svg" alt="YouTubeロゴ" width="36" height="36">
             </a>
-            <a href="">
+            <a href="" class="footer__sns-link">
               <img class="footer__sns-logo" src="assets/img/sns_logo_line.svg" alt="LINEロゴ" width="36" height="36">
             </a>
           </div>
@@ -288,13 +302,13 @@
           </div>
 
           <div class="footer__banner">
-            <a href="">
+            <a href="" class="footer__banner-link">
               <img class="footer__banner-img" src="assets/img/image_banner.png" alt="バナー" width="234" height="60">
             </a>
-            <a href="">
+            <a href="" class="footer__banner-link">
               <img class="footer__banner-img" src="assets/img/image_banner.png" alt="バナー" width="234" height="60">
             </a>
-            <a href="">
+            <a href="" class="footer__banner-link">
               <img class="footer__banner-img" src="assets/img/image_banner.png" alt="バナー" width="234" height="60">
             </a>
           </div>
