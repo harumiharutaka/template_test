@@ -63,59 +63,35 @@ export function dropdown() {
                 childParentBtn.nextElementSibling.classList.remove('dropdown__grandchild-wrapper--active');
             }, false);
 
+            childParentBtn.addEventListener("keydown", (e) => {
+
+                if (e.key == "Enter") {
+
+                    const grandChildWrapperActive = childParentBtn.nextElementSibling.classList.contains('dropdown__grandchild-wrapper--active');
+                    if(!grandChildWrapperActive){
+        
+                        const grandChildWrapperActives = dropdown.querySelectorAll('.dropdown__grandchild-wrapper--active');
+                        grandChildWrapperActives.forEach(function(grandChildWrapperActive, index) {
+                            grandChildWrapperActive.classList.remove('dropdown__grandchild-wrapper--active');
+                        });
+        
+                        childParentBtn.nextElementSibling.classList.add('dropdown__grandchild-wrapper--active');
+        
+                    } else {
+
+                        childParentBtn.nextElementSibling.classList.remove('dropdown__grandchild-wrapper--active');
+        
+                    }
+    
+                }
+
+            });
+
         });
 
         // フォーカスの処理
         const focusBtns = dropdown.querySelectorAll('a');
         focusBtns.forEach(function(focusBtn, index) {
-
-            focusBtn.addEventListener("keydown", (e) => {
-
-                if (e.key == "Enter") {
-
-                    const linkParentActive = focusBtn.classList.contains('js_dropdown_link_parent');
-                    const childParentActive = focusBtn  .classList.contains('js_dropdown_child_parent');
-                    if (linkParentActive){
-
-                        const childWrapperActive = focusBtn.nextElementSibling.classList.contains('dropdown__child-wrapper--active');
-                        if(!childWrapperActive){
-            
-                            const childWrapperActives = dropdown.querySelectorAll('.dropdown__child-wrapper--active');
-                            childWrapperActives.forEach(function(childWrapperActive, index) {
-                                childWrapperActive.classList.remove('dropdown__child-wrapper--active');
-                            });
-            
-                            focusBtn.nextElementSibling.classList.add('dropdown__child-wrapper--active');
-            
-                        } else {
-    
-                            focusBtn.nextElementSibling.classList.remove('dropdown__child-wrapper--active');
-            
-                        }
-                    
-                    } else if (childParentActive) {
-    
-                        const grandChildWrapperActive = focusBtn.nextElementSibling.classList.contains('dropdown__grandchild-wrapper--active');
-                        if(!grandChildWrapperActive){
-            
-                            const grandChildWrapperActives = dropdown.querySelectorAll('.dropdown__grandchild-wrapper--active');
-                            grandChildWrapperActives.forEach(function(grandChildWrapperActive, index) {
-                                grandChildWrapperActive.classList.remove('dropdown__grandchild-wrapper--active');
-                            });
-            
-                            focusBtn.nextElementSibling.classList.add('dropdown__grandchild-wrapper--active');
-            
-                        } else {
-    
-                            focusBtn.nextElementSibling.classList.remove('dropdown__grandchild-wrapper--active');
-            
-                        }
-    
-                    }
-
-                }
-
-            });
 
             focusBtn.addEventListener('focus', function (e) {
 

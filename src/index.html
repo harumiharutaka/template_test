@@ -57,7 +57,7 @@
       </div>
 
       <div class="header__hamburger">
-        <button class="header__hamburger-button js_header_hamburger-button">
+        <button class="header__hamburger-button js_header_hamburger-button" aria-level="メニューの開閉">
           <span class="header__hamburger-line"></span>
           <span class="header__hamburger-line"></span>
           <span class="header__hamburger-line"></span>
@@ -69,9 +69,9 @@
           <a href="/" class="dropdown__link">トップ</a>
         </li>
         <li class="dropdown__item">
-          <a tabindex="0" class="dropdown__link js_dropdown_link_parent">
+          <button class="dropdown__link js_dropdown_link_parent">
             企業情報<i class="dropdown__link-icon fa-solid fa-angle-down"></i>
-          </a>
+          </button>
           <ul class="dropdown__child-wrapper">
             <li class="dropdown__child-item">
               <a href="" class="dropdown__child-link">企業概要</a>
@@ -85,17 +85,17 @@
           </ul>
         </li>
         <li class="dropdown__item">
-          <a tabindex="0" class="dropdown__link js_dropdown_link_parent">
+          <button class="dropdown__link js_dropdown_link_parent">
             事業紹介<i class="dropdown__link-icon fa-solid fa-angle-down"></i>
-          </a>
+          </button>
           <ul class="dropdown__child-wrapper">
             <li class="dropdown__child-item">
               <a href="" class="dropdown__child-link">事業内容</a>
             </li>
             <li class="dropdown__child-item">
-              <a tabindex="0" class="dropdown__child-link js_dropdown_child_parent">
+              <button class="dropdown__child-link js_dropdown_child_parent">
                 事業実績<i class="dropdown__child-icon fa-solid fa-angle-right"></i>
-              </a>
+              </button>
               <ul class="dropdown__grandchild-wrapper">
                 <li class="dropdown__grandchild-item">
                   <a href="" class="dropdown__grandchild-link">事業カテゴリ1</a>
@@ -112,9 +112,9 @@
               <a href="" class="dropdown__child-link">事業内容</a>
             </li>
             <li class="dropdown__child-item">
-              <a tabindex="0" class="dropdown__child-link js_dropdown_child_parent">
+              <button class="dropdown__child-link js_dropdown_child_parent">
                 事業実績<i class="dropdown__child-icon fa-solid fa-angle-right"></i>
-              </a>
+              </button>
               <ul class="dropdown__grandchild-wrapper">
                 <li class="dropdown__grandchild-item">
                   <a href="" class="dropdown__grandchild-link">事業カテゴリ1</a>
@@ -271,19 +271,19 @@
 
           <div class="footer__sns-body">
             <a href="" class="footer__sns-link">
-              <img class="footer__sns-logo" src="assets/img/sns_logo_x.svg" alt="Xロゴ" width="36" height="36">
+              <img class="footer__sns-logo" src="assets/img/sns_logo_x.svg" alt="X" width="36" height="36">
             </a>
             <a href="" class="footer__sns-link">
-              <img class="footer__sns-logo" src="assets/img/sns_logo_instagram.svg" alt="Instagramロゴ" width="36" height="36">
+              <img class="footer__sns-logo" src="assets/img/sns_logo_instagram.svg" alt="Instagram" width="36" height="36">
             </a>
             <a href="" class="footer__sns-link">
-              <img class="footer__sns-logo" src="assets/img/sns_logo_facebook.svg" alt="Facebookロゴ" width="36" height="36">
+              <img class="footer__sns-logo" src="assets/img/sns_logo_facebook.svg" alt="Facebook" width="36" height="36">
             </a>
             <a href="" class="footer__sns-link">
-              <img class="footer__sns-logo" src="assets/img/sns_logo_youtube.svg" alt="YouTubeロゴ" width="36" height="36">
+              <img class="footer__sns-logo" src="assets/img/sns_logo_youtube.svg" alt="YouTube" width="36" height="36">
             </a>
             <a href="" class="footer__sns-link">
-              <img class="footer__sns-logo" src="assets/img/sns_logo_line.svg" alt="LINEロゴ" width="36" height="36">
+              <img class="footer__sns-logo" src="assets/img/sns_logo_line.svg" alt="LINE" width="36" height="36">
             </a>
           </div>
 
@@ -335,7 +335,7 @@
     </div>
   </footer><!-- /.footer -->
 
-  <button class="pagetop js_pagetop"><i class="pagetop__icon fa-solid fa-angle-up"></i></button>
+  <button class="pagetop js_pagetop" aria-level="トップへ戻る"><i class="pagetop__icon fa-solid fa-angle-up"></i></button>
 
   <div class="drawer-overlay js_drawer-overlay"></div>
 
