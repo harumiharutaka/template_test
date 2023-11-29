@@ -176,14 +176,21 @@ export function dropdown() {
     
     // ドロップダウン範囲外をクリックで子メニューを閉じる
     document.addEventListener('click', (e) => {
+        
         if (!e.target.closest('.js_dropdown')) {
     
             const childWrapperActives = document.querySelectorAll('.dropdown__child-wrapper--active');
             childWrapperActives.forEach(function(childWrapperActive, index) {
                 childWrapperActive.classList.remove('dropdown__child-wrapper--active');
             });
+
+            const grandchildWrapperActives = document.querySelectorAll('.dropdown__grandchild-wrapper--active');
+            grandchildWrapperActives.forEach(function(grandchildWrapperActive, index) {
+                grandchildWrapperActive.classList.remove('dropdown__grandchild-wrapper--active');
+            });
     
         }
+
     })
 
     //ウィンドウリサイズの処理
@@ -194,6 +201,11 @@ export function dropdown() {
             const childWrapperActives = document.querySelectorAll('.dropdown__child-wrapper--active');
             childWrapperActives.forEach(function(childWrapperActive, index) {
                 childWrapperActive.classList.remove('dropdown__child-wrapper--active');
+            });
+
+            const grandchildWrapperActives = document.querySelectorAll('.dropdown__grandchild-wrapper--active');
+            grandchildWrapperActives.forEach(function(grandchildWrapperActive, index) {
+                grandchildWrapperActive.classList.remove('dropdown__grandchild-wrapper--active');
             });
     
         }
