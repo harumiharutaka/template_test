@@ -45,7 +45,7 @@
   <meta name="robots" content="noindex">
 </head>
 
-<body class="note">
+<body class="top">
 
   <header class="header">
     <div class="header__inner">
@@ -54,12 +54,7 @@
         <img class="header__title-img" src="assets/img/brand-logo.png" alt="BLAND NAME" width="490" height="64">
       </a>
 
-      <button class="header__hamburger js_header_hamburger" aria-label="メニューの開閉">
-        <span class="header__hamburger-line"></span>
-        <span class="header__hamburger-line"></span>
-        <span class="header__hamburger-line"></span>
-      </button>
-
+      <!-- PCドロップダウン表示 -->
       <ul class="dropdown js_dropdown">
         <li class="dropdown__item">
           <a href="/" class="dropdown__link">トップ</a>
@@ -113,13 +108,13 @@
               </button>
               <ul class="dropdown__grandchild">
                 <li class="dropdown__grandchild-item">
-                  <a href="" class="dropdown__grandchild-link">事業カテゴリ1</a>
+                  <a href="" class="dropdown__grandchild-link">事業カテゴリ4</a>
                 </li>
                 <li class="dropdown__grandchild-item">
-                  <a href="" class="dropdown__grandchild-link">事業カテゴリ2</a>
+                  <a href="" class="dropdown__grandchild-link">事業カテゴリ5</a>
                 </li>
                 <li class="dropdown__grandchild-item">
-                  <a href="" class="dropdown__grandchild-link">事業カテゴリ3</a>
+                  <a href="" class="dropdown__grandchild-link">事業カテゴリ6</a>
                 </li>
               </ul>
             </li>
@@ -136,15 +131,25 @@
         </li>
       </ul><!-- /.dropdown -->
 
+      <!-- SPハンバーガー＆ドロワー表示 -->
+      <button class="header__hamburger js_header_hamburger" aria-label="メニューの開閉">
+        <span class="header__hamburger-line"></span>
+        <span class="header__hamburger-line"></span>
+        <span class="header__hamburger-line"></span>
+      </button>
+
       <ul class="drawer js_drawer">
         <li class="drawer__item">
           <a href="/" class="drawer__link">トップ</a>
         </li>
         <li class="drawer__item">
           <button class="drawer__link js_drawer_link_parent">
-            企業情報<i class="drawer__child-icon fa-solid fa-angle-right"></i>
+            企業情報<i class="drawer__icon fa-solid fa-angle-right"></i>
           </button>
           <ul class="drawer__child">
+            <button class="drawer__child-link js_drawer_child_close" aria-label="子メニューを閉じる">
+              <i class="drawer__icon fa-solid fa-angle-left"></i>
+            </button>
             <li class="drawer__child-item">
               <a href="" class="drawer__child-link">企業概要</a>
             </li>
@@ -158,17 +163,23 @@
         </li>
         <li class="drawer__item">
           <button class="drawer__link js_drawer_link_parent">
-            事業紹介<i class="drawer__child-icon fa-solid fa-angle-right"></i>
+            事業紹介<i class="drawer__icon fa-solid fa-angle-right"></i>
           </button>
           <ul class="drawer__child">
+            <button class="drawer__child-link js_drawer_child_close" aria-label="子メニューを閉じる">
+              <i class="drawer__icon fa-solid fa-angle-left"></i>
+            </button>
             <li class="drawer__child-item">
               <a href="" class="drawer__child-link">事業内容</a>
             </li>
             <li class="drawer__child-item">
               <button class="drawer__child-link js_drawer_child_parent">
-                事業実績<i class="drawer__child-icon fa-solid fa-angle-right"></i>
+                事業実績<i class="drawer__icon fa-solid fa-angle-right"></i>
               </button>
               <ul class="drawer__grandchild">
+                <button class="drawer__child-link js_drawer_grandchild_close" aria-label="孫メニューを閉じる">
+                  <i class="drawer__icon fa-solid fa-angle-left"></i>
+                </button>
                 <li class="drawer__grandchild-item">
                   <a href="" class="drawer__grandchild-link">事業カテゴリ1</a>
                 </li>
@@ -181,13 +192,16 @@
               </ul>
             </li>
             <li class="drawer__child-item">
-              <a href="" class="drawer__child-link">事業内容testtesttesttesttest</a>
+              <a href="" class="drawer__child-link">事業内容</a>
             </li>
             <li class="drawer__child-item">
               <button class="drawer__child-link js_drawer_child_parent">
-                事業実績<i class="drawer__child-icon fa-solid fa-angle-right"></i>
+                事業実績<i class="drawer__icon fa-solid fa-angle-right"></i>
               </button>
               <ul class="drawer__grandchild">
+                <button class="drawer__child-link js_drawer_grandchild_close" aria-label="孫メニューを閉じる">
+                  <i class="drawer__icon fa-solid fa-angle-left"></i>
+                </button>
                 <li class="drawer__grandchild-item">
                   <a href="" class="drawer__grandchild-link">事業カテゴリ4</a>
                 </li>
@@ -195,7 +209,7 @@
                   <a href="" class="drawer__grandchild-link">事業カテゴリ5</a>
                 </li>
                 <li class="drawer__grandchild-item">
-                  <a href="" class="drawer__grandchild-link">事業カテゴリ6testtesttesttesttest</a>
+                  <a href="" class="drawer__grandchild-link">事業カテゴリ6</a>
                 </li>
               </ul>
             </li>
@@ -211,32 +225,6 @@
           <a href="" class="drawer__link">お問い合わせ</a>
         </li>
       </ul><!-- /.drawer -->
-
-      <!--nav class="drawer js_drawer">
-        <ul class="drawer__inner">
-          <li class="drawer__link-wrapper">
-            <a class="drawer__link" href="index.html">top</a>
-          </li>
-          <li class="drawer__link-wrapper drawer__link-wrapper--heading">
-            <a class="drawer__link" href="note.html">note</a>
-          </li>
-          <li class="drawer__link-wrapper drawer__link-wrapper--pc-hidden">
-            <a class="drawer__link" href="note_digital-agency-memo.html">デジタル庁</a>
-          </li>
-          <li class="drawer__link-wrapper drawer__link-wrapper--pc-hidden">
-            <a class="drawer__link" href="note_task-runner-memo.html">タスクランナーメモ</a>
-          </li>
-          <li class="drawer__link-wrapper drawer__link-wrapper--heading">
-            <a class="drawer__link" href="archive.html">archive</a>
-          </li>
-          <li class="drawer__link-wrapper drawer__link-wrapper--pc-hidden">
-            <a class="drawer__link" href="archive_bem-template.html">bem-template</a>
-          </li>
-          <li class="drawer__link-wrapper drawer__link-wrapper--pc-hidden">
-            <a class="drawer__link" href="archive_js-library.html">js-library</a>
-          </li>
-        </ul>
-      </nav--><!-- /.drawer -->
       
     </div>
   </header><!-- /.header -->
@@ -328,6 +316,8 @@
       </div>
     </div><!-- /.container -->
 
+    <button class="pagetop js_pagetop" aria-label="トップへ戻る"><i class="pagetop__icon fa-solid fa-angle-up"></i></button>
+
   </div><!-- /.wrapper -->
 
   <footer class="footer">
@@ -406,8 +396,6 @@
 
     </div>
   </footer><!-- /.footer -->
-
-  <button class="pagetop js_pagetop" aria-label="トップへ戻る"><i class="pagetop__icon fa-solid fa-angle-up"></i></button>
 
   <div class="drawer-overlay js_drawer-overlay"></div>
 
