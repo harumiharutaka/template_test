@@ -50,19 +50,15 @@
   <header class="header">
     <div class="header__inner">
       
-      <div class="header__title">
-        <a href="/" class="header__title-link">
-          <img class="header__title-img" src="assets/img/brand-logo.png" alt="BLAND NAME" width="490" height="64">
-        </a>
-      </div>
+      <a href="/" class="header__title">
+        <img class="header__title-img" src="assets/img/brand-logo.png" alt="BLAND NAME" width="490" height="64">
+      </a>
 
-      <div class="header__hamburger">
-        <button class="header__hamburger-button js_header_hamburger-button" aria-label="メニューの開閉">
-          <span class="header__hamburger-line"></span>
-          <span class="header__hamburger-line"></span>
-          <span class="header__hamburger-line"></span>
-        </button>
-      </div>
+      <button class="header__hamburger js_header_hamburger" aria-label="メニューの開閉">
+        <span class="header__hamburger-line"></span>
+        <span class="header__hamburger-line"></span>
+        <span class="header__hamburger-line"></span>
+      </button>
 
       <ul class="dropdown js_dropdown">
         <li class="dropdown__item">
@@ -72,7 +68,7 @@
           <button class="dropdown__link js_dropdown_link_parent">
             企業情報<i class="dropdown__link-icon fa-solid fa-angle-down"></i>
           </button>
-          <ul class="dropdown__child-wrapper">
+          <ul class="dropdown__child">
             <li class="dropdown__child-item">
               <a href="" class="dropdown__child-link">企業概要</a>
             </li>
@@ -88,7 +84,7 @@
           <button class="dropdown__link js_dropdown_link_parent">
             事業紹介<i class="dropdown__link-icon fa-solid fa-angle-down"></i>
           </button>
-          <ul class="dropdown__child-wrapper">
+          <ul class="dropdown__child">
             <li class="dropdown__child-item">
               <a href="" class="dropdown__child-link">事業内容</a>
             </li>
@@ -96,7 +92,7 @@
               <button class="dropdown__child-link js_dropdown_child_parent">
                 事業実績<i class="dropdown__child-icon fa-solid fa-angle-right"></i>
               </button>
-              <ul class="dropdown__grandchild-wrapper">
+              <ul class="dropdown__grandchild">
                 <li class="dropdown__grandchild-item">
                   <a href="" class="dropdown__grandchild-link">事業カテゴリ1</a>
                 </li>
@@ -115,7 +111,7 @@
               <button class="dropdown__child-link js_dropdown_child_parent">
                 事業実績<i class="dropdown__child-icon fa-solid fa-angle-right"></i>
               </button>
-              <ul class="dropdown__grandchild-wrapper">
+              <ul class="dropdown__grandchild">
                 <li class="dropdown__grandchild-item">
                   <a href="" class="dropdown__grandchild-link">事業カテゴリ1</a>
                 </li>
@@ -139,6 +135,82 @@
           <a href="" class="dropdown__link">お問い合わせ</a>
         </li>
       </ul><!-- /.dropdown -->
+
+      <ul class="drawer js_drawer">
+        <li class="drawer__item">
+          <a href="/" class="drawer__link">トップ</a>
+        </li>
+        <li class="drawer__item">
+          <button class="drawer__link js_drawer_link_parent">
+            企業情報<i class="drawer__child-icon fa-solid fa-angle-right"></i>
+          </button>
+          <ul class="drawer__child">
+            <li class="drawer__child-item">
+              <a href="" class="drawer__child-link">企業概要</a>
+            </li>
+            <li class="drawer__child-item">
+              <a href="" class="drawer__child-link">沿革</a>
+            </li>
+            <li class="drawer__child-item">
+              <a href="" class="drawer__child-link">アクセス</a>
+            </li>
+          </ul>
+        </li>
+        <li class="drawer__item">
+          <button class="drawer__link js_drawer_link_parent">
+            事業紹介<i class="drawer__child-icon fa-solid fa-angle-right"></i>
+          </button>
+          <ul class="drawer__child">
+            <li class="drawer__child-item">
+              <a href="" class="drawer__child-link">事業内容</a>
+            </li>
+            <li class="drawer__child-item">
+              <button class="drawer__child-link js_drawer_child_parent">
+                事業実績<i class="drawer__child-icon fa-solid fa-angle-right"></i>
+              </button>
+              <ul class="drawer__grandchild">
+                <li class="drawer__grandchild-item">
+                  <a href="" class="drawer__grandchild-link">事業カテゴリ1</a>
+                </li>
+                <li class="drawer__grandchild-item">
+                  <a href="" class="drawer__grandchild-link">事業カテゴリ2</a>
+                </li>
+                <li class="drawer__grandchild-item">
+                  <a href="" class="drawer__grandchild-link">事業カテゴリ3</a>
+                </li>
+              </ul>
+            </li>
+            <li class="drawer__child-item">
+              <a href="" class="drawer__child-link">事業内容testtesttesttesttest</a>
+            </li>
+            <li class="drawer__child-item">
+              <button class="drawer__child-link js_drawer_child_parent">
+                事業実績<i class="drawer__child-icon fa-solid fa-angle-right"></i>
+              </button>
+              <ul class="drawer__grandchild">
+                <li class="drawer__grandchild-item">
+                  <a href="" class="drawer__grandchild-link">事業カテゴリ4</a>
+                </li>
+                <li class="drawer__grandchild-item">
+                  <a href="" class="drawer__grandchild-link">事業カテゴリ5</a>
+                </li>
+                <li class="drawer__grandchild-item">
+                  <a href="" class="drawer__grandchild-link">事業カテゴリ6testtesttesttesttest</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li class="drawer__item">
+          <a href="" class="drawer__link">ニュース</a>
+        </li>
+        <li class="drawer__item">
+          <a href="" class="drawer__link">BLOG</a>
+        </li>
+        <li class="drawer__item">
+          <a href="" class="drawer__link">お問い合わせ</a>
+        </li>
+      </ul><!-- /.drawer -->
 
       <!--nav class="drawer js_drawer">
         <ul class="drawer__inner">

@@ -5,8 +5,8 @@ import { bodyScroll } from "./module/bodyScroll";
 bodyScroll();
 
 //ハンバーガー＆ドロワー
-import { hamburger } from "./module/hamburger";
-hamburger();
+import { hamburgerAndDrawer } from "./module/hamburger-and-drawer";
+hamburgerAndDrawer();
 
 //ページトップ
 import { pagetop } from "./module/pagetop";

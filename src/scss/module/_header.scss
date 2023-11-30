@@ -32,10 +32,6 @@
 }
 
 .header__title{
-    line-height: g.$line-height_same;
-}
-
-.header__title-link{
     transition: 0.1s;
     
     &:hover,&:active,&:focus{
@@ -53,13 +49,6 @@
 }
 
 .header__hamburger{
-
-    @include g.media(header-pc){
-        display: none;
-    }
-}
-
-.header__hamburger-button{
     position: relative;
     display: block;
     width: calc(g.$header-height_sp * 0.8);
@@ -86,6 +75,10 @@
                 transform:  translateY(-50%) translateX(-50%) rotate(45deg);
             }
         }
+    }
+
+    @include g.media(header-pc){
+        display: none;
     }
 }
 

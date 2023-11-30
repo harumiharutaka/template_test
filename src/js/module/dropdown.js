@@ -13,19 +13,19 @@ export function dropdown() {
     
             parentBtn.onclick = function(e) {
     
-                const childWrapperActive = this.nextElementSibling.classList.contains('dropdown__child-wrapper--active');
-                if (!childWrapperActive){
+                const childActive = this.nextElementSibling.classList.contains('dropdown__child--active');
+                if (!childActive){
     
-                    const childWrapperActives = dropdown.querySelectorAll('.dropdown__child-wrapper--active');
-                    childWrapperActives.forEach(function(childWrapperActive, index) {
-                        childWrapperActive.classList.remove('dropdown__child-wrapper--active');
+                    const childActives = dropdown.querySelectorAll('.dropdown__child--active');
+                    childActives.forEach(function(childActive, index) {
+                        childActive.classList.remove('dropdown__child--active');
                     });
     
-                    this.nextElementSibling.classList.add('dropdown__child-wrapper--active');
+                    this.nextElementSibling.classList.add('dropdown__child--active');
     
                 } else {
     
-                    this.nextElementSibling.classList.remove('dropdown__child-wrapper--active');
+                    this.nextElementSibling.classList.remove('dropdown__child--active');
     
                 }
     
@@ -33,16 +33,16 @@ export function dropdown() {
 
             parentBtn.addEventListener('mouseover', function (e) {
 
-                const childWrapperActive = this.nextElementSibling.classList.contains('dropdown__child-wrapper--active');
-                if (!childWrapperActive){
+                const childActive = this.nextElementSibling.classList.contains('dropdown__child--active');
+                if (!childActive){
     
-                    const childWrapperActives = dropdown.querySelectorAll('.dropdown__child-wrapper--active');
-                    childWrapperActives.forEach(function(childWrapperActive, index) {
-                        childWrapperActive.classList.remove('dropdown__child-wrapper--active');
+                    const childActives = dropdown.querySelectorAll('.dropdown__child--active');
+                    childActives.forEach(function(childActive, index) {
+                        childActive.classList.remove('dropdown__child--active');
                     });
 
-                    if(childWrapperActives.length !== 0){
-                        this.nextElementSibling.classList.add('dropdown__child-wrapper--active');
+                    if(childActives.length !== 0){
+                        this.nextElementSibling.classList.add('dropdown__child--active');
                     }
 
                 }
@@ -56,30 +56,30 @@ export function dropdown() {
         childParentBtns.forEach(function(childParentBtn, index) {
 
             childParentBtn.parentNode.addEventListener('mouseover', function (event) {
-                childParentBtn.nextElementSibling.classList.add('dropdown__grandchild-wrapper--active');
+                childParentBtn.nextElementSibling.classList.add('dropdown__grandchild--active');
             }, false);
 
             childParentBtn.parentNode.addEventListener('mouseleave', function (event) {
-                childParentBtn.nextElementSibling.classList.remove('dropdown__grandchild-wrapper--active');
+                childParentBtn.nextElementSibling.classList.remove('dropdown__grandchild--active');
             }, false);
 
             childParentBtn.addEventListener("keydown", (e) => {
 
                 if (e.key == "Enter") {
 
-                    const grandChildWrapperActive = childParentBtn.nextElementSibling.classList.contains('dropdown__grandchild-wrapper--active');
-                    if(!grandChildWrapperActive){
+                    const grandChildActive = childParentBtn.nextElementSibling.classList.contains('dropdown__grandchild--active');
+                    if(!grandChildActive){
         
-                        const grandChildWrapperActives = dropdown.querySelectorAll('.dropdown__grandchild-wrapper--active');
-                        grandChildWrapperActives.forEach(function(grandChildWrapperActive, index) {
-                            grandChildWrapperActive.classList.remove('dropdown__grandchild-wrapper--active');
+                        const grandChildActives = dropdown.querySelectorAll('.dropdown__grandchild--active');
+                        grandChildActives.forEach(function(grandChildActive, index) {
+                            grandChildActive.classList.remove('dropdown__grandchild--active');
                         });
         
-                        childParentBtn.nextElementSibling.classList.add('dropdown__grandchild-wrapper--active');
+                        childParentBtn.nextElementSibling.classList.add('dropdown__grandchild--active');
         
                     } else {
 
-                        childParentBtn.nextElementSibling.classList.remove('dropdown__grandchild-wrapper--active');
+                        childParentBtn.nextElementSibling.classList.remove('dropdown__grandchild--active');
         
                     }
     
@@ -97,49 +97,49 @@ export function dropdown() {
 
                 const linkParentActive = this.classList.contains('js_dropdown_link_parent');
                 const childParentActive = this.classList.contains('js_dropdown_child_parent');
-                const childActive = this.closest('.dropdown__child-wrapper--active');
-                const grandchildActive = this.closest('.dropdown__grandchild-wrapper--active');
+                const childActive = this.closest('.dropdown__child--active');
+                const grandchildActive = this.closest('.dropdown__grandchild--active');
                 if (linkParentActive) {
 
-                    const childWrapperActive = this.nextElementSibling.classList.contains('dropdown__child-wrapper--active');
-                    if (!childWrapperActive){
+                    const childActive = this.nextElementSibling.classList.contains('dropdown__child--active');
+                    if (!childActive){
 
-                        const childWrapperActives = dropdown.querySelectorAll('.dropdown__child-wrapper--active');
-                        childWrapperActives.forEach(function(childWrapperActive, index) {
-                            childWrapperActive.classList.remove('dropdown__child-wrapper--active');
+                        const childActives = dropdown.querySelectorAll('.dropdown__child--active');
+                        childActives.forEach(function(childActive, index) {
+                            childActive.classList.remove('dropdown__child--active');
                         });
     
                     }
 
                 } else if  (childParentActive) {
 
-                    const grandchildWrapperActive = this.nextElementSibling.classList.contains('dropdown__grandchild-wrapper--active');
-                    if (!grandchildWrapperActive){
+                    const grandchildActive = this.nextElementSibling.classList.contains('dropdown__grandchild--active');
+                    if (!grandchildActive){
 
-                        const grandchildWrapperActives = dropdown.querySelectorAll('.dropdown__grandchild-wrapper--active');
-                        grandchildWrapperActives.forEach(function(grandchildWrapperActive, index) {
-                            grandchildWrapperActive.classList.remove('dropdown__grandchild-wrapper--active');
+                        const grandchildActives = dropdown.querySelectorAll('.dropdown__grandchild--active');
+                        grandchildActives.forEach(function(grandchildActive, index) {
+                            grandchildActive.classList.remove('dropdown__grandchild--active');
                         });
     
                     }
 
                 } else if  (!childActive) {
 
-                    const childWrapperActives = dropdown.querySelectorAll('.dropdown__child-wrapper--active');
-                    childWrapperActives.forEach(function(childWrapperActive, index) {
-                        childWrapperActive.classList.remove('dropdown__child-wrapper--active');
+                    const childActives = dropdown.querySelectorAll('.dropdown__child--active');
+                    childActives.forEach(function(childActive, index) {
+                        childActive.classList.remove('dropdown__child--active');
                     });
             
-                    const grandchildWrapperActives = dropdown.querySelectorAll('.dropdown__grandchild-wrapper--active');
-                    grandchildWrapperActives.forEach(function(grandchildWrapperActive, index) {
-                        grandchildWrapperActive.classList.remove('dropdown__grandchild-wrapper--active');
+                    const grandchildActives = dropdown.querySelectorAll('.dropdown__grandchild--active');
+                    grandchildActives.forEach(function(grandchildActive, index) {
+                        grandchildActive.classList.remove('dropdown__grandchild--active');
                     });
 
                 } else if (!grandchildActive) {
 
-                    const grandchildWrapperActives = dropdown.querySelectorAll('.dropdown__grandchild-wrapper--active');
-                    grandchildWrapperActives.forEach(function(grandchildWrapperActive, index) {
-                        grandchildWrapperActive.classList.remove('dropdown__grandchild-wrapper--active');
+                    const grandchildActives = dropdown.querySelectorAll('.dropdown__grandchild--active');
+                    grandchildActives.forEach(function(grandchildActive, index) {
+                        grandchildActive.classList.remove('dropdown__grandchild--active');
                     });
 
                 }
@@ -155,14 +155,14 @@ export function dropdown() {
         
         if (!e.target.closest('.js_dropdown')) {
     
-            const childWrapperActives = document.querySelectorAll('.dropdown__child-wrapper--active');
-            childWrapperActives.forEach(function(childWrapperActive, index) {
-                childWrapperActive.classList.remove('dropdown__child-wrapper--active');
+            const childActives = document.querySelectorAll('.dropdown__child--active');
+            childActives.forEach(function(childActive, index) {
+                childActive.classList.remove('dropdown__child--active');
             });
 
-            const grandchildWrapperActives = document.querySelectorAll('.dropdown__grandchild-wrapper--active');
-            grandchildWrapperActives.forEach(function(grandchildWrapperActive, index) {
-                grandchildWrapperActive.classList.remove('dropdown__grandchild-wrapper--active');
+            const grandchildActives = document.querySelectorAll('.dropdown__grandchild--active');
+            grandchildActives.forEach(function(grandchildActive, index) {
+                grandchildActive.classList.remove('dropdown__grandchild--active');
             });
     
         }
@@ -174,14 +174,14 @@ export function dropdown() {
 
         if (window.matchMedia('(max-width:991.98px)').matches) {
     
-            const childWrapperActives = document.querySelectorAll('.dropdown__child-wrapper--active');
-            childWrapperActives.forEach(function(childWrapperActive, index) {
-                childWrapperActive.classList.remove('dropdown__child-wrapper--active');
+            const childActives = document.querySelectorAll('.dropdown__child--active');
+            childActives.forEach(function(childActive, index) {
+                childActive.classList.remove('dropdown__child--active');
             });
 
-            const grandchildWrapperActives = document.querySelectorAll('.dropdown__grandchild-wrapper--active');
-            grandchildWrapperActives.forEach(function(grandchildWrapperActive, index) {
-                grandchildWrapperActive.classList.remove('dropdown__grandchild-wrapper--active');
+            const grandchildActives = document.querySelectorAll('.dropdown__grandchild--active');
+            grandchildActives.forEach(function(grandchildActive, index) {
+                grandchildActive.classList.remove('dropdown__grandchild--active');
             });
     
         }
