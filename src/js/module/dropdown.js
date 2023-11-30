@@ -90,7 +90,7 @@ export function dropdown() {
         });
 
         // フォーカスの処理
-        const focusBtns = dropdown.querySelectorAll('a');
+        const focusBtns = dropdown.querySelectorAll('a,button');
         focusBtns.forEach(function(focusBtn, index) {
 
             focusBtn.addEventListener('focus', function (e) {
@@ -103,7 +103,7 @@ export function dropdown() {
 
                     const childWrapperActive = this.nextElementSibling.classList.contains('dropdown__child-wrapper--active');
                     if (!childWrapperActive){
-        
+
                         const childWrapperActives = dropdown.querySelectorAll('.dropdown__child-wrapper--active');
                         childWrapperActives.forEach(function(childWrapperActive, index) {
                             childWrapperActive.classList.remove('dropdown__child-wrapper--active');
@@ -115,7 +115,7 @@ export function dropdown() {
 
                     const grandchildWrapperActive = this.nextElementSibling.classList.contains('dropdown__grandchild-wrapper--active');
                     if (!grandchildWrapperActive){
-        
+
                         const grandchildWrapperActives = dropdown.querySelectorAll('.dropdown__grandchild-wrapper--active');
                         grandchildWrapperActives.forEach(function(grandchildWrapperActive, index) {
                             grandchildWrapperActive.classList.remove('dropdown__grandchild-wrapper--active');
