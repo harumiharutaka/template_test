@@ -33,5 +33,5 @@ import { dropdown } from "./module/dropdown";
 dropdown();
 
 //スライドショー
-import { slideshow } from "./module/slideshow";
-slideshow();
+import { plugin } from "./module/plugin";
+plugin();

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
+
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
@@ -28,21 +29,30 @@
 
   <!-- リセットCSS -->
   <link rel="stylesheet" href="assets/css/destyle.min.css">
-  <!-- CSS -->
-  <link rel="stylesheet" href="/scss/style.scss">
-  
-  <!-- JavaScript -->
-  <script src="/js/main.js" type="module"></script>
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
   <!-- Font Awesome -->
   <script src="https://kit.fontawesome.com/22eeb3d0d6.js" crossorigin="anonymous"></script>
 
+  <!-- Swiper -->
+  <!--link href="https://cdn.jsdelivr.net/npm/swiper@11.0.5/swiper-bundle.min.css" rel="stylesheet"-->
+  <!--script src="https://cdn.jsdelivr.net/npm/swiper@11.0.5/swiper-bundle.min.js"></script--> 
+  <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+  <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script> 
+  
   <!-- 検索エンジンにインデックスさせない -->
   <meta name="robots" content="noindex">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/scss/style.scss">
+
+  <!-- JavaScript -->
+  <script src="/js/main.js" type="module"></script>
+
 </head>
 
 <body class="top">
@@ -238,6 +248,34 @@
   </header><!-- /.header -->
 
   <div class="wrapper">
+
+    <!-- Swiper -->
+    <div class="swiper slideshow">
+      <div class="swiper-wrapper slideshow__wrapper">
+        <div class="swiper-slide slideshow__item">
+          <img src="assets/img/image_blue.png" class="slideshow__img" alt="blue" width="1280" height="720">
+        </div>
+        <div class="swiper-slide slideshow__item">
+          <img src="assets/img/image_green.png" class="slideshow__img" alt="green" width="1280" height="720">
+        </div>
+        <div class="swiper-slide slideshow__item">
+          <img src="assets/img/image_yellow.png" class="slideshow__img" alt="yellow" width="1280" height="720">
+        </div>
+        <div class="swiper-slide slideshow__item">
+          <img src="assets/img/image_red.png" class="slideshow__img" alt="red" width="1280" height="720">
+        </div>
+        <div class="swiper-slide slideshow__item">
+          <img src="assets/img/image_purple.png" class="slideshow__img" alt="purple" width="1280" height="720">
+        </div>
+      </div>
+      <div class="swiper-pagination"></div>
+      <div class="slideshow__button-prev">
+        <i class="slideshow__icon fa-solid fa-angle-left"></i>
+      </div>
+      <div class="slideshow__button-next">
+        <i class="slideshow__icon fa-solid fa-angle-right"></i>
+      </div>
+    </div>
 
     <div class="page-visual">
       <div class="page-visual__inner">
