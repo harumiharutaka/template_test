@@ -112,7 +112,6 @@ export function hamburgerAndDrawer() {
         });
     }
 
-
     //ハンバーガーボタンの処理
     hamburger.onclick = function() {
         const active = this.classList.contains('header__hamburger--active');

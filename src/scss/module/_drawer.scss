@@ -9,7 +9,7 @@
     position: absolute;
     top: g.$header-height_sp;
     right: 0;
-    width: min(240px, 60vw);
+    width: min(200px, 60vw);
     height: calc(100vh - g.$header-height_sp);
     padding: 20px 0;
     background-color: g.$p-color_opacity_white_095;
@@ -24,17 +24,13 @@
         opacity: 1;
         visibility: visible;
     }
-
-    @include g.media(header-pc){
-        display: none;
-    }
 }
 
 .drawer__child,.drawer__grandchild{
     position: absolute;
     top: -1px;
     left: 0px;
-    width: min(240px, 60vw);
+    width: min(200px, 60vw);
     height: calc(100vh - g.$header-height_sp);
     padding: 20px 0;
     background-color: g.$p-color_opacity_white_095;

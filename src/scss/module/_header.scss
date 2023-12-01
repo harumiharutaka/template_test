@@ -49,6 +49,23 @@
     }
 }
 
+.header__nav{
+
+    &--pc{
+        height: 100%;
+
+        @include g.media(header-sp){
+            display: none;
+        }
+    }
+
+    &--sp{
+        @include g.media(header-pc){
+            display: none;
+        }
+    }
+}
+
 .header__hamburger{
     position: relative;
     display: block;
@@ -76,10 +93,6 @@
                 transform:  translateY(-50%) translateX(-50%) rotate(45deg);
             }
         }
-    }
-
-    @include g.media(header-pc){
-        display: none;
     }
 }
 

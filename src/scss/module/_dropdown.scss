@@ -7,10 +7,6 @@
 .dropdown{
     display: flex;
     height: 100%;
-
-    @include g.media(header-sp){
-        display: none;
-    }
 }
 
 .dropdown__item,.dropdown__child-item{
