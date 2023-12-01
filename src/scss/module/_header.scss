@@ -94,6 +94,10 @@
             }
         }
     }
+
+    @include g.media(header-pc){
+        display: none;
+    }
 }
 
 .header__hamburger-line{
