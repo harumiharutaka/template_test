@@ -13,22 +13,20 @@
     line-height: g.$line-height_s;
 }
 
-.breadcrum{
-    span a{
-        color: g.$s-color_menu-link_normal;
-        text-decoration: none;
-        transition: 0.1s;
-    
-        &:hover,&:active,&:focus{
-            color: g.$s-color_menu-link_hover;
-        }
-    }
-    
-    span .current-item{
-        color: g.$p-color_grey_500;
+.breadcrum__link{
+    color: g.$s-color_menu-link_normal;
+    text-decoration: none;
+    transition: 0.1s;
+
+    &:hover,&:active,&:focus{
+        color: g.$s-color_menu-link_hover;
     }
 }
 
 .breadcrum__partition{
     font-size: g.$font-size_xs;
+}
+
+.breadcrum__current{
+    color: g.$p-color_grey_500;
 }

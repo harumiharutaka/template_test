@@ -85,7 +85,7 @@
 1.CSS設計は「BEM」を採用
 2.命名規則は「MindBEMding（.Block__Element--Modifier）」を採用
 3.modifierのキーと値はハイフンで繋ぐ（key-val）
-4.基本的に子孫セレクタは使用しない
+4.基本的に子孫セレクタは使用しない（Modifierで下層の状態を変化させる時は良い）
 
 /* JSルール */
 
