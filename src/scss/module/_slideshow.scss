@@ -5,168 +5,118 @@
 *********************************/
 
 .slideshow{
-    width: 100%;
+
+}
+
+.slideshow__track{
     height: calc(100vh - g.$header-height_pc);
-}
 
-.slideshow__wrapper{
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: flex;
-    width: 400%;
-    transition: 0.5s;
-}
-
-.slideshow__item{
-    max-width: g.$content_width;
+    @include g.media(header-sp){
+        height: calc(100vh - g.$header-height_sp);
+    }
 }
 
 .slideshow__img{
-    object-fit: cover;
+    width: 100%;
     height: 100%;
+    object-fit: cover;
+
+    &--pc{
+        @include g.media(sp){
+            display: none;
+        }
+    }
+
+    &--sp{
+        @include g.media(pc){
+            display: none;
+        }  
+    }
 }
 
-.slideshow__button-prev,.slideshow__button-next{
-    position: absolute;
+.slideshow__arrow{
     display: flex;
     justify-content: center;
     align-items: center;
-    top: 0;
     width: 60px;
     height: 100%;
+    background: none;
+    border-radius: 0;
+    opacity: 1;
     z-index: 10;
 
     &:hover,&:active,&:focus{
         background-color: #ffffff1A;
+
+        .slideshow__icon{
+            color: g.$p-color_white;
+        }
+    }
+
+    &--prev{
+        left: max(0px, (100% - g.$content_width) / 2);
+    }
+
+    &--next{
+        right: max(0px, (100% - g.$content_width) / 2);
+    }
+
+    @include g.media(sp){
+        width: 30px;
     }
 }
 
-.slideshow__button-prev{
-    left: calc((100% - g.$content_width) / 2);
+.slideshow__icon{
+    color: #ffffff80;
+    font-size: 24px;
+
+    @include g.media(sp){
+        width: 18px;
+    }
 }
 
-.slideshow__button-next{
-    right: calc((100% - g.$content_width) / 2);
+.slideshow__pagination{
+    bottom: 20px;
 }
 
-/*
-.slideshow{
-    position: relative;
-    width: min(500px, 100%);
-    aspect-ratio: 4/3;
-    margin: 0 auto;
-    overflow: hidden;
+.slideshow__pagination li{
+    margin-left: 5px;
+    margin-right: 5px;
 }
 
-.slideshow__img-wrapper{
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: flex;
-    width: 400%;
-    transition: 0.5s;
-}
+.slideshow__page{
+    width: 20px;
+    height: 20px;
+    background: none;
+    border-radius: 0;
+    transition: 0.1s;
 
-.slideshow__img-wrapper-item{
-    width: min(500px, 100%);
-    aspect-ratio: 4/3;
-}
-
-.slideshow__img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.slideshow__angle{
-    display: block;
-    position: absolute;
-    top: 0;
-    width: 30px;
-    height: 100%;
-    color: rgba(g.$color_white,0.5);
-    transition: 0.5s;
-    cursor: pointer;
+    &:hover,&:active,&:focus{
+        opacity: 1;
+        &::before{
+            color: g.$p-color_white;
+        }
+    }
 
     &::before{
         font-family: 'Font Awesome 6 Free';
         font-weight: 900;
+        content: "\f111";  
+        display:  inline-block;
         position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translateY(-50%) translateX(-50%); 
-        font-size: g.$font-size_xxxl;
-    }   
-    
-    &:hover{
-        background-color: rgba(g.$color_white,0.1);
-        color: g.$color_white;
-    }
-
-    &--left{
+        top: 0;
         left: 0;
+        font-size: 20px;
+        font-weight: 400;
+        color: #ffffff80;
+    }
+
+    &.is-active{
+        background: none;
+        transform: none;
 
         &::before{
-            content: "\f104"; 
-        }
-    }
-
-    &--right{
-        right: 0;
-
-        &::before{
-            content: "\f105"; 
+            content: "\f192";  
         }
     }
 }
-
-.slideshow__dot-wrapper{
-    position: absolute;
-    bottom: 15px;
-    left: 0;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-}
-
-.slideshow__dot{
-    position: relative;
-    display: block;
-    width: 16px;
-    height: 16px;
-    border-radius: 100px;
-    border: 1px solid rgba(g.$color_white,0.5);
-    transition: 0.5s;
-    cursor: pointer;
-
-    &::after{
-        content: "";
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translateY(-50%) translateX(-50%); 
-        width: 12px;
-        height: 12px;
-        border-radius: 100px;
-        transition: 0.5s;
-    }
-
-    &:hover{
-        border-color: g.$color_white;
-        
-        &::after{
-            background-color: g.$color_white;
-        }
-    }
-
-    &--active{
-        pointer-events: none;
-
-        &::after{
-            background-color: rgba(g.$color_white,0.5);
-        }
-    }
-}
-*/

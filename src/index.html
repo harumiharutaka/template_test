@@ -38,12 +38,11 @@
   <!-- Font Awesome -->
   <script src="https://kit.fontawesome.com/22eeb3d0d6.js" crossorigin="anonymous"></script>
 
-  <!-- Swiper -->
-  <!--link href="https://cdn.jsdelivr.net/npm/swiper@11.0.5/swiper-bundle.min.css" rel="stylesheet"-->
-  <!--script src="https://cdn.jsdelivr.net/npm/swiper@11.0.5/swiper-bundle.min.js"></script--> 
-  <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
-  <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script> 
-  
+  <!-- Splide -->
+  <link rel="stylesheet" href="assets/css/splide.min.css">
+  <script src="assets/js/splide.min.js"></script>
+  <!--style>.slideshow__page.is-active{}</style-->
+
   <!-- 検索エンジンにインデックスさせない -->
   <meta name="robots" content="noindex">
 
@@ -249,33 +248,40 @@
 
   <div class="wrapper">
 
-    <!-- Swiper -->
-    <div class="swiper slideshow">
-      <div class="swiper-wrapper slideshow__wrapper">
-        <div class="swiper-slide slideshow__item">
-          <img src="assets/img/image_blue.png" class="slideshow__img" alt="blue" width="1280" height="720">
-        </div>
-        <div class="swiper-slide slideshow__item">
-          <img src="assets/img/image_green.png" class="slideshow__img" alt="green" width="1280" height="720">
-        </div>
-        <div class="swiper-slide slideshow__item">
-          <img src="assets/img/image_yellow.png" class="slideshow__img" alt="yellow" width="1280" height="720">
-        </div>
-        <div class="swiper-slide slideshow__item">
-          <img src="assets/img/image_red.png" class="slideshow__img" alt="red" width="1280" height="720">
-        </div>
-        <div class="swiper-slide slideshow__item">
-          <img src="assets/img/image_purple.png" class="slideshow__img" alt="purple" width="1280" height="720">
-        </div>
+    <div class="splide slideshow">
+      <div class="splide__track slideshow__track">
+        <ul class="splide__list">
+          <li class="splide__slide">
+            <img src="assets/img/image_blue.png" class="slideshow__img slideshow__img--pc" alt="blue" width="1280" height="720">
+            <img src="assets/img/image_blue_sp.png" class="slideshow__img slideshow__img--sp" alt="blue" width="540" height="960">
+          </li>
+          <li class="splide__slide">
+            <img src="assets/img/image_green.png" class="slideshow__img slideshow__img--pc" alt="green" width="1280" height="720">
+            <img src="assets/img/image_green_sp.png" class="slideshow__img slideshow__img--sp" alt="green" width="540" height="960">
+          </li>
+          <li class="splide__slide">
+            <img src="assets/img/image_yellow.png" class="slideshow__img slideshow__img--pc" alt="yellow" width="1280" height="720">
+            <img src="assets/img/image_yellow_sp.png" class="slideshow__img slideshow__img--sp" alt="yellow" width="540" height="960">
+          </li>
+          <li class="splide__slide">
+            <img src="assets/img/image_red.png" class="slideshow__img slideshow__img--pc" alt="red" width="1280" height="720">
+            <img src="assets/img/image_red_sp.png" class="slideshow__img slideshow__img--sp" alt="red" width="540" height="960">
+          </li>
+          <li class="splide__slide">
+            <img src="assets/img/image_purple.png" class="slideshow__img slideshow__img--pc" alt="purple" width="1280" height="720">
+            <img src="assets/img/image_purple_sp.png" class="slideshow__img slideshow__img--sp" alt="purple" width="540" height="960">
+          </li>
+        </ul>
       </div>
-      <div class="swiper-pagination"></div>
-      <div class="slideshow__button-prev">
-        <i class="slideshow__icon fa-solid fa-angle-left"></i>
+      <div class="splide__arrows">
+        <button class="splide__arrow splide__arrow--prev slideshow__arrow slideshow__arrow--prev">
+          <i class="slideshow__icon fa-solid fa-angle-left"></i>
+        </dbutton>
+        <button class="splide__arrow splide__arrow--next slideshow__arrow slideshow__arrow--next">
+          <i class="slideshow__icon fa-solid fa-angle-right"></i>
+        </button>
       </div>
-      <div class="slideshow__button-next">
-        <i class="slideshow__icon fa-solid fa-angle-right"></i>
-      </div>
-    </div>
+    </div><!-- /.slideshow -->
 
     <div class="page-visual">
       <div class="page-visual__inner">
@@ -362,7 +368,9 @@
       </div>
     </div><!-- /.container -->
 
-    <button class="pagetop js_pagetop" aria-label="トップへ戻る"><i class="pagetop__icon fa-solid fa-angle-up"></i></button>
+    <button class="pagetop js_pagetop" aria-label="トップへ戻る">
+      <i class="pagetop__icon fa-solid fa-angle-up"></i>
+    </button><!-- /.pagetop -->
 
   </div><!-- /.wrapper -->
 

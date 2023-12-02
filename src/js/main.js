@@ -32,6 +32,6 @@ modal();
 import { dropdown } from "./module/dropdown";
 dropdown();
 
-//スライドショー
+//プラグイン
 import { plugin } from "./module/plugin";
 plugin();
