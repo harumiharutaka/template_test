@@ -24,24 +24,19 @@ export function loading() {
         }, duration);
     }
     
-    // archive_js-library.htmlでのみ動作
-    if(document.URL.match(/archive_js-library.html/)){
-    
-        // アクセスした時1回だけ表示する処理
-        if (!sessionStorage.getItem('visited')) {
-            sessionStorage.setItem('visited', 'first');
-            window.addEventListener('load', function() {
-                loadingTime();
-            })
-        } else {
-            loading.classList.remove('loading--active');
-        }
-    
-        // ※テスト用 クリックしたとき表示する処理
-        document.querySelector('.js_loading_test').onclick = function() {
+    // アクセスした時1回だけ表示する処理
+    if (!sessionStorage.getItem('visited')) {
+        sessionStorage.setItem('visited', 'first');
+        window.addEventListener('load', function() {
             loadingTime();
-        }
-        
+        })
+    } else {
+        loading.classList.remove('loading--active');
     }
-    
+
+    // ※テスト用 クリックしたとき表示する処理
+    document.querySelector('.js_loading_test').onclick = function() {
+        loadingTime();
+    }
+ 
 }
