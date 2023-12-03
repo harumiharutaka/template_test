@@ -7,7 +7,7 @@ export function plugin() {
   /* Splide */
   new Splide(".splide", {
     type: "loop", // ループ
-    //autoplay: true, // 自動再生
+    autoplay: true, // 自動再生
     interval: 3000, // 自動再生の間隔
     pauseOnHover: false, // カーソルが乗ってもスクロールを停止させない
     pauseOnFocus: false, // 矢印をクリックしてもスクロールを停止させない

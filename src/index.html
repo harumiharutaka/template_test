@@ -39,9 +39,8 @@
   <script src="https://kit.fontawesome.com/22eeb3d0d6.js" crossorigin="anonymous"></script>
 
   <!-- Splide -->
-  <link rel="stylesheet" href="assets/css/splide.min.css">
+  <link rel="stylesheet" href="assets/css/splide-core.min.css">
   <script src="assets/js/splide.min.js"></script>
-  <!--style>.slideshow__page.is-active{}</style-->
 
   <!-- 検索エンジンにインデックスさせない -->
   <meta name="robots" content="noindex">
@@ -253,33 +252,45 @@
         <ul class="splide__list">
           <li class="splide__slide">
             <img src="assets/img/image_blue.png" class="slideshow__img slideshow__img--pc" alt="blue" width="1280" height="720">
-            <img src="assets/img/image_blue_sp.png" class="slideshow__img slideshow__img--sp" alt="blue" width="540" height="960">
+            <img src="assets/img/image_blue_sp.png" class="slideshow__img slideshow__img--sp" alt="blue" width="720" height="1280">
           </li>
           <li class="splide__slide">
             <img src="assets/img/image_green.png" class="slideshow__img slideshow__img--pc" alt="green" width="1280" height="720">
-            <img src="assets/img/image_green_sp.png" class="slideshow__img slideshow__img--sp" alt="green" width="540" height="960">
+            <img src="assets/img/image_green_sp.png" class="slideshow__img slideshow__img--sp" alt="green" width="720" height="1280">
           </li>
           <li class="splide__slide">
             <img src="assets/img/image_yellow.png" class="slideshow__img slideshow__img--pc" alt="yellow" width="1280" height="720">
-            <img src="assets/img/image_yellow_sp.png" class="slideshow__img slideshow__img--sp" alt="yellow" width="540" height="960">
+            <img src="assets/img/image_yellow_sp.png" class="slideshow__img slideshow__img--sp" alt="yellow" width="720" height="1280">
           </li>
           <li class="splide__slide">
             <img src="assets/img/image_red.png" class="slideshow__img slideshow__img--pc" alt="red" width="1280" height="720">
-            <img src="assets/img/image_red_sp.png" class="slideshow__img slideshow__img--sp" alt="red" width="540" height="960">
+            <img src="assets/img/image_red_sp.png" class="slideshow__img slideshow__img--sp" alt="red" width="720" height="1280">
           </li>
           <li class="splide__slide">
             <img src="assets/img/image_purple.png" class="slideshow__img slideshow__img--pc" alt="purple" width="1280" height="720">
-            <img src="assets/img/image_purple_sp.png" class="slideshow__img slideshow__img--sp" alt="purple" width="540" height="960">
+            <img src="assets/img/image_purple_sp.png" class="slideshow__img slideshow__img--sp" alt="purple" width="720" height="1280">
           </li>
         </ul>
       </div>
       <div class="splide__arrows">
         <button class="splide__arrow splide__arrow--prev slideshow__arrow slideshow__arrow--prev">
-          <i class="slideshow__icon fa-solid fa-angle-left"></i>
+          <i class="slideshow__arrow-icon fa-solid fa-angle-left"></i>
         </dbutton>
         <button class="splide__arrow splide__arrow--next slideshow__arrow slideshow__arrow--next">
-          <i class="slideshow__icon fa-solid fa-angle-right"></i>
+          <i class="slideshow__arrow-icon fa-solid fa-angle-right"></i>
         </button>
+      </div>
+      <div class="slideshow__footer">
+        <button class="splide__toggle slideshow__toggle">
+          <span class="splide__toggle__play slideshow__toggle-play">
+            <i class="slideshow__toggle-icon fa-solid fa-play"></i>
+          </span>
+          <span class="splide__toggle__pause slideshow__toggle-pause">
+            <i class="slideshow__toggle-icon fa-solid fa-pause"></i>
+          </span>
+        </button>
+        <span class="slideshow__footer-divider"></span>
+        <ul class="splide__pagination slideshow__pagination"></ul>
       </div>
     </div><!-- /.slideshow -->
 

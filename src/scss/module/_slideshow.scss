@@ -5,7 +5,6 @@
 *********************************/
 
 .slideshow{
-
 }
 
 .slideshow__track{
@@ -35,15 +34,15 @@
 }
 
 .slideshow__arrow{
+    position: absolute;
+    top: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     width: 60px;
     height: 100%;
-    background: none;
-    border-radius: 0;
-    opacity: 1;
-    z-index: 10;
+    transition: 0.1s;
+    z-index: 1;
 
     &:hover,&:active,&:focus{
         background-color: #ffffff1A;
@@ -66,57 +65,97 @@
     }
 }
 
-.slideshow__icon{
+.slideshow__arrow-icon{
     color: #ffffff80;
     font-size: 24px;
+    transition: 0.1s;
 
     @include g.media(sp){
         width: 18px;
     }
 }
 
-.slideshow__pagination{
+.slideshow__footer{
+    position: absolute;
+    display: flex;
+    left: 0;
+    right: 0;
     bottom: 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    z-index: 1;
+
+    @include g.media(sp){
+        bottom: 10px;
+    }
 }
 
-.slideshow__pagination li{
-    margin-left: 5px;
-    margin-right: 5px;
+.slideshow__toggle{
+    display: flex;
 }
 
-.slideshow__page{
-    width: 20px;
-    height: 20px;
-    background: none;
-    border-radius: 0;
+.slideshow__toggle-play,.slideshow__toggle-pause{
+    line-height: g.$line-height_same;
+}
+
+.slideshow__toggle-icon{
+    color: #ffffff80;
+    font-size: 24px;
     transition: 0.1s;
 
     &:hover,&:active,&:focus{
-        opacity: 1;
-        &::before{
-            color: g.$p-color_white;
-        }
+        color: g.$p-color_white;
     }
+
+    @include g.media(sp){
+        font-size: 20px;
+    }
+}
+
+.slideshow__footer-divider{
+    width: 1px;
+    height: 22px;
+    background-color: #ffffff80;
+
+    @include g.media(sp){
+        height: 18px;
+    }
+}
+
+.slideshow__pagination{
+    gap: 10px;
+}
+
+.slideshow__page{
+    display: flex;
 
     &::before{
         font-family: 'Font Awesome 6 Free';
         font-weight: 900;
         content: "\f111";  
         display:  inline-block;
-        position: absolute;
-        top: 0;
-        left: 0;
         font-size: 20px;
         font-weight: 400;
         color: #ffffff80;
+        transition: 0.1s;
+    }
+
+    &:hover,&:active,&:focus{
+        &::before{
+            color: g.$p-color_white;
+        }
     }
 
     &.is-active{
-        background: none;
-        transform: none;
-
         &::before{
             content: "\f192";  
+        }
+    }
+
+    @include g.media(sp){
+        &::before{
+            font-size: 16px;
         }
     }
 }
