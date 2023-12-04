@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>{{pageMeta.title}}</title>
+  <meta name="description" content="{{pageMeta.description}}">
+
+  <!-- OGP -->
+  <meta property="og:url" content="{{envUrl}}{{pageMeta.path}}">
+  <meta property="og:type" content="{{pageMeta.type}}">
+  <meta property="og:title" content="{{pageMeta.title}}">
+  <meta property="og:description" content="{{pageMeta.description}}">
+  <meta property="og:site_name" content="{{siteName}}">
+  <meta property="og:image" content="{{envUrl}}{{pageMeta.ogpImage}}">
+  
+  <!-- ファビコン -->
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+  <link rel="manifest" href="assets/favicon/site.webmanifest">
+  <link rel="mask-icon" href="assets/favicon/safari-pinned-tab.svg" color="#000000">
+  <link rel="shortcut icon" href="assets/favicon/favicon.ico">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-config" content="assets/favicon/browserconfig.xml">
+  <meta name="theme-color" content="#ffffff">
+
+  <!-- リセットCSS -->
+  <link rel="stylesheet" href="assets/css/destyle.min.css">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/22eeb3d0d6.js" crossorigin="anonymous"></script>
+
+  <!-- Splide -->
+  <link rel="stylesheet" href="assets/css/splide-core.min.css">
+  <script src="assets/js/splide.min.js"></script>
+
+  <!-- 検索エンジンにインデックスさせない -->
+  <meta name="robots" content="noindex">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/scss/style.scss">
+
+  <!-- JavaScript -->
+  <script src="/js/main.js" type="module"></script>
+
+</head>
+
+<body class="
+{{#if pageMeta.isHome}}
+home
+{{else}}
+page
+{{/if}}
+">
+
+  <header class="header">
+    <div class="header__inner">
+      
+      <a href="/" class="header__title">
+        <img class="header__title-img" src="assets/img/brand-logo.png" alt="BLAND NAME" width="490" height="64">
+      </a>
+
+      <!-- PCドロップダウン表示 -->
+      <nav class="header__nav header__nav--pc">
+        
+        <ul class="dropdown js_dropdown">
+          <li class="dropdown__item">
+            <a href="/" class="dropdown__link">トップ</a>
+          </li>
+          <li class="dropdown__item">
+            <button class="dropdown__link js_dropdown_link_parent">
+              企業情報<i class="dropdown__link-icon fa-solid fa-angle-down"></i>
+            </button>
+            <ul class="dropdown__child">
+              <li class="dropdown__child-item">
+                <a href="" class="dropdown__child-link">企業概要</a>
+              </li>
+              <li class="dropdown__child-item">
+                <a href="" class="dropdown__child-link">沿革</a>
+              </li>
+              <li class="dropdown__child-item">
+                <a href="" class="dropdown__child-link">アクセス</a>
+              </li>
+            </ul>
+          </li>
+          <li class="dropdown__item">
+            <button class="dropdown__link js_dropdown_link_parent">
+              事業紹介<i class="dropdown__link-icon fa-solid fa-angle-down"></i>
+            </button>
+            <ul class="dropdown__child">
+              <li class="dropdown__child-item">
+                <a href="" class="dropdown__child-link">事業内容</a>
+              </li>
+              <li class="dropdown__child-item">
+                <button class="dropdown__child-link js_dropdown_child_parent">
+                  事業実績<i class="dropdown__child-icon fa-solid fa-angle-right"></i>
+                </button>
+                <ul class="dropdown__grandchild">
+                  <li class="dropdown__grandchild-item">
+                    <a href="" class="dropdown__grandchild-link">事業カテゴリ1</a>
+                  </li>
+                  <li class="dropdown__grandchild-item">
+                    <a href="" class="dropdown__grandchild-link">事業カテゴリ2</a>
+                  </li>
+                  <li class="dropdown__grandchild-item">
+                    <a href="" class="dropdown__grandchild-link">事業カテゴリ3</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="dropdown__child-item">
+                <a href="" class="dropdown__child-link">事業内容</a>
+              </li>
+              <li class="dropdown__child-item">
+                <button class="dropdown__child-link js_dropdown_child_parent">
+                  事業実績<i class="dropdown__child-icon fa-solid fa-angle-right"></i>
+                </button>
+                <ul class="dropdown__grandchild">
+                  <li class="dropdown__grandchild-item">
+                    <a href="" class="dropdown__grandchild-link">事業カテゴリ4</a>
+                  </li>
+                  <li class="dropdown__grandchild-item">
+                    <a href="" class="dropdown__grandchild-link">事業カテゴリ5</a>
+                  </li>
+                  <li class="dropdown__grandchild-item">
+                    <a href="" class="dropdown__grandchild-link">事業カテゴリ6</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li class="dropdown__item">
+            <a href="" class="dropdown__link">ニュース</a>
+          </li>
+          <li class="dropdown__item">
+            <a href="" class="dropdown__link">BLOG</a>
+          </li>
+          <li class="dropdown__item">
+            <a href="" class="dropdown__link">お問い合わせ</a>
+          </li>
+        </ul><!-- /.dropdown -->
+
+      </nav>
+
+      <!-- SPドロワー表示 -->
+      <nav class="header__nav header__nav--sp">
+
+        <ul class="drawer js_drawer">
+          <li class="drawer__item">
+            <a href="/" class="drawer__link">トップ</a>
+          </li>
+          <li class="drawer__item">
+            <button class="drawer__link js_drawer_link_parent">
+              企業情報<i class="drawer__icon fa-solid fa-angle-right"></i>
+            </button>
+            <ul class="drawer__child">
+              <button class="drawer__child-link js_drawer_child_close" aria-label="子メニューを閉じる">
+                <i class="drawer__icon fa-solid fa-angle-left"></i>
+              </button>
+              <li class="drawer__child-item">
+                <a href="" class="drawer__child-link">企業概要</a>
+              </li>
+              <li class="drawer__child-item">
+                <a href="" class="drawer__child-link">沿革</a>
+              </li>
+              <li class="drawer__child-item">
+                <a href="" class="drawer__child-link">アクセス</a>
+              </li>
+            </ul>
+          </li>
+          <li class="drawer__item">
+            <button class="drawer__link js_drawer_link_parent">
+              事業紹介<i class="drawer__icon fa-solid fa-angle-right"></i>
+            </button>
+            <ul class="drawer__child">
+              <button class="drawer__child-link js_drawer_child_close" aria-label="子メニューを閉じる">
+                <i class="drawer__icon fa-solid fa-angle-left"></i>
+              </button>
+              <li class="drawer__child-item">
+                <a href="" class="drawer__child-link">事業内容</a>
+              </li>
+              <li class="drawer__child-item">
+                <button class="drawer__child-link js_drawer_child_parent">
+                  事業実績<i class="drawer__icon fa-solid fa-angle-right"></i>
+                </button>
+                <ul class="drawer__grandchild">
+                  <button class="drawer__child-link js_drawer_grandchild_close" aria-label="孫メニューを閉じる">
+                    <i class="drawer__icon fa-solid fa-angle-left"></i>
+                  </button>
+                  <li class="drawer__grandchild-item">
+                    <a href="" class="drawer__grandchild-link">事業カテゴリ1</a>
+                  </li>
+                  <li class="drawer__grandchild-item">
+                    <a href="" class="drawer__grandchild-link">事業カテゴリ2</a>
+                  </li>
+                  <li class="drawer__grandchild-item">
+                    <a href="" class="drawer__grandchild-link">事業カテゴリ3</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="drawer__child-item">
+                <a href="" class="drawer__child-link">事業内容</a>
+              </li>
+              <li class="drawer__child-item">
+                <button class="drawer__child-link js_drawer_child_parent">
+                  事業実績<i class="drawer__icon fa-solid fa-angle-right"></i>
+                </button>
+                <ul class="drawer__grandchild">
+                  <button class="drawer__child-link js_drawer_grandchild_close" aria-label="孫メニューを閉じる">
+                    <i class="drawer__icon fa-solid fa-angle-left"></i>
+                  </button>
+                  <li class="drawer__grandchild-item">
+                    <a href="" class="drawer__grandchild-link">事業カテゴリ4</a>
+                  </li>
+                  <li class="drawer__grandchild-item">
+                    <a href="" class="drawer__grandchild-link">事業カテゴリ5</a>
+                  </li>
+                  <li class="drawer__grandchild-item">
+                    <a href="" class="drawer__grandchild-link">事業カテゴリ6</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li class="drawer__item">
+            <a href="" class="drawer__link">ニュース</a>
+          </li>
+          <li class="drawer__item">
+            <a href="" class="drawer__link">BLOG</a>
+          </li>
+          <li class="drawer__item">
+            <a href="" class="drawer__link">お問い合わせ</a>
+          </li>
+        </ul><!-- /.drawer -->
+
+      </nav>
+
+      <button class="header__hamburger js_header_hamburger" aria-label="メニューの開閉">
+        <span class="header__hamburger-line"></span>
+        <span class="header__hamburger-line"></span>
+        <span class="header__hamburger-line"></span>
+      </button>
+
+    </div>
+  </header><!-- /.header -->
+
+  <div class="wrapper">
+
+    {{#if pageMeta.isHome}}
+
+    <div class="splide slideshow">
+      <div class="splide__track slideshow__track">
+        <ul class="splide__list">
+          <li class="splide__slide">
+            <img src="assets/img/image_blue.png" class="slideshow__img slideshow__img--pc" alt="blue" width="1280" height="720">
+            <img src="assets/img/image_blue_sp.png" class="slideshow__img slideshow__img--sp" alt="blue" width="720" height="1280">
+          </li>
+          <li class="splide__slide">
+            <img src="assets/img/image_green.png" class="slideshow__img slideshow__img--pc" alt="green" width="1280" height="720">
+            <img src="assets/img/image_green_sp.png" class="slideshow__img slideshow__img--sp" alt="green" width="720" height="1280">
+          </li>
+          <li class="splide__slide">
+            <img src="assets/img/image_yellow.png" class="slideshow__img slideshow__img--pc" alt="yellow" width="1280" height="720">
+            <img src="assets/img/image_yellow_sp.png" class="slideshow__img slideshow__img--sp" alt="yellow" width="720" height="1280">
+          </li>
+          <li class="splide__slide">
+            <img src="assets/img/image_red.png" class="slideshow__img slideshow__img--pc" alt="red" width="1280" height="720">
+            <img src="assets/img/image_red_sp.png" class="slideshow__img slideshow__img--sp" alt="red" width="720" height="1280">
+          </li>
+          <li class="splide__slide">
+            <img src="assets/img/image_purple.png" class="slideshow__img slideshow__img--pc" alt="purple" width="1280" height="720">
+            <img src="assets/img/image_purple_sp.png" class="slideshow__img slideshow__img--sp" alt="purple" width="720" height="1280">
+          </li>
+        </ul>
+      </div>
+      <div class="splide__arrows">
+        <button class="splide__arrow splide__arrow--prev slideshow__arrow slideshow__arrow--prev">
+          <i class="slideshow__arrow-icon fa-solid fa-angle-left"></i>
+        </dbutton>
+        <button class="splide__arrow splide__arrow--next slideshow__arrow slideshow__arrow--next">
+          <i class="slideshow__arrow-icon fa-solid fa-angle-right"></i>
+        </button>
+      </div>
+      <div class="slideshow__footer">
+        <button class="splide__toggle slideshow__toggle">
+          <span class="splide__toggle__play slideshow__toggle-play">
+            <i class="slideshow__toggle-icon fa-solid fa-play"></i>
+          </span>
+          <span class="splide__toggle__pause slideshow__toggle-pause">
+            <i class="slideshow__toggle-icon fa-solid fa-pause"></i>
+          </span>
+        </button>
+        <span class="slideshow__footer-divider"></span>
+        <ul class="splide__pagination slideshow__pagination"></ul>
+      </div>
+    </div><!-- /.slideshow -->
+
+    {{else}}
+
+    <div class="page-visual">
+      <div class="page-visual__inner">
+        <div class="page-visual__heading page-visual__heading--left">
+          <h2 class="page-visual-heading">{{pageMeta.category}}</h2>
+        </div>
+      </div>
+    </div><!-- /.page-visual -->
+
+    <div class="container container--breadcrum">
+      <div class="container__inner">
+
+        <div class="breadcrum">
+          <a href="/" class="breadcrum__link">Top</a>
+          <i class="breadcrum__partition fa-solid fa-angle-right"></i>
+          <p class="breadcrum__current">{{pageMeta.title}}</p>
+        </div><!-- /.breadcrum -->
+        
+      </div>
+    </div><!-- /.container -->
+
+    {{/if}}

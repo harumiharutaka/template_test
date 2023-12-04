@@ -5,7 +5,7 @@
 export function loading() {
     
     const loading = document.querySelector('.js_loading');
-    const progressBar = document.querySelector('.js_loading__bar');
+    const progressBar = document.querySelector('.js_loading_bar');
     const home = document.querySelector('.home');
     
     // ローディングを表示する関数
@@ -37,8 +37,8 @@ export function loading() {
     })
 
     // ※テスト用 クリックしたとき表示する処理
-    document.querySelector('.js_loading_test').onclick = function() {
-        loadingTime();
-    }
+    //document.querySelector('.js_loading_test').onclick = function() {
+    //    loadingTime();
+    //}
  
 }

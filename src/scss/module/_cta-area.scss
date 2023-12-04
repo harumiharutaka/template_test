@@ -13,6 +13,10 @@
     gap: 20px;
     background-color: g.$s-color_background_tertiary;
     border-radius: 8px;
+
+    &--bg-none{
+        background-color: transparent;
+    }
 }
 
 .cta-area__title{

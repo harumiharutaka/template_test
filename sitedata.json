@@ -4,30 +4,27 @@
   "pageMeta": {
     "/index.html": {
       "id": 1,
-      "name": "top",
-      "title": "top",
-      "description": "top",
+      "name": "template_test",
+      "title": "home",
+      "description": "home-description",
+      "category": "home",
+      "isHome": true,
+      "showCtaArea": false,
       "ogpImage": "/assets/img/image_16-9.png",
       "type": "website",
       "path": "/"
     },
-    "/copy1.html": {
+    "/page.html": {
       "id": 2,
-      "name": "copy1",
-      "title": "copy1",
-      "description": "copy1",
+      "name": "template_test",
+      "title": "page",
+      "description": "page-description",
+      "category": "category",
+      "isHome": false,
+      "showCtaArea": true,
       "ogpImage": "/assets/img/image_16-9.png",
       "type": "article",
-      "path": "/copy1.html"
-    },
-    "/copy2/index.html": {
-      "id": 3,
-      "name": "copy2",
-      "title": "copy2",
-      "description": "copy2",
-      "ogpImage": "/assets/img/image_16-9.png",
-      "type": "article",
-      "path": "/copy2/index.html"
+      "path": "/page.html"
     }
   }
 }
