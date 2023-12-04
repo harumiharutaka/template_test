@@ -60,6 +60,10 @@
     }
 
     &--sp{
+        position: absolute;
+        top: 0;
+        right: 0;
+        
         @include g.media(header-pc){
             display: none;
         }

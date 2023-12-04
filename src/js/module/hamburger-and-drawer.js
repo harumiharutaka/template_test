@@ -36,7 +36,6 @@ export function hamburgerAndDrawer() {
         drawer.style.transitionProperty = 'right';
         drawer.style.transitionDuration = duration + 'ms';
         hamburger.classList.remove('header__hamburger--active');
-        drawer.classList.remove('drawer--active')
         drawer.style.right = 0;
         overlay.classList.remove('drawer-overlay--active');
         window.globalFunction.bodyScrollStart();
@@ -45,6 +44,7 @@ export function hamburgerAndDrawer() {
         setTimeout(() => {
             drawer.style.removeProperty('transition-property');
             drawer.style.removeProperty('transition-duration');
+            drawer.classList.remove('drawer--active')
         }, duration);
     }
 
