@@ -4,6 +4,12 @@
     トップページ
 *********************************/
 
-.top{
+.home{
+    opacity: 0;
+    visibility: hidden;
 
+    &--active{
+        opacity: 1;
+        visibility: visible;
+    }
 }

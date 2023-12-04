@@ -6,6 +6,7 @@ export function loading() {
     
     const loading = document.querySelector('.js_loading');
     const progressBar = document.querySelector('.js_loading__bar');
+    const home = document.querySelector('.home');
     
     // ローディングを表示する関数
     function loadingTime(duration = 1000, transition = 200) {
@@ -25,14 +26,15 @@ export function loading() {
     }
     
     // アクセスした時1回だけ表示する処理
-    if (!sessionStorage.getItem('visited')) {
-        sessionStorage.setItem('visited', 'first');
-        window.addEventListener('load', function() {
+    window.addEventListener('DOMContentLoaded', function() {
+        if (!sessionStorage.getItem('visited')) {
+            sessionStorage.setItem('visited', 'first');
             loadingTime();
-        })
-    } else {
-        loading.classList.remove('loading--active');
-    }
+            home.classList.add('home--active');
+        } else {
+            home.classList.add('home--active');
+        }
+    })
 
     // ※テスト用 クリックしたとき表示する処理
     document.querySelector('.js_loading_test').onclick = function() {
