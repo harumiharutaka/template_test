@@ -26,19 +26,24 @@ export function loading() {
     }
     
     // アクセスした時1回だけ表示する処理
-    window.addEventListener('DOMContentLoaded', function() {
-        if (!sessionStorage.getItem('visited')) {
-            sessionStorage.setItem('visited', 'first');
-            loadingTime();
-            home.classList.add('home--active');
-        } else {
-            home.classList.add('home--active');
-        }
-    })
+    if (home) {
+        window.addEventListener('DOMContentLoaded', function() {
+            if (!sessionStorage.getItem('visited')) {
+                sessionStorage.setItem('visited', 'first');
+                loadingTime();
+                home.classList.add('home--active');
+            } else {
+                home.classList.add('home--active');
+            }
+        })
+    }
 
     // ※テスト用 クリックしたとき表示する処理
-    //document.querySelector('.js_loading_test').onclick = function() {
-    //    loadingTime();
-    //}
- 
+    const loadingTest = document.querySelector('.js_loading_test');
+    if (loadingTest) {
+        loadingTest.onclick = function() {
+            loadingTime();
+        }
+    }
+
 }
