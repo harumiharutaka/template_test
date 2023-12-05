@@ -25,26 +25,35 @@
 // サイドバー
 @forward 'sidebar';
 
-// セクション
-//@forward 'section';
-
 // 見出し
-//@forward 'heading';
+@forward 'heading';
 
 // ボタン
-//@forward 'button';
+@forward 'button';
 
-// ラベル
-//@forward 'label';
+// アイコン
+@forward 'icon';
+
+// 分類ラベル
+@forward 'class-label';
+
+// 注釈
+@forward 'annotation-text';
+
+// ディバイダー
+@forward 'divider';
+
+// テーブル
+@forward 'table';
+
+// リスト
+@forward 'list';
 
 // メディア
 //@forward 'media';
 
 // カード
 //@forward 'card';
-
-// テーブル
-//@forward 'table';
 
 // ページャー
 //@forward 'pager';
@@ -60,9 +69,6 @@
 
 // ポストリスト
 //@forward 'posts';
-
-// リスト
-//@forward 'list';
 
 // タブ
 //@forward 'tab';

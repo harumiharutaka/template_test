@@ -4,127 +4,81 @@
     ボタン
 *********************************/
 
-/* 標準ボタン */
 .button{
     display: inline-block;
+    width: fit-content;
     min-width: 150px;
     max-width: 100%;
     padding: 5px 15px;
-    background-color: g.$color_grey_dark;
+    background-color: g.$s-color_button_normal;
     border: 1px solid transparent;
     border-radius: 4px;
-    box-shadow: 0 1px 4px 0 rgba(g.$color_pure-black,0.1);
-    color: g.$color_white;
-    font-size: g.$font-size_lg;
-    font-weight: bold;
+    color: g.$s-color_text_on-fill;
+    @include g.text-style(button_m);
     text-align: center;
-    transition: 0.5s;
+    text-decoration: none;
+    transition: 0.1s;
 
     &:hover,&:active,&:focus{ 
-        background-color: g.$color_grey_light;
-        border-color: currentColor;
-        color: g.$color_grey_dark;
+        background-color: g.$s-color_button_hover;
     }
 
-    &--chevron-right{
-        position: relative;
-        padding-right: 2em;
-        padding-left: 1.2em;
+    &--secondary{  
+        background-color: g.$p-color_white;
+        border: 1px solid g.$p-color_grey_600;
+        color: g.$p-color_grey_600;
 
-        &::after{
-            font-family: 'Font Awesome 6 Free';
-            font-weight: 900;
-            content: "\f054";  
-            position: absolute;
-            top: 50%;
-            right: 0.8rem;
-            transform: translateY(-50%); 
-        }   
+        &:hover,&:active,&:focus{ 
+            background-color: g.$p-color_grey_100;
+        }
+    }
+
+    &--primary-small{
+        min-width: auto;
+        padding: 3px 9px;
+        @include g.text-style(button_s);
+    }
+
+    &--secondary-small{  
+        min-width: auto;
+        padding: 3px 9px;
+        background-color: g.$p-color_white;
+        border: 1px solid g.$p-color_grey_600;
+        color: g.$p-color_grey_600;
+        @include g.text-style(button_s);
+
+        &:hover,&:active,&:focus{ 
+            background-color: g.$p-color_grey_100;
+        }
     }
     
-    &--large{
-        min-width: 180px;
-        max-width: 100%;
-        padding-top: 10px;
-        padding-bottom: 10px;
-        font-size: g.$font-size_xl;
-    }
 
-    &--green{
-        background-color: #62ac81;
+    &--success{
+        background-color: g.$s-color_status_success;
         
         &:hover,&:active,&:focus{ 
-            color: #62ac81;
+            background-color: g.$p-color_green_900;
         }
     }
 
-    &--red{
-        background-color: #a74848;
+    &--alert{
+        background-color: g.$s-color_status_alert;
         
         &:hover,&:active,&:focus{ 
-            color: #a74848;
-        }
-    }
-}
-
-/* アイコン付き小ボタン */
-.before-icon-button{
-    display: inline-block;
-    padding: 0.2em 0.4em;
-    background-color: g.$color_white;
-    border: 1px solid currentColor;;
-    border-radius: 2px;
-    box-shadow: 0 1px 4px 0 rgba(g.$color_pure-black,0.1);
-    color: g.$color_grey_dark;
-    transition: 0.5s;
-
-    &::before{
-        display: inline-block;
-        font-family: 'Font Awesome 6 Free';
-        font-weight: 900;
-        margin-right: 0.4em; 
-    }  
-
-    &:hover,&:active,&:focus{ 
-        background-color: g.$color_grey_dark;
-        border-color: transparent;
-        color: g.$color_white;
-    }
-
-    &--download{
-        
-        &::before{
-            content: "\f019"; 
-
+            background-color: g.$p-color_red_1100;
         }
     }
 
-    &--zoom{
-        
-        &::before{
-            content: "\f00e"; 
-
-        }
+    &--icon-after{
+        position: relative;
+        padding-right: 01.2rem;
     }
 }
 
-/* 水平ボタンリスト */
-.horizontal-button-list{
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-}
-
-.horizontal-button-list__item{
-    flex: 1;
-    max-width: 150px;
-}
-
-.horizontal-button-list__button{
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    min-width: auto;
-    height: 100%;
+.button__icon-after{
+    position: absolute;
+    top: 50%;
+    right: 0.4rem;
+    font-size: g.$font-size_s;
+    transform: translateY(-50%);
 }

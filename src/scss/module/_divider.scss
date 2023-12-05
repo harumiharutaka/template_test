@@ -1,0 +1,9 @@
+@use '../global' as g;
+
+/*********************************
+    ディバイダー
+*********************************/
+
+.divider{
+    border-color: g.$s-color_border_divider;
+}

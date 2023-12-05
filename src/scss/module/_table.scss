@@ -5,19 +5,6 @@
 *********************************/
 
 .table{
-
-    &--md-scroll{
-        overflow-x: auto;
-
-        .table__header{
-            white-space: nowrap;
-        }
-
-        .table__text{
-            white-space: nowrap;
-        }
-    }
-
     &--vertical{
 
         .table__body-row{
@@ -33,7 +20,7 @@
         .table__header-row{
 
             &:first-child>*:first-child{
-                background-color: g.$color_white;
+                background-color: g.$p-color_white;
                 border-top: none;
                 border-left: none;
             }
@@ -46,11 +33,23 @@
             }
         }
     }
+
+    &--sp-scroll{
+        overflow-x: auto;
+
+        .table__header{
+            white-space: nowrap;
+        }
+
+        .table__text{
+            white-space: nowrap;
+        }
+    }
 }
 
 .table__inner{
     width: 100%;
-    background-color: g.$color_white;
+    background-color: g.$p-color_white;
     border-spacing: 0;
     border-collapse: separate;
 }
@@ -61,32 +60,25 @@
 .table__body{
 }
 
-.table__header-row{
+.table__header-row,.table__body-row{
 
     &:first-child>*{
-        border-top: 1px solid g.$color_grey;
-    }
-}
-
-.table__body-row{
-
-    &:first-child>*{
-        border-top: 1px solid g.$color_grey;
+        border-top: 1px solid g.$s-color_border_field;
     }
 }
 
 .table__header{
     padding: 5px 10px;
     border: none;
-    border-right: 1px solid g.$color_grey;
-    border-bottom: 1px solid g.$color_grey;
-    background-color: g.$color_light;
+    border-right: 1px solid g.$s-color_border_field;
+    border-bottom: 1px solid g.$s-color_border_field;
+    background-color: g.$p-color_grey_50;
 
     &:first-child{
-        border-left: 1px solid g.$color_grey;
+        border-left: 1px solid g.$s-color_border_field;
     }
     
-    &--md-sticky{
+    &--sp-sticky{
         position: sticky;
         left: 0;
     }
@@ -95,10 +87,10 @@
 .table__text{
     padding: 5px 10px;
     border: none;
-    border-right: 1px solid g.$color_grey;
-    border-bottom: 1px solid g.$color_grey;
+    border-right: 1px solid g.$s-color_border_field;
+    border-bottom: 1px solid g.$s-color_border_field;
 
     &:first-child{
-        border-left: 1px solid g.$color_grey;
+        border-left: 1px solid g.$s-color_border_field;
     }
 }

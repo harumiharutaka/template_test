@@ -1,0 +1,15 @@
+@use '../global' as g;
+
+/*********************************
+    アイコン
+*********************************/
+
+.icon{
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.icon__icon{
+    font-size: g.$font-size_s;
+}

@@ -1,0 +1,15 @@
+@use '../global' as g;
+
+/*********************************
+    注釈
+*********************************/
+
+.annotation-text{
+    &--alert{
+        color: g.$s-color_status_alert;
+    }
+    
+    &--note{
+        font-size: g.$font-size_xs;
+    }
+}
