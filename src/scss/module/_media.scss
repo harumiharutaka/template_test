@@ -6,46 +6,42 @@
 
 .media{
     display: flex;
-    flex-direction: column;
     align-items: center;
     gap: 20px;
 
-    @include g.media(pc){
-        flex-direction: row;
+    @include g.media(sp){
+        flex-direction: column;
+        gap: 10px;
     }
 
     &--reverse{
-        
         @include g.media(pc){
             flex-direction: row-reverse;
         }
     }
 }
 
-.media__body{
-    flex: 1;
-    
-    >*:last-child{
-        margin-bottom: 0;
+.media__img{
+    width: 30%;
+    @include g.image-aspect-ratio(ratio_3-2);
+
+    @include g.media(sp){
+        width: 100%;
     }
 }
 
-.media__title{
-    margin-bottom: 10px;
-    font-size:g.$font-size_lg;
-    font-weight: bold;
+.media__body{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex: 1;
 }
 
 .media__text{
-    font-size: g.$font-size_sm;
-    line-height: g.$line-height_low;
-    margin-bottom: 10px;
+    font-size: g.$font-size_s;
 }
 
-.media__img-wrapper{
-    flex: 0 1 30%;
-}
-
-.media__img{
-    width: 100%;
+.media__button{
+    display: flex;
+    justify-content: flex-end;
 }

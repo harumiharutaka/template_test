@@ -6,9 +6,7 @@
 
 .table{
     &--vertical{
-
         .table__body-row{
-
             &:first-child>*{
                 border-top: none;
             }
@@ -16,9 +14,7 @@
     }
     
     &--cross{
-
         .table__header-row{
-
             &:first-child>*:first-child{
                 background-color: g.$p-color_white;
                 border-top: none;
@@ -27,7 +23,6 @@
         }
 
         .table__body-row{
-
             &:first-child>*{
                 border-top: none;
             }

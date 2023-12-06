@@ -54,7 +54,7 @@
     color: g.$s-color_button_normal;
     text-decoration: none;
     line-height: g.$line-height_s;
-    gap: 10px;
+    gap: 20px;
     transition: 0.1s;
 
     &:hover,&:active,&:focus{
@@ -63,6 +63,7 @@
 
     @include g.media(sp){
         flex-direction: column;
+        gap: 10px;
     }  
 }
 
