@@ -154,5 +154,7 @@
     "dev": "vite",
     "build": "vite build && html-beautify dist/**/*.html",
     "preview": "vite preview"
-19.「npm run dev」と入力するとプレビューサーバのパスが表示される
-20.「npm run build」と入力すると「dist」ディレクトリにビルドされる
+19.「package.json」の「"main"」の下に下記記述を追加
+    "type": "module",
+20.「npm run dev」と入力するとプレビューサーバのパスが表示される
+21.「npm run build」と入力すると「dist」ディレクトリにビルドされる
