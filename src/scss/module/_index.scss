@@ -49,14 +49,17 @@
 // リスト
 @forward 'list';
 
+// ページャー
+@forward 'pager';
+
+// ポストリスト
+@forward 'posts';
+
 // メディア
 //@forward 'media';
 
 // カード
 //@forward 'card';
-
-// ページャー
-//@forward 'pager';
 
 // CTAエリア
 @forward 'cta-area';
@@ -66,9 +69,6 @@
 
 // FAQ
 //@forward 'faq';
-
-// ポストリスト
-//@forward 'posts';
 
 // タブ
 //@forward 'tab';

@@ -4,6 +4,7 @@
     リスト
 *********************************/
 
+/* bullet */
 .bullet-list{
     display: flex;
     flex-direction: column;
@@ -49,6 +50,7 @@
     }
 }
 
+/* order */
 .order-list{
     counter-reset: order-list;
     display: flex;
