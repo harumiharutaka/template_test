@@ -37,11 +37,7 @@
     &--sp-scroll{
         overflow-x: auto;
 
-        .table__header{
-            white-space: nowrap;
-        }
-
-        .table__text{
+        .table__header,.table__text{
             white-space: nowrap;
         }
     }
@@ -61,7 +57,6 @@
 }
 
 .table__header-row,.table__body-row{
-
     &:first-child>*{
         border-top: 1px solid g.$s-color_border_field;
     }

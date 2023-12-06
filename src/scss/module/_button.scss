@@ -15,8 +15,8 @@
     border-radius: 4px;
     color: g.$s-color_text_on-fill;
     @include g.text-style(button_m);
-    text-align: center;
     text-decoration: none;
+    text-align: center;
     transition: 0.1s;
 
     &:hover,&:active,&:focus{ 
@@ -71,7 +71,7 @@
 
     &--icon-after{
         position: relative;
-        padding-right: 01.2rem;
+        padding-right: 1.2rem;
     }
 }
 

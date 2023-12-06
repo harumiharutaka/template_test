@@ -19,7 +19,6 @@
         font-family: 'Font Awesome 6 Free';
         font-weight: 900;
         content: "\f111";  
-        display:  inline-block;
         position: absolute;
         top: 0.7em;
         left: 0;
@@ -37,6 +36,7 @@
 .child-bullet-list__item{
     position: relative;
     padding-left: 0.8em;
+    line-height: g.$line-height_s;
 
     &::before{
         font-family: 'Font Awesome 6 Free';
@@ -47,7 +47,6 @@
         left: 0;
         font-size: 0.5em;
     }
-
 }
 
 .order-list{
@@ -60,13 +59,13 @@
 .order-list__item{
     position: relative;
     padding-left: 1.3em;
+    line-height: g.$line-height_s;
 
     &::before{
         counter-increment: order-list;
         content: counter(order-list); 
-        display: inline-block;
         position: absolute;
-        top: 0.5em;
+        top: 0.3em;
         left: 0;
         width: 1.6em;
         height: 1.6em;
@@ -92,13 +91,13 @@
 .child-order-list__item{
     position: relative;
     padding-left: 1.3em;
+    line-height: g.$line-height_s;
 
     &::before{
         counter-increment: child-order-list;
         content: counter(child-order-list); 
-        display: inline-block;
         position: absolute;
-        top: 0.5em;
+        top: 0.3em;
         left: 0;
         width: 1.6em;
         height: 1.6em;
