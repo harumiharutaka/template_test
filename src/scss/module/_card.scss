@@ -4,8 +4,8 @@
     カード
 *********************************/
 
-/* cards */
-.cards{
+/* card-group */
+.card-group{
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -16,7 +16,7 @@
     }
 
     &--column3{
-        .cards__itme{
+        .card-group__item{
             width: calc((100% - (20px * 2)) / 3);
 
             @include g.media(sp){
@@ -26,7 +26,7 @@
     }
     
     &--column4{
-        .cards__itme{
+        .card-group__item{
             width: calc((100% - (20px * 3)) / 4);
 
             @include g.media(sp){
@@ -36,7 +36,7 @@
     }
 }
 
-.cards__itme{
+.card-group__item{
 }
 
 /* card */

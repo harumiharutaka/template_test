@@ -4,8 +4,8 @@
     料金表
 *********************************/
 
-/* price-boxes{ */
-.price-boxes{
+/* price-box-group */
+.price-box-group{
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -15,12 +15,13 @@
     }
 }
 
-.price-boxes__item{
+.price-box-group__item{
     flex: 1;
 }
 
 /* price-box */
 .price-box{
+    background-color: g.$p-color_white;
     border: 1px solid g.$p-color_grey_600;
 }
 

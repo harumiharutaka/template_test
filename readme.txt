@@ -1,20 +1,4 @@
 /*********************************
-    環境構築方法（作業者用）
-*********************************/
-
-1.Gitからプロジェクトをクローンする
-2.「npm init -y」と入力し「package.json」を作成
-3.「npm install -D vite sass postcss autoprefixer postcss-sort-media-queries css-declaration-sorter @fullhuman/postcss-purgecss postcss-normalize-charset vite-plugin-handlebars js-beautify」と入力しプラグインを一括インストール
-4.「package.json」の「"scripts"」に下記記述を追加
-    "dev": "vite",
-    "build": "vite build && html-beautify dist/**/*.html",
-    "preview": "vite preview"
-5.「npm run dev」と入力するとプレビューサーバのパスが表示される
-6.「npm run build」と入力すると「dist」ディレクトリにビルドされる
-
-
-
-/*********************************
     ディレクトリ構成
 *********************************/
 
@@ -29,7 +13,6 @@
 　┃　　┃　　┃　　　　　：
 　┃　　┃　　┣━ layout //レイアウトに使うBlockを格納
 　┃　　┃　　┃　　┗━ _container.scss //コンテナ
-　┃　　┃　　┃　　　　　：
 　┃　　┃　　┣━ module //モジュールとして使うBlockを格納
 　┃　　┃　　┃　　┣━ _header.scss //ヘッダー
 　┃　　┃　　┃　　┗━ _footer.scss //フッター
@@ -37,6 +20,8 @@
 　┃　　┃　　┣━ page //ページ毎に使うCSSを格納
 　┃　　┃　　┃　　┗━ _top.scss //indexページ
 　┃　　┃　　┃　　　　　：
+　┃　　┃　　┣━ utility //クラス単体で使うCSSを格納
+　┃　　┃　　┃　　┗━ _helper.scss //ヘルパークラス
 　┃　　┃　　┗━ style.scss
 　┃　　┣━ js
 　┃　　┃　　┣━ module //モジュールに分けたjsを格納
