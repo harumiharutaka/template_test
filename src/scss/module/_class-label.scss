@@ -14,7 +14,7 @@
     color: g.$s-color_text_on-fill;
     font-size: g.$font-size_xxs;
     line-height: g.$line-height_s;
-    font-weight: bold;
+    font-weight: g.$font-weight_b;
 
     &--success{
         background-color: g.$s-color_status_success;
