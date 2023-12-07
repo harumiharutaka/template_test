@@ -67,18 +67,19 @@
         counter-increment: order-list;
         content: counter(order-list); 
         position: absolute;
-        top: 0.3em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        top: 0;
         left: 0;
         width: 1.6em;
         height: 1.6em;
+        padding-left: 0.1em;
         background-color: g.$p-color_grey_600;
         border-radius: 100px;
         color: g.$s-color_text_on-fill;
         font-size: g.$font-size_xxs;
         line-height: g.$line-height_s;
-        text-align: center;
-        padding-top: 0.1em;
-        padding-left: 0.1em;
     }
 }
 
@@ -99,17 +100,18 @@
         counter-increment: child-order-list;
         content: counter(child-order-list); 
         position: absolute;
-        top: 0.3em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        top: 0;
         left: 0;
         width: 1.6em;
         height: 1.6em;
+        padding-left: 0.1em;
         background-color: g.$p-color_grey_300;
         border-radius: 100px;
         color: g.$s-color_text_on-fill;
         font-size: g.$font-size_xxs;
         line-height: g.$line-height_s;
-        text-align: center;
-        padding-top: 0.1em;
-        padding-left: 0.1em;
     }
 }
