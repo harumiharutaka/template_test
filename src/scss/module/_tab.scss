@@ -36,10 +36,10 @@
 }
 
 .tab-navigation__item{
+    flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: calc(100% / 4);
     padding: 5px 15px;
     border-bottom: 4px solid g.$p-color_grey_300;
     line-height: g.$line-height_s;

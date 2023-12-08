@@ -5,7 +5,7 @@
 export function accordion() {
 
     // アコーディオンを開く関数
-    function slideDown(el, duration = 500) {
+    function slideDown(el, duration = 300) {
         el.classList.add('accordion__body--active');
         el.style.overflow = 'hidden';
         el.style.height = 'auto';
@@ -28,7 +28,7 @@ export function accordion() {
     }
     
     // アコーディオンを閉じる関数
-    function slideUp(el, duration = 500) {
+    function slideUp(el, duration = 300) {
         el.style.overflow = 'hidden';
         let h = el.offsetHeight;
         el.style.height = 0;
@@ -54,22 +54,18 @@ export function accordion() {
     const accordions = document.querySelectorAll('.js_accordion');
     accordions.forEach(function(accordion, index) {
 
-        const accordionBtns = accordion.querySelectorAll('.js_accordion_button');
-        accordionBtns.forEach(function(accordionBtn, index) {
+        const accordionBtn = accordion.querySelector('.js_accordion_button');
+        accordionBtn.onclick = function() {
 
-            accordionBtn.onclick = function() {
-
-                const content = accordionBtn.parentNode.nextElementSibling;
-                if(content.classList.contains('accordion__body--active')){
-                    slideUp(content);
-                    accordionBtn.classList.remove('accordion__button--active');
-                } else {
-                    slideDown(content);
-                    accordionBtn.classList.add('accordion__button--active');
-                }
+            const body = this.nextElementSibling;
+            if(body.classList.contains('accordion__body--active')){
+                slideUp(body);
+                this.classList.remove('accordion__button--active');
+            } else {
+                slideDown(body);
+                this.classList.add('accordion__button--active');
             }
-
-        });
+        }
 
     });
 
