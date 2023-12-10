@@ -57,12 +57,12 @@ export function accordion() {
         const accordionBtn = accordion.querySelector('.js_accordion_button');
         accordionBtn.onclick = function() {
 
-            const body = this.nextElementSibling;
-            if(body.classList.contains('accordion__body--active')){
-                slideUp(body);
+            const accordionBody = this.nextElementSibling;
+            if(accordionBody.classList.contains('accordion__body--active')){
+                slideUp(accordionBody);
                 this.classList.remove('accordion__button--active');
             } else {
-                slideDown(body);
+                slideDown(accordionBody);
                 this.classList.add('accordion__button--active');
             }
         }

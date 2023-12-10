@@ -11,43 +11,62 @@ export function modal() {
         modalBtn.onclick = function() {
 
             const modalBtnId = this.dataset.modal;
+            console.log(modalBtnId);
+            document.querySelector('#' + modalBtnId).showModal();
             document.querySelector('#' + modalBtnId).classList.add('modal--active');
-            document.querySelector('#' + modalBtnId).previousElementSibling.classList.add('modal-overlay--active');
             window.globalFunction.bodyScrollStop();
 
         }
 
     });
 
-    // モーダルを閉じる処理
-    const modalCloses = document.querySelectorAll('.js_modal_close');
-    modalCloses.forEach(function(modalClose, index) {
+    // モーダルを閉じる関数
+    function modalClose(){
+        const modalActives = document.querySelectorAll('.modal--active');
+        modalActives.forEach(function(modalActive, index) {
 
-        modalClose.onclick = function() {
+            modalActive.close();
+            modalActive.classList.remove('modal--active');
+            window.globalFunction.bodyScrollStart();
 
-            const active = this.parentNode.classList.contains('modal--active');
-            if(active){
-                this.parentNode.classList.remove('modal--active');
-                this.parentNode.previousElementSibling.classList.remove('modal-overlay--active');
-                window.globalFunction.bodyScrollStart();
-            }
+        });
+
+    }
+
+    // 閉じるボタンの処理
+    const modalCloseButtons = document.querySelectorAll('.js_modal_close');
+    modalCloseButtons.forEach(function(modalCloseButton, index) {
+
+        modalCloseButton.onclick = function() {
+
+            modalClose();
 
         }
 
     });
 
-    // オーバーレイでモーダルを閉じる処理
-    const modalOverlays = document.querySelectorAll('.js_modal-overlay');
-    modalOverlays.forEach(function(modalOverlay, index) {
+    // オーバーレイクリック時の処理
+    const modals = document.querySelectorAll('.js_modal');
+    modals.forEach(function(modal, index) {
 
-        modalOverlay.onclick = function() {
-
-            const active = this.classList.contains('modal-overlay--active');
-            if(active){
-                this.classList.remove('modal-overlay--active');
-                this.nextElementSibling.classList.remove('modal--active');
-                window.globalFunction.bodyScrollStart();
+        modal.addEventListener('click', (e) => {
+        
+            if (!e.target.closest('.js_modal_box')) {
+        
+                modalClose();
+        
             }
+    
+        })
+
+    });
+
+    // Escapeボタンを押したときの時の処理
+    document.addEventListener('keydown', (e) => {
+
+        if (e.key == 'Escape') {
+
+            modalClose();
 
         }
 

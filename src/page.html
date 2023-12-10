@@ -738,31 +738,53 @@
                     アコーディオン
                   </button>
                   <div class="accordion__body">
-                    <p class="accordion__text">
+                    <p>
                       テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
                     </p>
                   </div>
                 </div><!-- /.accordion -->
 
-                <a class="js_modal_open" data-modal="js_modal_1">モーダルを表示</a>
+                <button class="js_modal_open" data-modal="modal_1">モーダル1を表示</button>
 
-                <div class="modal-overlay js_modal-overlay"></div>
-                <div class="modal" id="js_modal_1">
-                  <div class="modal__box">
-                    <div class="modal__header">
-                      <h5 class="heading-fifth">見出し</h5>
+                <dialog class="modal js_modal" id="modal_1">
+                  <div class="modal__box js_modal_box">
+                    <div class="modal__box-inner">
+                      <div class="modal__header">
+                        <h5 class="heading-fifth">見出し1</h5>
+                      </div>
+                      <div class="modal__body">
+                        <p>
+                          テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+                        </p>
+                      </div>
+                      <div class="modal__footer">
+                        <a class="button" href="">ボタン</a>
+                      </div>
                     </div>
-                    <div class="modal__body">
-                      <p>
-                        テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
-                      </p>
-                    </div>
-                    <div class="modal__footer">
-                      <a class="button" href="">ボタン</a>
-                    </div>
+                    <button class="modal__close js_modal_close" aria-label="モーダルを閉じる"><i class="modal__close-icon fa-solid fa-xmark"></i></button>
                   </div>
-                  <button class="modal__close js_modal_close"><i class="modal__close-icon fa-solid fa-xmark"></i></button>
-                </div><!-- /.modal -->
+                </dialog><!-- /.modal -->
+
+                <button class="js_modal_open" data-modal="modal_2">モーダル2を表示</button>
+
+                <dialog class="modal js_modal" id="modal_2">
+                  <div class="modal__box js_modal_box">
+                    <div class="modal__box-inner">
+                      <div class="modal__header">
+                        <h5 class="heading-fifth">見出し2</h5>
+                      </div>
+                      <div class="modal__body">
+                        <p>
+                          テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+                        </p>
+                      </div>
+                      <div class="modal__footer">
+                        <a class="button" href="">ボタン</a>
+                      </div>
+                    </div>
+                    <button class="modal__close js_modal_close" aria-label="モーダルを閉じる"><i class="modal__close-icon fa-solid fa-xmark"></i></button>
+                  </div>
+                </dialog><!-- /.modal -->
 
               </div>
             </div>

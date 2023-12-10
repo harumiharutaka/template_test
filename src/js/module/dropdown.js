@@ -74,9 +74,9 @@ export function dropdown() {
             childParentBtn.nextElementSibling.classList.remove('dropdown__grandchild--active');
         });
 
-        childParentBtn.addEventListener("keydown", (e) => {
+        childParentBtn.addEventListener('keydown', (e) => {
 
-            if (e.key == "Enter") {
+            if (e.key == 'Enter') {
 
                 const grandchildActive = childParentBtn.nextElementSibling.classList.contains('dropdown__grandchild--active');
                 if(!grandchildActive){
