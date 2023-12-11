@@ -13,7 +13,9 @@ export function tab() {
 
             tabBtn.onclick = function() {
 
+                tab.querySelector('.tab-navigation__item--active').inert = false;
                 tab.querySelector('.tab-navigation__item--active').classList.remove('tab-navigation__item--active');
+                this.inert = true;
                 this.classList.add('tab-navigation__item--active');
                 tab.querySelector('.tab__item--active').classList.remove('tab__item--active');
                 tab.querySelectorAll('.tab__item')[index].classList.add('tab__item--active');
