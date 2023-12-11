@@ -84,3 +84,21 @@
 
 // スライドショー
 @forward 'slideshow';
+
+// テキスト入力
+@forward 'form-text';
+
+// テキストエリア
+@forward 'form-textarea';
+
+// セレクター
+@forward 'form-select';
+
+// ラジオボタン
+@forward 'form-radio';
+
+// チェックボックス
+@forward 'form-checkbox';
+
+// 検索ボックス
+@forward 'search-box';

@@ -1,0 +1,9 @@
+@use '../global' as g;
+
+/*********************************
+    セレクター
+*********************************/
+
+.form-select{
+    border-color: g.$s-color_border_divider;
+}
