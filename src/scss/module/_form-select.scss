@@ -13,6 +13,7 @@ $angle-down-icon: "data:image/svg+xml;charset=utf8,%3Csvg%20xmlns%3D%22http%3A%2
     background-image: url($angle-down-icon);
     border: 1px solid  g.$s-color_border_field;
     border-radius: 4px;
+    cursor: pointer;
 
     &:focus{
         padding: 4px 34px 4px 9px;
