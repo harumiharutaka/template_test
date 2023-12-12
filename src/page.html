@@ -800,31 +800,46 @@
                   </div>
                 </dialog><!-- /.modal -->
 
-                <input class="form-text" type="text" name="text" id="" placeholder="プレースホルダー" />
+                <input class="form-text" type="text" name="text" placeholder="プレースホルダー" />
                 
-                <textarea class="form-textarea" name="textarea" id="" rows="2" placeholder="プレースホルダー"></textarea>
+                <textarea class="form-textarea" name="textarea" rows="2" placeholder="プレースホルダー"></textarea>
+
+                <select class="form-select" name="select">
+                  <option value="選択肢1">選択肢1</option>
+                  <option value="選択肢2">選択肢2</option>
+                  <option value="選択肢3">選択肢3</option>
+                </select>
 
                 <fieldset class="form-radio-group">
                   <label class="form-radio">
-                    <input class="form-radio__input" type="radio" name="radio" value="radiobutton1">
-                    <span class="form-radio__label">ラジオボタン1</span>
+                    <input class="form-radio__input" type="radio" name="radio" value="ラジオボタン1">
+                    <span class="form-radio__icon"></span>
+                    <span class="form-radio__text">ラジオボタン1</span>
                   </label>
                   <label class="form-radio">
-                    <input class="form-radio__input" type="radio" name="radio" value="radiobutton2">
-                    <span class="form-radio__label">ラジオボタン2</span>
+                    <input class="form-radio__input" type="radio" name="radio" value="ラジオボタン2">
+                    <span class="form-radio__icon"></span>
+                    <span class="form-radio__text">ラジオボタン2</span>
                   </label>
                 </fieldset>
 
                 <fieldset class="form-checkbox-group">
                   <label class="form-checkbox">
-                    <input class="form-checkbox__input" type="checkbox" name="checkbox" value="checkboxbutton1">
-                    <span class="form-checkbox__label">チェックボックス1</span>
+                    <input class="form-checkbox__input" type="checkbox" name="checkbox" value="チェックボックス1">
+                    <span class="form-checkbox__icon"></span>
+                    <span class="form-checkbox__text">チェックボックス1</span>
                   </label>
                   <label class="form-checkbox">
-                    <input class="form-checkbox__input" type="checkbox" name="checkbox" value="checkboxbutton2">
-                    <span class="form-checkbox__label">チェックボックス2</span>
+                    <input class="form-checkbox__input" type="checkbox" name="checkbox" value="チェックボックス2">
+                    <span class="form-checkbox__icon"></span>
+                    <span class="form-checkbox__text">チェックボックス2</span>
                   </label>
                 </fieldset>
+
+                <div class="search-box">
+                  <input class="search-box__input" type="search" name="search" placeholder="検索" />
+                  <button class="search-box__button"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </div>
 
               </div>
             </div>
