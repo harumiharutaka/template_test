@@ -18,7 +18,7 @@
     border: none;
     opacity: 0;
     visibility: hidden;
-    transition: opacity 0.3s, visibility 0.3s;
+    transition: opacity g.$transition_middle, visibility g.$transition_middle;
     z-index: g.$z-index_modal;
 
     &--active{
@@ -80,7 +80,7 @@
     height: 30px;
     background-color: g.$p-color_grey_900;
     border-radius: 100px;
-    transition: 0.1s;
+    transition: g.$transition_high;
 
     &:hover,&:active,&:focus{ 
         background-color: g.$p-color_grey_300;

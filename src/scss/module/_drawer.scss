@@ -70,7 +70,7 @@
     font-size: g.$font-size_l;
     line-height: g.$line-height_s;
     text-decoration: none;
-    transition: 0.1s;
+    transition: g.$transition_high;
     cursor: pointer;
 
     &:hover,&:active,&:focus{
@@ -94,7 +94,7 @@
     z-index: g.$z-index_drawer-overlay;
     opacity: 0;
     visibility: hidden;
-    transition: opacity 0.3s, visibility 0.3s;
+    transition: opacity g.$transition_middle, visibility g.$transition_middle;
 
     &--active{
         opacity: 1;

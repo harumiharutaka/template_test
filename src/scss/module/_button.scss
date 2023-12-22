@@ -17,7 +17,7 @@
     @include g.text-style(button_m);
     text-decoration: none;
     text-align: center;
-    transition: 0.1s;
+    transition: g.$transition_high;
 
     &:hover,&:active,&:focus{ 
         background-color: g.$s-color_button_hover;

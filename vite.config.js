@@ -135,7 +135,7 @@ export default defineConfig(({ command }) => ({
       //各ページ情報の読み込み（json読み込み）
       context: (pagePath) => {
         return {
-          envUrl: command === 'dev' ? 'http:localhost' : 'https://template_test.com',
+          envUrl: command === 'dev' ? 'http:localhost' : 'https://template.com',
           siteName: siteData.siteName,
           siteUrl: siteData.siteUrl,
           pageMeta: siteData.pageMeta[pagePath]

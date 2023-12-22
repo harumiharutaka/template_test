@@ -21,7 +21,7 @@
     font-size: g.$font-size_l;
     line-height: g.$line-height_s;
     text-decoration: none;
-    transition: 0.1s;
+    transition: g.$transition_high;
     cursor: pointer;
 
     &:hover,&:active,&:focus{

@@ -1,6 +1,6 @@
 {
-  "siteName": "テンプレートテスト",
-  "siteUrl": "https://template_test.com/",
+  "siteName": "共通テンプレート",
+  "siteUrl": "https://template.com/",
   "pageMeta": {
     "/index.html": {
       "id": 1,

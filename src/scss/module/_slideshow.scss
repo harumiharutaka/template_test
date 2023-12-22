@@ -41,7 +41,7 @@
     align-items: center;
     width: 60px;
     height: 100%;
-    transition: 0.1s;
+    transition: g.$transition_high;
     z-index: 1;
 
     &:hover,&:active,&:focus{
@@ -68,7 +68,7 @@
 .slideshow__arrow-icon{
     color: #ffffff80;
     font-size: 24px;
-    transition: 0.1s;
+    transition: g.$transition_high;
 
     @include g.media(sp){
         width: 18px;
@@ -102,7 +102,7 @@
 .slideshow__toggle-icon{
     color: #ffffff80;
     font-size: 24px;
-    transition: 0.1s;
+    transition: g.$transition_high;
 
     &:hover,&:active,&:focus{
         color: g.$p-color_white;
@@ -137,7 +137,7 @@
         display:  inline-block;
         font-size: 20px;
         color: #ffffff80;
-        transition: 0.1s;
+        transition: g.$transition_high;
     }
 
     &:hover,&:active,&:focus{

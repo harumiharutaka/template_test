@@ -9,7 +9,7 @@ export function loading() {
     const home = document.querySelector('.home');
     
     // ローディングを表示する関数
-    function loadingTime(duration = 1000, transition = 200) {
+    function loadingTime(duration = 1000, transition = 300) {
         loading.classList.add('loading--active');
         loading.style.removeProperty('transition-property');
         loading.style.removeProperty('transition-duration');

@@ -15,7 +15,7 @@
     background-color: g.$p-color_grey_100;
     line-height: g.$line-height_s;
     font-weight: g.$font-weight_m;
-    transition: 0.1s;
+    transition: g.$transition_high;
 
     &::before{
         font-family: 'Font Awesome 6 Free';

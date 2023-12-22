@@ -20,7 +20,7 @@
     text-decoration: none;
     line-height: g.$line-height_s;
     gap: 10px;
-    transition: 0.1s;
+    transition: g.$transition_high;
 
     &:hover,&:active,&:focus{
         background-color: g.$p-color_opacity_black_005;
@@ -55,7 +55,7 @@
     text-decoration: none;
     line-height: g.$line-height_s;
     gap: 20px;
-    transition: 0.1s;
+    transition: g.$transition_high;
 
     &:hover,&:active,&:focus{
         background-color: g.$p-color_opacity_black_005;

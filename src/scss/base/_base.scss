@@ -25,7 +25,7 @@ img{
 a{
     color: g.$s-color_link_normal;
     text-decoration: underline;
-    transition: 0.1s;
+    transition: g.$transition_high;
 
     &:where(:visited){
         color: g.$s-color_link_visited;

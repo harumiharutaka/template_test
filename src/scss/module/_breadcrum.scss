@@ -16,7 +16,7 @@
 .breadcrum__link{
     color: g.$s-color_menu-link_normal;
     text-decoration: none;
-    transition: 0.1s;
+    transition: g.$transition_high;
 
     &:hover,&:active,&:focus{
         color: g.$s-color_menu-link_hover;

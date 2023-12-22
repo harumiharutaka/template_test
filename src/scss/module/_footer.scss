@@ -67,7 +67,7 @@
 }
 
 .footer__sns-link{
-    transition: 0.1s;
+    transition: g.$transition_high;
 
     &:hover,&:active,&:focus{
         opacity: 0.6;
@@ -118,7 +118,7 @@
     font-size: g.$font-size_s;
     line-height: g.$line-height_s;
     text-decoration: none;
-    transition: 0.1s;
+    transition: g.$transition_high;
 
     &:hover,&:active,&:focus{
         color: g.$s-color_menu-link_hover;
@@ -137,7 +137,7 @@
 }
 
 .footer__banner-link{
-    transition: 0.1s;
+    transition: g.$transition_high;
     
     &:hover,&:active,&:focus{
         opacity: 0.6;

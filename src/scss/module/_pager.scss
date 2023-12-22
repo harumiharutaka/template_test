@@ -39,7 +39,7 @@
     color: g.$s-color_text_on-fill;
     line-height: g.$line-height_s;
     text-decoration: none;
-    transition: 0.1s;
+    transition: g.$transition_high;
 
     &:hover,&:active,&:focus{
         background-color: g.$s-color_button_hover;

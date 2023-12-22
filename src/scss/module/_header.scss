@@ -33,7 +33,7 @@
 
 .header__title{
     line-height: g.$line-height_same;
-    transition: 0.1s;
+    transition: g.$transition_high;
     
     &:hover,&:active,&:focus{
         opacity: 0.6;
@@ -112,7 +112,7 @@
     left: calc((100% - 60%) / 2);
     background: g.$p-color_grey_900;
     border-radius: 100px;
-    transition: 0.3s;
+    transition: g.$transition_middle;
 
     &:nth-of-type(1){
         top: 30%;

@@ -52,7 +52,7 @@
         color: g.$s-color_menu-link_normal;
         text-decoration: none;
         box-shadow: g.$elevation_style1;
-        transition: 0.1s;
+        transition: g.$transition_high;
 
         &:hover,&:active,&:focus{ 
             background-color: g.$p-color_grey_50;

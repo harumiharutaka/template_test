@@ -17,7 +17,7 @@
     border-radius: 100px;
     z-index: g.$z-index_pagetop;
     opacity: 0;
-    transition: opacity 0.1s , background-color 0.1s;
+    transition: opacity g.$transition_high, background-color g.$transition_high;
 
     &:hover,&:active,&:focus{
         opacity: 0.6;

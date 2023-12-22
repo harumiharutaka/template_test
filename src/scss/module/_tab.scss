@@ -44,7 +44,7 @@
     border-bottom: 4px solid g.$p-color_grey_300;
     line-height: g.$line-height_s;
     font-weight: g.$font-weight_m;
-    transition: 0.1s;
+    transition: g.$transition_high;
 
     &:hover,&:active,&:focus{
         background-color: g.$p-color_opacity_black_005;
