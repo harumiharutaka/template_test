@@ -4,27 +4,212 @@
   "pageMeta": {
     "/index.html": {
       "id": 1,
-      "name": "template_test",
-      "title": "home",
-      "description": "home-description",
-      "category": "home",
+      "title": "共通テンプレート",
+      "description": "description",
+      "category": "ホーム",
       "isHome": true,
       "showCtaArea": false,
       "ogpImage": "/assets/img/image_16-9.png",
       "type": "website",
       "path": "/"
     },
-    "/page.html": {
+    "/company/profile.html": {
       "id": 2,
-      "name": "template_test",
-      "title": "page",
-      "description": "page-description",
-      "category": "category",
+      "title": "企業概要",
+      "description": "description",
+      "category": "企業情報",
       "isHome": false,
       "showCtaArea": true,
       "ogpImage": "/assets/img/image_16-9.png",
       "type": "article",
-      "path": "/page.html"
-    }
+      "path": "/company/profile.html"
+    },
+    "/company/history.html": {
+      "id": 3,
+      "title": "沿革",
+      "description": "description",
+      "category": "企業情報",
+      "isHome": false,
+      "showCtaArea": true,
+      "ogpImage": "/assets/img/image_16-9.png",
+      "type": "article",
+      "path": "/company/history.html"
+    },
+    "/company/access.html": {
+      "id": 4,
+      "title": "アクセス",
+      "description": "description",
+      "category": "企業情報",
+      "isHome": false,
+      "showCtaArea": true,
+      "ogpImage": "/assets/img/image_16-9.png",
+      "type": "article",
+      "path": "/company/access.html"
+    },
+    "/business/detail.html": {
+      "id": 5,
+      "title": "事業内容",
+      "description": "description",
+      "category": "事業紹介",
+      "isHome": false,
+      "showCtaArea": true,
+      "ogpImage": "/assets/img/image_16-9.png",
+      "type": "article",
+      "path": "/business/detail.html"
+    },
+    "/business/achievement/category.html": {
+      "id": 6,
+      "title": "事業カテゴリ",
+      "description": "description",
+      "category": "事業実績",
+      "isHome": false,
+      "showCtaArea": true,
+      "ogpImage": "/assets/img/image_16-9.png",
+      "type": "blog",
+      "path": "/business/achievement/category.html"
+    },
+    "/business/achievement/single.html": {
+      "id": 7,
+      "title": "事業実績詳細",
+      "description": "description",
+      "category": "事業実績",
+      "isHome": false,
+      "showCtaArea": true,
+      "ogpImage": "/assets/img/image_16-9.png",
+      "type": "article",
+      "path": "/business/achievement/single.html"
+    },
+    "/news/index.html": {
+      "id": 8,
+      "title": "ニュース一覧",
+      "description": "description",
+      "category": "ニュース",
+      "isHome": false,
+      "showCtaArea": true,
+      "ogpImage": "/assets/img/image_16-9.png",
+      "type": "blog",
+      "path": "/news/"
+    },
+    "/news/single.html": {
+      "id": 9,
+      "title": "ニュース記事",
+      "description": "description",
+      "category": "ニュース",
+      "isHome": false,
+      "showCtaArea": true,
+      "ogpImage": "/assets/img/image_16-9.png",
+      "type": "article",
+      "path": "/news/single.html"
+    },
+    "/blog/index.html": {
+      "id": 10,
+      "title": "BLOG一覧",
+      "description": "description",
+      "category": "BLOG",
+      "isHome": false,
+      "showCtaArea": true,
+      "ogpImage": "/assets/img/image_16-9.png",
+      "type": "blog",
+      "path": "/blog/"
+    },
+    "/blog/single.html": {
+      "id": 11,
+      "title": "BLOG記事",
+      "description": "description",
+      "category": "BLOG",
+      "isHome": false,
+      "showCtaArea": true,
+      "ogpImage": "/assets/img/image_16-9.png",
+      "type": "article",
+      "path": "/blog/single.html"
+    },
+    "/blog/filter.html": {
+      "id": 12,
+      "title": "BLOG絞り込み",
+      "description": "description",
+      "category": "BLOG",
+      "isHome": false,
+      "showCtaArea": true,
+      "ogpImage": "/assets/img/image_16-9.png",
+      "type": "blog",
+      "path": "/blog/filter.html"
+    },
+    "/blog/search.html": {
+      "id": 13,
+      "title": "BLOG検索",
+      "description": "description",
+      "category": "BLOG",
+      "isHome": false,
+      "showCtaArea": true,
+      "ogpImage": "/assets/img/image_16-9.png",
+      "type": "blog",
+      "path": "/blog/search.html"
+    },
+    "/contact/index.html": {
+      "id": 14,
+      "title": "お問い合わせ",
+      "description": "description",
+      "category": "お問い合わせ",
+      "isHome": false,
+      "showCtaArea": false,
+      "ogpImage": "/assets/img/image_16-9.png",
+      "type": "article",
+      "path": "/contact/"
+    },
+    "/contact/confirm.html": {
+      "id": 15,
+      "title": "お問い合わせ確認",
+      "description": "description",
+      "category": "お問い合わせ",
+      "isHome": false,
+      "showCtaArea": false,
+      "ogpImage": "/assets/img/image_16-9.png",
+      "type": "article",
+      "path": "/contact/confirm.html"
+    },
+    "/contact/finish.html": {
+      "id": 16,
+      "title": "お問い合わせ完了",
+      "description": "description",
+      "category": "お問い合わせ",
+      "isHome": false,
+      "showCtaArea": false,
+      "ogpImage": "/assets/img/image_16-9.png",
+      "type": "article",
+      "path": "/contact/finish.html"
+    },
+    "/policy.html": {
+      "id": 17,
+      "title": "ポリシー",
+      "description": "description",
+      "category": "ポリシー",
+      "isHome": false,
+      "showCtaArea": true,
+      "ogpImage": "/assets/img/image_16-9.png",
+      "type": "article",
+      "path": "/policy.html"
+    },
+    "/sitemap.html": {
+      "id": 18,
+      "title": "サイトマップ",
+      "description": "description",
+      "category": "サイトマップ",
+      "isHome": false,
+      "showCtaArea": true,
+      "ogpImage": "/assets/img/image_16-9.png",
+      "type": "article",
+      "path": "/sitemap.html"
+    },
+    "/component.html": {
+      "id": 19,
+      "title": "コンポーネント一覧",
+      "description": "description",
+      "category": "コンポーネント一覧",
+      "isHome": false,
+      "showCtaArea": true,
+      "ogpImage": "/assets/img/image_16-9.png",
+      "type": "article",
+      "path": "/component.html"
+    } 
   }
 }
