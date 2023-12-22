@@ -55,7 +55,7 @@
     box-shadow: g.$elevation_style1;
     opacity: 0;
     visibility: hidden;
-    transition: opacity 0.1s, visibility 0.1s;
+    transition: opacity g.$transition_high, visibility g.$transition_high;
 
     &--active{
         opacity: 1;
