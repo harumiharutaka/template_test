@@ -8,7 +8,7 @@
       "description": "description",
       "category": "ホーム",
       "isHome": true,
-      "showCtaArea": false,
+      "showCta": false,
       "ogpImage": "/assets/img/image_16-9.png",
       "type": "website",
       "path": "/"
@@ -19,7 +19,7 @@
       "description": "description",
       "category": "企業情報",
       "isHome": false,
-      "showCtaArea": true,
+      "showCta": true,
       "ogpImage": "/assets/img/image_16-9.png",
       "type": "article",
       "path": "/company/profile.html"
@@ -30,7 +30,7 @@
       "description": "description",
       "category": "企業情報",
       "isHome": false,
-      "showCtaArea": true,
+      "showCta": true,
       "ogpImage": "/assets/img/image_16-9.png",
       "type": "article",
       "path": "/company/history.html"
@@ -41,7 +41,7 @@
       "description": "description",
       "category": "企業情報",
       "isHome": false,
-      "showCtaArea": true,
+      "showCta": true,
       "ogpImage": "/assets/img/image_16-9.png",
       "type": "article",
       "path": "/company/access.html"
@@ -52,7 +52,7 @@
       "description": "description",
       "category": "事業紹介",
       "isHome": false,
-      "showCtaArea": true,
+      "showCta": true,
       "ogpImage": "/assets/img/image_16-9.png",
       "type": "article",
       "path": "/business/detail.html"
@@ -63,7 +63,7 @@
       "description": "description",
       "category": "事業実績",
       "isHome": false,
-      "showCtaArea": true,
+      "showCta": true,
       "ogpImage": "/assets/img/image_16-9.png",
       "type": "blog",
       "path": "/business/achievement/category.html"
@@ -74,7 +74,7 @@
       "description": "description",
       "category": "事業実績",
       "isHome": false,
-      "showCtaArea": true,
+      "showCta": true,
       "ogpImage": "/assets/img/image_16-9.png",
       "type": "article",
       "path": "/business/achievement/single.html"
@@ -85,7 +85,7 @@
       "description": "description",
       "category": "ニュース",
       "isHome": false,
-      "showCtaArea": true,
+      "showCta": true,
       "ogpImage": "/assets/img/image_16-9.png",
       "type": "blog",
       "path": "/news/"
@@ -96,7 +96,7 @@
       "description": "description",
       "category": "ニュース",
       "isHome": false,
-      "showCtaArea": true,
+      "showCta": true,
       "ogpImage": "/assets/img/image_16-9.png",
       "type": "article",
       "path": "/news/single.html"
@@ -107,7 +107,7 @@
       "description": "description",
       "category": "BLOG",
       "isHome": false,
-      "showCtaArea": true,
+      "showCta": true,
       "ogpImage": "/assets/img/image_16-9.png",
       "type": "blog",
       "path": "/blog/"
@@ -118,7 +118,7 @@
       "description": "description",
       "category": "BLOG",
       "isHome": false,
-      "showCtaArea": true,
+      "showCta": true,
       "ogpImage": "/assets/img/image_16-9.png",
       "type": "article",
       "path": "/blog/single.html"
@@ -129,7 +129,7 @@
       "description": "description",
       "category": "BLOG",
       "isHome": false,
-      "showCtaArea": true,
+      "showCta": true,
       "ogpImage": "/assets/img/image_16-9.png",
       "type": "blog",
       "path": "/blog/filter.html"
@@ -140,7 +140,7 @@
       "description": "description",
       "category": "BLOG",
       "isHome": false,
-      "showCtaArea": true,
+      "showCta": true,
       "ogpImage": "/assets/img/image_16-9.png",
       "type": "blog",
       "path": "/blog/search.html"
@@ -151,7 +151,7 @@
       "description": "description",
       "category": "お問い合わせ",
       "isHome": false,
-      "showCtaArea": false,
+      "showCta": false,
       "ogpImage": "/assets/img/image_16-9.png",
       "type": "article",
       "path": "/contact/"
@@ -162,7 +162,7 @@
       "description": "description",
       "category": "お問い合わせ",
       "isHome": false,
-      "showCtaArea": false,
+      "showCta": false,
       "ogpImage": "/assets/img/image_16-9.png",
       "type": "article",
       "path": "/contact/confirm.html"
@@ -173,7 +173,7 @@
       "description": "description",
       "category": "お問い合わせ",
       "isHome": false,
-      "showCtaArea": false,
+      "showCta": false,
       "ogpImage": "/assets/img/image_16-9.png",
       "type": "article",
       "path": "/contact/finish.html"
@@ -184,7 +184,7 @@
       "description": "description",
       "category": "ポリシー",
       "isHome": false,
-      "showCtaArea": true,
+      "showCta": true,
       "ogpImage": "/assets/img/image_16-9.png",
       "type": "article",
       "path": "/policy.html"
@@ -195,7 +195,7 @@
       "description": "description",
       "category": "サイトマップ",
       "isHome": false,
-      "showCtaArea": true,
+      "showCta": true,
       "ogpImage": "/assets/img/image_16-9.png",
       "type": "article",
       "path": "/sitemap.html"
@@ -206,7 +206,7 @@
       "description": "description",
       "category": "コンポーネント一覧",
       "isHome": false,
-      "showCtaArea": true,
+      "showCta": true,
       "ogpImage": "/assets/img/image_16-9.png",
       "type": "article",
       "path": "/component.html"
