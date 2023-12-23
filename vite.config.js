@@ -96,7 +96,7 @@ export default defineConfig(({ command }) => ({
   //server: {
   //  host: true //IPアドレスを有効化
   //},
-  base: './', //相対パスでビルドする
+  base: '/test/template_test/', //絶対パスでビルドする
   root: './src', //開発ディレクトリ設定
   publicDir: "public", //publicディレクトリ設定
   build: {
