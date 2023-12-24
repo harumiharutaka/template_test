@@ -1,7 +1,7 @@
 @use '../global' as g;
 
 /*********************************
-    トップページ
+    ホーム
 *********************************/
 
 .home{
@@ -14,22 +14,74 @@
     }
 }
 
+.home-massage{
+}
+
+.home-massage__inner{
+}
+
+.home-media-group{
+}
+
+.home-media{
+}
+
 .home-container{
     display: flex;
     justify-content: center;   
-    width: 100%; 
+    width: 100%;
 
-    &--cta-area{
-        background-color: g.$s-color_background_primary;
+    &--results{
+        background-color: g.$p-color_grey_800;
 
+        .home-container__heading{
+            color: g.$p-color_white;
+
+            &::after{
+                background-color: g.$p-color_white;
+            }
+        }
+    }
+
+    &--news{
+        background-color: g.$p-color_grey_50;
+    }
+
+    &--cta{
         .home-container__inner{
             max-width: g.$content_width;
+            padding: 20px 20px 40px 20px;
         }
     }
 }
 
 .home-container__inner{
+    display: flex;
+    flex-direction: column;
     width: 100%;
     max-width: 1000px;
-    padding: 20px 20px 40px 20px;
+    padding: 60px 40px 80px 40px;
+    gap: 40px;
+}
+
+.home-container__header{
+    display: flex;
+    justify-content: center;
+}
+
+.home-container__heading{
+    width: fit-content;
+    color: g.$p-color_grey_900;
+    font-size: g.$font-size_xxxxl;
+    line-height: g.$line-height_s;
+    font-weight: g.$font-weight_m;
+
+    &::after{
+        content: "";
+        display: block;
+        height: 4px;
+        margin-top: 10px;
+        background-color: g.$p-color_grey_900;
+        border-radius: 100px;
+    }
 }
