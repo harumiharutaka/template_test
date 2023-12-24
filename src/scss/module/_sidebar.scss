@@ -57,7 +57,7 @@
     gap: 10px;
 }
 
-.sidebar-list__menu{
+.sidebar-menu{
     color: g.$s-color_menu-link_normal;
     font-size: g.$font-size_l;
     line-height: g.$line-height_s;
@@ -70,22 +70,22 @@
     }
 }
 
-.sidebar-list-date{
+.sidebar-date{
     display: flex;
     flex-direction: column;
     gap: 5px;
 }
 
-.sidebar-list-date__link{
+.sidebar-date__link{
     line-height: g.$line-height_s;
 }
 
-.sidebar-list-date__date{
+.sidebar-date__date{
     font-size: g.$font-size_xs;
     line-height: g.$line-height_s;
 }
 
-.sidebar-list-ranking{
+.sidebar-ranking{
     position: relative;
     padding-left: 1em;
 
@@ -130,10 +130,10 @@
     }
 }
 
-.sidebar-list-ranking__link{
+.sidebar-ranking__link{
     line-height: g.$line-height_s;
 }
 
-.sidebar-list-filter{
+.sidebar-filter{
     line-height: g.$line-height_s;
 }

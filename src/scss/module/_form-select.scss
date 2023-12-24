@@ -21,4 +21,8 @@ $angle-down-icon: "data:image/svg+xml;charset=utf8,%3Csvg%20xmlns%3D%22http%3A%2
         border: 2px solid g.$s-color_border_focused;
         outline: none;
     }
+
+    &--inquiry-type{
+        max-width: 400px;
+    }
 }

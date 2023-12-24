@@ -7,15 +7,126 @@
 
           <artcile class="content-box">
             <div class="content-box__inner">
-              <div class="content-box__header">
-                <p>コンテンツheader</p>
-              </div>
+
               <div class="content-box__body">
-                <p>コンテンツbody</p>
+
+                <div class="form-area">
+
+                  <p>
+                    テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+                  </p>
+
+                  <div class="form-unit">
+                    <div class="form-unit__header">
+                      <p class="form-unit__heading">お名前</p>
+                      <p class="form-unit__required">必須</p>
+                    </div>
+                    <div class="form-unit__body">
+                      <input class="form-text form-text--name" type="text" name="姓" placeholder="姓" />
+                      <input class="form-text form-text--name" type="text" name="名" placeholder="名" />
+                    </div>
+                    <div class="form-unit__footer">
+                      <p class="form-unit__error">エラーテキスト</p>
+                    </div>
+                  </div><!-- /.form-unit -->
+
+                  <div class="form-unit">
+                    <div class="form-unit__header">
+                      <p class="form-unit__heading">フリガナ</p>
+                      <p class="form-unit__required">必須</p>
+                    </div>
+                    <div class="form-unit__body">
+                      <input class="form-text form-text--name" type="text" name="セイ" placeholder="セイ" />
+                      <input class="form-text form-text--name" type="text" name="メイ" placeholder="メイ" />
+                    </div>
+                    <div class="form-unit__footer">
+                      <p class="form-unit__error">エラーテキスト</p>
+                    </div>
+                  </div><!-- /.form-unit -->
+
+                  <div class="form-unit">
+                    <div class="form-unit__header">
+                      <p class="form-unit__heading">性別</p>
+                    </div>
+                    <div class="form-unit__body">
+                      <fieldset class="form-radio-group">
+                        <label class="form-radio">
+                          <input class="form-radio__input" type="radio" name="性別" value="男性">
+                          <span class="form-radio__icon"></span>
+                          <span class="form-radio__text">男性</span>
+                        </label>
+                        <label class="form-radio">
+                          <input class="form-radio__input" type="radio" name="性別" value="女性">
+                          <span class="form-radio__icon"></span>
+                          <span class="form-radio__text">女性</span>
+                        </label>
+                      </fieldset><!-- /.form-radio-group -->
+                    </div>
+                  </div><!-- /.form-unit -->
+
+                  <div class="form-unit">
+                    <div class="form-unit__header">
+                      <p class="form-unit__heading">お問い合わせ種別</p>
+                      <p class="form-unit__required">必須</p>
+                    </div>
+                    <div class="form-unit__body">
+                      <select class="form-select form-select--inquiry-type" name="お問い合わせ種別">
+                        <option value="選択肢1">選択肢1</option>
+                        <option value="選択肢2">選択肢2</option>
+                        <option value="選択肢3">選択肢3</option>
+                      </select><!-- /.form-form-select -->
+                    </div>
+                    <div class="form-unit__footer">
+                      <p class="form-unit__error">エラーテキスト</p>
+                    </div>
+                  </div><!-- /.form-unit -->
+
+                  <div class="form-unit">
+                    <div class="form-unit__header">
+                      <p class="form-unit__heading">お問い合わせ内容</p>
+                      <p class="form-unit__required">必須</p>
+                    </div>
+                    <div class="form-unit__body">
+                      <textarea class="form-textarea" name="お問い合わせ内容" rows="2" placeholder="内容"></textarea>
+                    </div>
+                    <div class="form-unit__footer">
+                      <p class="form-unit__error">エラーテキスト</p>
+                    </div>
+                  </div><!-- /.form-unit -->
+
+                  <div class="form-unit">
+                    <div class="form-unit__header">
+                      <p class="form-unit__heading">当社をどこで知りましたか（複数回答可）</p>
+                    </div>
+                    <div class="form-unit__body">
+                      <fieldset class="form-checkbox-group">
+                        <label class="form-checkbox">
+                          <input class="form-checkbox__input" type="checkbox" name="当社をどこで知りましたか" value="チェックボックス1">
+                          <span class="form-checkbox__icon"></span>
+                          <span class="form-checkbox__text">チェックボックス1</span>
+                        </label><!-- /.form-checkbox -->
+                        <label class="form-checkbox">
+                          <input class="form-checkbox__input" type="checkbox" name="当社をどこで知りましたか" value="チェックボックス2">
+                          <span class="form-checkbox__icon"></span>
+                          <span class="form-checkbox__text">チェックボックス2</span>
+                        </label><!-- /.form-checkbox -->
+                        <label class="form-checkbox">
+                          <input class="form-checkbox__input" type="checkbox" name="当社をどこで知りましたか" value="チェックボックス3">
+                          <span class="form-checkbox__icon"></span>
+                          <span class="form-checkbox__text">チェックボックス3</span>
+                        </label><!-- /.form-checkbox -->
+                      </fieldset><!-- /.form-checkbox-group -->
+                    </div>
+                  </div><!-- /.form-unit -->
+
+                </div><!-- /.form-area -->
+
               </div>
+
               <div class="content-box__footer">
-                <p>コンテンツfooter</p>
+                <a href="/test/template_test/contact/confirm.html" class="button button--success">確認する</a>
               </div>
+
             </div>
           </artcile><!-- /.content-box -->
 

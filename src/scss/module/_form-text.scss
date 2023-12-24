@@ -5,6 +5,7 @@
 *********************************/
 
 .form-text{
+    width: 100%;
     padding: 5px 10px;
     background-color: g.$p-color_white;
     border: 1px solid  g.$s-color_border_field;
@@ -18,5 +19,9 @@
         padding: 4px 9px;
         border: 2px solid g.$s-color_border_focused;
         outline: none;
+    }
+
+    &--name{
+        max-width: 200px;
     }
 }

@@ -4,5 +4,44 @@
     お問い合わせ
 *********************************/
 
-.contact{
+.form-area{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.form-unit{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.form-unit__header{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.form-unit__heading{
+    line-height: g.$line-height_s;
+    font-weight: g.$font-weight_m;
+}
+
+.form-unit__required{
+    color: g.$s-color_status_alert;
+    font-size: g.$font-size_xs;
+}
+
+.form-unit__body{
+    display: flex;
+    gap: 10px;
+}
+
+.form-unit__footer{
+}
+
+.form-unit__error{
+    color: g.$s-color_status_alert;
+    font-size: g.$font-size_s;
+    line-height: g.$line-height_s;
 }
