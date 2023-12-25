@@ -15,15 +15,129 @@
 }
 
 .home-massage{
+    display: flex;
+    padding: 120px 0px 20px 0px;
+    flex-direction: column;
+    align-items: center;
 }
 
 .home-massage__inner{
+    display: flex;
+    max-width: 1200px;
+    padding: 20px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+    @include g.media(sp){
+        gap: 40px;
+    }
+}
+
+.home-massage__catch-phrase{
+    font-size: g.$font-size_xxxxxl;
+    line-height: g.$line-height_s;
+    font-weight: g.$font-weight_m;
+
+    @include g.media(sp){
+        font-size: g.$font-size_xxxl;
+    }
+}
+
+.home-massage__text{
+    font-size: g.$font-size_xxl;
+    text-align: center;
+
+    @include g.media(sp){
+        font-size: g.$font-size_l;
+    }
 }
 
 .home-media-group{
+    display: flex;
+    padding: 40px 0px;
+    flex-direction: column;
 }
 
 .home-media{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &::before{
+        position: absolute;
+        content: "";
+        right: 0;
+        bottom: 0;
+        width: 60%;
+        height: 55%;
+        background-color: g.$p-color_grey_50;
+        z-index: -1;
+    }
+    
+    @include g.media(sp){
+        &::before{
+            width: 68%;
+            height: 68%;
+        }
+    }
+
+    &--second{
+        .home-media__inner{
+            flex-direction: row-reverse;
+
+            @include g.media(sp){
+                flex-direction: column;
+            }
+        }
+
+        &::before{
+            left: 0;
+            background-color: g.$p-color_grey_100;
+        }
+    }
+
+    &--third{
+        &::before{
+            background-color: g.$p-color_grey_200;
+        }
+        
+    }
+}
+
+.home-media__inner{
+    display: flex;
+    max-width: 1200px;
+    padding: 80px 20px;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+
+    @include g.media(sp){
+        flex-direction: column;
+    }
+}
+
+.home-media__body{
+    display: flex;
+    width: 50%;
+    flex-direction: column;
+    gap: 40px;
+
+    @include g.media(sp){
+        width: 100%;
+    }
+}
+
+.home-media__img{
+    width: 40%;
+    @include g.image-aspect-ratio(ratio_16-9);
+
+    @include g.media(sp){
+        width: 100%;
+    }
 }
 
 .home-container{
