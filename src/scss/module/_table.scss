@@ -5,6 +5,16 @@
 *********************************/
 
 .table{
+    &--horizontal{
+        .table__header{
+            width: 180px;
+    
+            @include g.media(sp){
+                width: auto;
+            }  
+        }
+    }
+
     &--vertical{
         .table__body-row{
             &:first-child>*{
@@ -31,6 +41,12 @@
 
     &--sp-scroll{
         overflow-x: auto;
+        
+        .table__inner{
+            @include g.media(sp){
+                min-width: 900px;
+            }  
+        }
 
         .table__header,.table__text{
             white-space: nowrap;
@@ -63,6 +79,7 @@
     border-right: 1px solid g.$s-color_border_field;
     border-bottom: 1px solid g.$s-color_border_field;
     background-color: g.$p-color_grey_50;
+    vertical-align:middle;
 
     &:first-child{
         border-left: 1px solid g.$s-color_border_field;
@@ -71,6 +88,7 @@
     &--sp-sticky{
         position: sticky;
         left: 0;
+        width: 180px;
     }
 }
 
@@ -79,6 +97,7 @@
     border: none;
     border-right: 1px solid g.$s-color_border_field;
     border-bottom: 1px solid g.$s-color_border_field;
+    vertical-align:middle;
 
     &:first-child{
         border-left: 1px solid g.$s-color_border_field;

@@ -1,0 +1,39 @@
+@use '../global' as g;
+
+/*********************************
+    アクセス
+*********************************/
+
+.access-text-area{
+    display: flex;
+    gap: 20px;
+    
+    @include g.media(sp){
+        flex-direction: column;
+    }
+}
+
+.access-text-area__left{
+    flex: 1;
+}
+
+.access-text-area__right{
+    flex: 1;
+}
+
+.access-text-area__heading{
+    font-weight: g.$font-weight_m;
+}
+
+.access-map{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    border: 1px solid g.$p-color_grey_600;
+    aspect-ratio: 16 / 9;
+    
+    @include g.media(sp){
+        aspect-ratio: 1 / 1;
+    }
+}
