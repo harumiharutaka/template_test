@@ -43,6 +43,24 @@
     gap: 20px;
 }
 
+.content-box__header-bottom{
+    display: flex;
+    justify-content: space-between;
+    align-items: center ;
+}
+
+.content-box__header-category{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.content-box__header-date{
+    font-size: g.$font-size_s;
+    line-height: g.$line-height_s;
+    text-wrap: nowrap;
+}
+
 .content-box__body{
     display: flex;
     flex-direction: column;
@@ -52,5 +70,4 @@
 .content-box__footer{
     display: flex;
     justify-content: center;
-    gap: 20px;
 }

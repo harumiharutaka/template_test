@@ -45,3 +45,10 @@
     font-size: g.$font-size_s;
     line-height: g.$line-height_s;
 }
+
+.confirm-checkbox{
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 20px;   
+    row-gap: 10px;
+}

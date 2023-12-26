@@ -1,0 +1,48 @@
+@use '../global' as g;
+
+/*********************************
+    事業紹介
+*********************************/
+
+/* 事業内容 */
+.business-detail-massage{
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+.business-detail-media{
+    display: flex;
+    flex-direction: column;
+    gap: 20px  ;
+    padding-bottom: 20px;
+}
+
+.business-detail-price-box{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.business-detail-heading{
+    font-size: g.$font-size_xxl;
+    line-height: g.$line-height_s;
+    font-weight: g.$font-weight_b;
+    text-align: center;
+}
+
+/* 事業実績詳細 */
+.business-single-img{
+    @include g.image-aspect-ratio(ratio_3-2);
+}
+
+.business-single-img-group{
+    display: flex;
+    gap: 20px;
+
+    @include g.media(sp){
+        flex-direction: column;
+    }
+}
+
+.business-single-img-group__item{
+}

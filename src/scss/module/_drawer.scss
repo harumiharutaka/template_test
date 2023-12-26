@@ -4,7 +4,7 @@
     ドロワー
 *********************************/
 
-/* ドロワー */
+/* drawer */
 .drawer{
     position: absolute;
     top: g.$header-height_sp;
@@ -83,7 +83,7 @@
     font-size: g.$font-size_l;
 }
 
-/* ドロワーオーバーレイ */
+/* drawer-overlay */
 .drawer-overlay{
     position: fixed;
     top: 0;

@@ -1,8 +1,11 @@
 // ホーム
 @forward 'home';
 
-// アクセス
-@forward 'access';
+// 企業情報
+@forward 'company';
+
+// 事業紹介
+@forward 'business';
 
 // お問い合わせ
 @forward 'contact';
