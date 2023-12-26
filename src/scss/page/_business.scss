@@ -34,15 +34,3 @@
 .business-single-img{
     @include g.image-aspect-ratio(ratio_3-2);
 }
-
-.business-single-img-group{
-    display: flex;
-    gap: 20px;
-
-    @include g.media(sp){
-        flex-direction: column;
-    }
-}
-
-.business-single-img-group__item{
-}
