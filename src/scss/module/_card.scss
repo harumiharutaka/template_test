@@ -46,9 +46,11 @@
     background-color: g.$p-color_white;
     border: 1px solid g.$p-color_grey_300;
     border-radius: 4px;
+    overflow: hidden;
 
     &--link{
         display: block;
+        border: none;
         color: g.$s-color_menu-link_normal;
         text-decoration: none;
         box-shadow: g.$elevation_style1;
