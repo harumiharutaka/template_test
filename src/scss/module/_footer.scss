@@ -93,6 +93,10 @@
 
 .footer__nav{
     display: flex;
+}
+
+.footer__nav-list{
+    display: flex;
     justify-content: flex-end;
     flex-wrap: wrap;
     gap: 20px;
