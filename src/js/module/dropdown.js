@@ -60,6 +60,26 @@ export function dropdown() {
 
         });
 
+        parentBtn.addEventListener('keydown', (e) => {
+
+            if(e.key == 'Enter') {
+                           
+                const childActive = parentBtn.nextElementSibling.classList.contains('dropdown__child--active');
+                if (!childActive){
+
+                    childAllClose();
+                    parentBtn.nextElementSibling.classList.add('dropdown__child--active');
+
+                } else {
+
+                    parentBtn.nextElementSibling.classList.remove('dropdown__child--active');
+
+                }
+
+            }
+
+        });
+
     });
     
     // 孫メニューを展開するボタンの処理
@@ -97,7 +117,7 @@ export function dropdown() {
     });
 
     // フォーカスの処理
-    const focusBtns = dropdown.querySelectorAll('a,button');
+    const focusBtns = dropdown.querySelectorAll('a');
     focusBtns.forEach(function(focusBtn, index) {
 
         focusBtn.addEventListener('focus', function (e) {
@@ -149,7 +169,7 @@ export function dropdown() {
     
         }
 
-    })
+    });
 
     //ウィンドウリサイズの処理
     window.addEventListener('resize',function(){

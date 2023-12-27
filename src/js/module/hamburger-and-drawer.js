@@ -157,6 +157,33 @@ export function hamburgerAndDrawer() {
 
         }
 
+        parentBtn.addEventListener('keydown', (e) => {
+
+            if(e.key == 'Enter') {
+
+                const childActive = parentBtn.nextElementSibling.classList.contains('drawer__child--active');
+                childWidth = parentBtn.nextElementSibling.getBoundingClientRect().width;
+    
+                if (!childActive){
+    
+                    childAllClose();
+                    grandchildAllClose();
+                    parentBtn.nextElementSibling.classList.add('drawer__child--active');
+                    childOpen();
+    
+                } else {
+    
+                    setTimeout(() => {
+                        childAllClose();
+                    }, duration);
+                    childClose();
+    
+                }
+
+            }
+
+        });
+
     });
 
     // 子メニューを閉じるボタンの処理
@@ -172,6 +199,20 @@ export function hamburgerAndDrawer() {
             childClose();
             
         }
+        
+        childCloseBtn.addEventListener('keydown', (e) => {
+
+            if(e.key == 'Enter') {
+
+                setTimeout(() => {
+                    childAllClose();
+                    grandchildAllClose();
+                }, duration);
+                childClose();  
+
+            }
+
+        });
 
     });
 
@@ -200,6 +241,32 @@ export function hamburgerAndDrawer() {
             }
 
         }
+        
+        childParentBtn.addEventListener('keydown', (e) => {
+
+            if(e.key == 'Enter') {
+
+                const grandchildActive = childParentBtn.nextElementSibling.classList.contains('drawer__grandchild--active');
+                grandchildWidth = childParentBtn.nextElementSibling.getBoundingClientRect().width;
+    
+                if (!grandchildActive){
+    
+                    grandchildAllClose();
+                    childParentBtn.nextElementSibling.classList.add('drawer__grandchild--active');
+                    grandchildOpen();
+    
+                } else {
+    
+                    setTimeout(() => {
+                        grandchildAllClose();
+                    }, duration);
+                    grandchildClose();
+    
+                }
+
+            }
+
+        });
 
     });
 
@@ -215,6 +282,19 @@ export function hamburgerAndDrawer() {
             grandchildClose();
             
         }
+        
+        grandchildCloseBtn.addEventListener('keydown', (e) => {
+
+            if(e.key == 'Enter') {
+
+                setTimeout(() => {
+                    grandchildAllClose();
+                }, duration);
+                grandchildClose();
+
+            }
+
+        });
 
     });
        
