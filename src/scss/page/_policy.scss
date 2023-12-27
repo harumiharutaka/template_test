@@ -1,0 +1,23 @@
+@use '../global' as g;
+
+/*********************************
+    ポリシー
+*********************************/
+
+.policy-content{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.policy-content__item{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.policy-content__title{
+    font-size: g.$font-size_l;
+    line-height: g.$line-height_s;
+    font-weight: g.$font-weight_m;
+}
