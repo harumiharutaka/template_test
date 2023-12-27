@@ -1,0 +1,53 @@
+@use '../global' as g;
+
+/*********************************
+    ブログ
+*********************************/
+
+/* 記事 */
+.blog-single-img{
+    @include g.image-aspect-ratio(ratio_3-2);
+}
+
+.blog-sidebar-search{
+    &--pc{
+        display: block;
+
+        @include g.media(sp){
+            display: none;
+        }
+    }
+    
+    &--sp{
+        display: none;
+
+        @include g.media(sp){
+            display: block;
+        }
+    }
+}
+
+/* 絞り込み */
+.blog-filter-link{
+    display: flex;
+    padding: 10px;
+    gap: 20px;
+    flex-wrap: wrap;
+    line-height: g.$line-height_s;
+
+}
+
+/* 検索 */
+.blog-header-events{
+    font-size: g.$font-size_s;
+    line-height: g.$line-height_s;
+}
+
+.blog-content-search{
+    width: 100%;
+    max-width: 520px;
+}
+
+.blog-search-highlight{
+    background-color: g.$p-color_yellow_200;
+}
