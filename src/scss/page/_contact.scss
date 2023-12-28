@@ -4,6 +4,14 @@
     お問い合わせ
 *********************************/
 
+/* 入力 */
+.form-content{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 40px;
+}
+
 .form-area{
     display: flex;
     flex-direction: column;
@@ -46,6 +54,7 @@
     line-height: g.$line-height_s;
 }
 
+/* 確認 */
 .confirm-checkbox{
     display: flex;
     flex-wrap: wrap;
