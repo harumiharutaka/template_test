@@ -58,7 +58,7 @@
 .content-box__header-date{
     font-size: g.$font-size_s;
     line-height: g.$line-height_s;
-    text-wrap: nowrap;
+    white-space: nowrap;
 }
 
 .content-box__body{

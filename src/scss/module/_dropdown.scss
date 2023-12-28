@@ -40,13 +40,13 @@
     height: 3rem;
     padding: 0 10px 0 20px;
     gap: 10px;
-    text-wrap: nowrap;
+    white-space: nowrap;
 }
 
 .dropdown__grandchild-link{
     height: 3rem;
     padding: 0 20px;
-    text-wrap: nowrap;
+    white-space: nowrap;
 }
 
 .dropdown__child,.dropdown__grandchild{
