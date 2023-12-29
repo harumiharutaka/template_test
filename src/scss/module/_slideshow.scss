@@ -68,6 +68,7 @@
 .slideshow__arrow-icon{
     color: #ffffff80;
     font-size: 24px;
+    min-width: 24px;
     transition: g.$transition_high;
 
     @include g.media(sp){
@@ -103,6 +104,7 @@
     color: #ffffff80;
     font-size: 24px;
     transition: g.$transition_high;
+    min-width: 24px;
 
     &:hover,&:active,&:focus{
         color: g.$p-color_white;
