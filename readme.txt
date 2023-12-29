@@ -46,7 +46,6 @@
 　┃　　┣━ parts //テンプレートに分けたhtmlを格納
 　┃　　┃　　┣━ header.html //ヘッダー
 　┃　　┃　　┗━ footer.html //フッター
-　┃　　┃　　 　　：
 　┃　　┗━ index.html //ビルド前のhtmlを格納
 　┃　　 　　：
 　┗━ dist //ビルド後のファイル（編集不可）
