@@ -11,7 +11,6 @@ export function modal() {
         modalBtn.onclick = function() {
 
             const modalBtnId = this.dataset.modal;
-            console.log(modalBtnId);
             document.querySelector('#' + modalBtnId).showModal();
             document.querySelector('#' + modalBtnId).classList.add('modal--active');
             window.globalFunction.bodyScrollStop();
