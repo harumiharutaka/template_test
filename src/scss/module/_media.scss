@@ -15,8 +15,10 @@
     }
 
     &--reverse{
-        @include g.media(pc){
-            flex-direction: row-reverse;
+        flex-direction: row-reverse;
+        
+        @include g.media(sp){
+            flex-direction: column;
         }
     }
 }

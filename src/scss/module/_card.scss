@@ -7,12 +7,12 @@
 /* card-group */
 .card-group{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     flex-wrap: wrap;
     gap: 20px;
 
-    @include g.media(pc){
-        flex-direction: row;
+    @include g.media(sp){
+        flex-direction: column;
     }
 
     &--column3{
