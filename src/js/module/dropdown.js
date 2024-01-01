@@ -53,7 +53,15 @@ export function dropdown() {
                 });
 
                 if(childActives.length !== 0){
+
+                    parentBtns.forEach(function(parentBtn, index) {
+                        parentBtn.blur();
+                    });
+
+                    this.focus();
+                    
                     this.nextElementSibling.classList.add('dropdown__child--active');
+
                 }
 
             }
@@ -87,10 +95,12 @@ export function dropdown() {
     childParentBtns.forEach(function(childParentBtn, index) {
 
         childParentBtn.parentNode.addEventListener('mouseover', function (e) {
+            childParentBtn.focus();
             childParentBtn.nextElementSibling.classList.add('dropdown__grandchild--active');
         });
 
         childParentBtn.parentNode.addEventListener('mouseleave', function (e) {
+            childParentBtn.blur();
             childParentBtn.nextElementSibling.classList.remove('dropdown__grandchild--active');
         });
 
@@ -122,11 +132,11 @@ export function dropdown() {
 
         focusBtn.addEventListener('focus', function (e) {
 
-            const linkParentActive = this.classList.contains('js_dropdown_link_parent');
-            const childParentActive = this.classList.contains('js_dropdown_child_parent');
+            const linkParent = this.classList.contains('js_dropdown_link_parent');
+            const childParent = this.classList.contains('js_dropdown_child_parent');
             const childActive = this.closest('.dropdown__child--active');
             const grandchildActive = this.closest('.dropdown__grandchild--active');
-            if (linkParentActive) {
+            if (linkParent) {
 
                 const childActive = this.nextElementSibling.classList.contains('dropdown__child--active');
                 if (!childActive){
@@ -135,7 +145,7 @@ export function dropdown() {
 
                 }
 
-            } else if  (childParentActive) {
+            } else if  (childParent) {
 
                 const grandchildActive = this.nextElementSibling.classList.contains('dropdown__grandchild--active');
                 if (!grandchildActive){
