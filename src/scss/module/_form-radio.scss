@@ -19,6 +19,9 @@
 }
 
 .form-radio__input{
+    width: 0;
+    height: 0;
+    
     &:focus + .form-radio__icon{
         outline: 2px solid g.$s-color_border_focused;
     }
