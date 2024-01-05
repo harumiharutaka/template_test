@@ -50,13 +50,12 @@
     &::before{
         content: "";
         position: absolute;
-        top: 50%;
+        top: 0.375rem;
         left: 0;
         width: 4px;
         height: g.$font-size_xxxl;
         background-color: g.$p-color_black;
         border-radius: 100px;
-        transform: translateY(-50%);
     }
 
     @include g.media(sp){
