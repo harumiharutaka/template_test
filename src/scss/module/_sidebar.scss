@@ -89,6 +89,7 @@
 .sidebar-ranking{
     position: relative;
     padding-left: 1em;
+    line-height: g.$line-height_s;
 
     &::before{
         font-family: 'Font Awesome 6 Free';
@@ -132,7 +133,6 @@
 }
 
 .sidebar-ranking__link{
-    line-height: g.$line-height_s;
 }
 
 .sidebar-filter{
