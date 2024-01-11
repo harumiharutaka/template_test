@@ -51,6 +51,12 @@
         color: g.$p-color_grey_600;
         pointer-events: none;
     }
+
+    &--dots{
+        background-color: transparent;
+        color: g.$p-color_grey_600;
+        pointer-events: none;
+    }
 }
 
 .pager__icon{

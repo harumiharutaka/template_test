@@ -210,6 +210,17 @@
       "ogpImage": "/assets/img/image_16-9.png",
       "type": "article",
       "path": "/component.html"
+    } ,
+    "/404.html": {
+      "id": 20,
+      "title": "404",
+      "description": "description",
+      "category": "ページが見つかりません",
+      "isHome": false,
+      "showCta": true,
+      "ogpImage": "/assets/img/image_16-9.png",
+      "type": "article",
+      "path": "/404.html"
     } 
   }
 }
