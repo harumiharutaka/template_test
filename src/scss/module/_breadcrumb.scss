@@ -4,7 +4,7 @@
     パンくずリスト
 *********************************/
 
-.breadcrum{
+.breadcrumb{
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
@@ -13,7 +13,7 @@
     line-height: g.$line-height_s;
 }
 
-.breadcrum__link{
+.breadcrumb__link{
     color: g.$s-color_menu-link_normal;
     text-decoration: none;
     transition: g.$transition_high;
@@ -23,11 +23,11 @@
     }
 }
 
-.breadcrum__partition{
+.breadcrumb__partition{
     font-size: g.$font-size_xs;
     min-width: 0.5625rem;
 }
 
-.breadcrum__current{
+.breadcrumb__current{
     color: g.$p-color_grey_500;
 }
