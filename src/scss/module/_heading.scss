@@ -5,7 +5,7 @@
 *********************************/
 
 .heading-first{
-    color: g.$p-color_black;
+    color: g.$s-color_text_body;
     @include g.text-style(heading_first_pc);
 
     &::after{
@@ -13,7 +13,7 @@
         display: block;
         height: 4px;
         margin-top: 10px;
-        background-color: g.$p-color_black;
+        background-color: g.$p-color_grey_900;
         border-radius: 100px;
     }
 
@@ -24,7 +24,7 @@
 
 .heading-second{
     width: fit-content;
-    color: g.$p-color_black;
+    color: g.$s-color_text_body;
     @include g.text-style(heading_second_pc);
 
     &::after{
@@ -32,7 +32,7 @@
         display: block;
         height: 2px;
         margin-top: 5px;
-        background-color: g.$p-color_black;
+        background-color: g.$p-color_grey_900;
         border-radius: 100px;
     }
 
@@ -43,7 +43,7 @@
 
 .heading-third{
     position: relative;
-    color: g.$p-color_black;
+    color: g.$s-color_text_body;
     @include g.text-style(heading_third_pc);
     padding-left: 14px;
 
@@ -54,7 +54,7 @@
         left: 0;
         width: 4px;
         height: g.$font-size_xxxl;
-        background-color: g.$p-color_black;
+        background-color: g.$p-color_grey_900;
         border-radius: 100px;
     }
 
@@ -68,7 +68,7 @@
 }
 
 .heading-fourth{
-    color: g.$p-color_black;
+    color: g.$s-color_text_body;
     @include g.text-style(heading_fourth_pc);
 
     @include g.media(sp){
@@ -77,7 +77,7 @@
 }
 
 .heading-fifth{
-    color: g.$p-color_black;
+    color: g.$s-color_text_body;
     @include g.text-style(heading_fifth_pc);
 
     @include g.media(sp){
