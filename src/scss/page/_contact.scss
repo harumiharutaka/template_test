@@ -46,10 +46,20 @@
 }
 
 .form-unit__footer{
+    &--textarea{
+        display: flex;
+        justify-content: space-between;
+    }
 }
 
 .form-unit__error{
     color: g.$s-color_status_alert;
+    font-size: g.$font-size_s;
+    line-height: g.$line-height_s;
+}
+
+.form-unit__count{
+    color: g.$p-color_grey_600;
     font-size: g.$font-size_s;
     line-height: g.$line-height_s;
 }
